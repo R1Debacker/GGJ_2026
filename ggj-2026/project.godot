@@ -14,6 +14,25 @@ config/name="GGJ2026"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[input]
+
+top_view_move_up={
+"deadzone": 0.2,
+"events": []
+}
+top_view_move_down={
+"deadzone": 0.2,
+"events": []
+}
+top_view_move_left={
+"deadzone": 0.2,
+"events": []
+}
+top_view_move_right={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
