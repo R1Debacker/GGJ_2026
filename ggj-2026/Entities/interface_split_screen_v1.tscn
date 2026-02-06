@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://hqinuqb0rn01"]
+
+[node name="CameraSetup" type="Control" unique_id=173811773]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlTopCamera" type="Control" parent="." unique_id=1700904178]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ControlTopCamera" unique_id=2126818590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="ControlTopCamera/SubViewportContainer" unique_id=1599633482]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="ControlTopCamera/SubViewportContainer/SubViewport" unique_id=510206226]
+transform = Transform3D(1, 0, 0, 0, 0.06785861, 0.99769497, 0, -0.99769497, 0.06785861, 0, 1.0955993, 0)
+
+[node name="ControlRobberCamera" type="Control" parent="." unique_id=523892795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ControlRobberCamera" unique_id=1826949175]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="ControlRobberCamera/SubViewportContainer" unique_id=2080583744]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="ControlRobberCamera/SubViewportContainer/SubViewport" unique_id=1163998937]
+transform = Transform3D(1, 0, 0, 0, 0.92879665, 0.37058985, 0, -0.37058985, 0.92879665, 0, 1.0955993, 0)
