@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://08o171pscmxd"]
+
+[ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="1_gv7lr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bbp71"]
+size = Vector2(25, 25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv7lr"]
+albedo_color = Color(0.1458379, 0.29545736, 0.1405881, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rdnsh"]
+size = Vector3(25, 0.1, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rdnsh"]
+size = Vector3(2, 3, 0.5)
+
+[node name="World" type="Node3D" unique_id=1839415001]
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1994679909]
+mesh = SubResource("PlaneMesh_bbp71")
+surface_material_override/0 = SubResource("StandardMaterial3D_gv7lr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1357734566]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1395371126]
+shape = SubResource("BoxShape3D_rdnsh")
+
+[node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("1_gv7lr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9505936, 0)
+speed = 7.0
+sensitivity = 0.02
+jump_velocity = 5.0
+gravity = 18.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1498927711]
+transform = Transform3D(0.06437955, -0.8582441, 0.5091879, 0.10765563, 0.51324165, 0.8514654, -0.99210155, -1.847933e-08, 0.1254371, 0, 10.343598, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=2143040003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6.315)
+mesh = SubResource("BoxMesh_rdnsh")
+
+[node name="Cube2" type="MeshInstance3D" parent="." unique_id=1016539711]
+transform = Transform3D(0.6206963, 0, 0.78405106, 0, 1, 0, -0.78405106, 0, 0.6206963, 6.133009, 1.5, 1.4562907)
+mesh = SubResource("BoxMesh_rdnsh")
+
+[node name="Cube3" type="MeshInstance3D" parent="." unique_id=1671900631]
+transform = Transform3D(0.9583226, 0, 0.28568837, 0, 1, 0, -0.28568837, 0, 0.9583226, -4.165848, 1.5, -9.396317)
+mesh = SubResource("BoxMesh_rdnsh")
+
+[node name="Cube4" type="MeshInstance3D" parent="." unique_id=1756183118]
+transform = Transform3D(0.5657012, 0, -0.8246103, 0, 1, 0, 0.8246103, 0, 0.5657012, 7.624306, 1.5, -9.396317)
+mesh = SubResource("BoxMesh_rdnsh")
+
+[node name="Cube5" type="MeshInstance3D" parent="." unique_id=1636515104]
+transform = Transform3D(0.5657012, 0, -0.8246103, 0, 1, 0, 0.8246103, 0, 0.5657012, -8.015232, 1.5, 2.395276)
+mesh = SubResource("BoxMesh_rdnsh")
