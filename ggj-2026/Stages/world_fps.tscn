@@ -28,7 +28,7 @@ shape = SubResource("BoxShape3D_rdnsh")
 [node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("1_gv7lr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9505936, 0)
 speed = 7.0
-sensitivity = 0.02
+sensitivity = 0.1
 jump_velocity = 5.0
 gravity = 18.0
 

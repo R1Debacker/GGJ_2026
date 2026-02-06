@@ -5,9 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="2_unqbx"]
 [ext_resource type="PackedScene" uid="uid://d01r87xg7ix6h" path="res://Assets/Map/computer/FBX/COMPUTERdemoscene.fbx" id="3_unqbx"]
 [ext_resource type="PackedScene" uid="uid://cu0lbomwkbxiq" path="res://Assets/Map/walls/Fbx/wallwindow_003.fbx" id="4_xprr7"]
+[ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
 size = Vector2(160, 90)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xprr7"]
+size = Vector3(1000, 0.1, 1000)
 
 [node name="Map" type="Node3D" unique_id=61862151]
 
@@ -39,3 +43,11 @@ transform = Transform3D(-1.673521e-06, 0, -29.999998, 0, 29.999998, 0, 38.2857, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=612208476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -339.1975, 0, -217.63339)
 mesh = SubResource("PlaneMesh_5bpvm")
+
+[node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("6_unqbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0652413, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=168777168]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1477505128]
+shape = SubResource("BoxShape3D_xprr7")
