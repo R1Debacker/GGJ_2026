@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dr5wbequjy16c" path="res://Assets/Map/walls/Fbx/floorpattern.fbx" id="1_5bpvm"]
 [ext_resource type="PackedScene" uid="uid://xndycpg7f6wf" path="res://Assets/Map/catferia/FBX/CAFETERIAdemoscene.fbx" id="1_okasm"]
-[ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="2_unqbx"]
-[ext_resource type="PackedScene" uid="uid://bfweg2hilm0jv" path="res://Assets/Map/walls/Fbx/walldoor_001.fbx" id="3_xprr7"]
 [ext_resource type="PackedScene" uid="uid://xili4dbq80fd" path="res://Assets/Map/classroom/FBX/classroom_demoscene.fbx" id="5_t6pdo"]
 
 [node name="Map" type="Node3D" unique_id=61862151]
@@ -20,12 +18,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.834319, 0, -1.0207253)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.834319, 0, 0.97944736)
 
 [node name="Walls" type="Node3D" parent="." unique_id=479656442]
-
-[node name="wall_001" parent="Walls" unique_id=2055470771 instance=ExtResource("2_unqbx")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.882884, 0.70375645, 0.83006)
-
-[node name="walldoor_001" parent="Walls" unique_id=1970425348 instance=ExtResource("3_xprr7")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.8674054, 0.6992396, -1.150032)
 
 [node name="Rooms" type="Node3D" parent="." unique_id=765140343]
 

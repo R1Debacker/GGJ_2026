@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://scsd1ipg4lyn"]
+
+[ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="1_3xhil"]
+
+[node name="wall_001" unique_id=2055470771 instance=ExtResource("1_3xhil")]
+
+[node name="wall_001" parent="." index="0" unique_id=2050425554]
+transform = Transform3D(300, 0, 0, 0, -1.3113417e-05, 300, 0, -300, -1.3113417e-05, 0, 0, 0)
