@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmhe4ut4syuo" path="res://Entities/prototype/prototype_cube.tscn" id="2_hqfmo"]
 [ext_resource type="PackedScene" uid="uid://d1sac2xawsn3d" path="res://Entities/prototype/prototype_rectangle.tscn" id="3_ruli6"]
 [ext_resource type="PackedScene" uid="uid://cwd1rdtf3boqx" path="res://Entities/prototype/prototype_sphere.tscn" id="4_udnt2"]
-[ext_resource type="PackedScene" uid="uid://hqinuqb0rn01" path="res://Stages/camera.tscn" id="5_hqfmo"]
+[ext_resource type="PackedScene" uid="uid://hqinuqb0rn01" path="res://Entities/camera.tscn" id="5_hqfmo"]
 
 [node name="Protorype" type="Node3D" unique_id=49809672]
 
