@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d1sac2xawsn3d"]
+
+[ext_resource type="Texture2D" uid="uid://y1m51ttg5oav" path="res://Assets/kenney_prototype_textures/purple/texture_10.png" id="1_cqeiv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jw4q8"]
+albedo_texture = ExtResource("1_cqeiv")
+uv1_scale = Vector3(9, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iukxo"]
+material = SubResource("StandardMaterial3D_jw4q8")
+size = Vector3(3, 1, 1)
+
+[node name="PrototypeRectangle" type="MeshInstance3D" unique_id=1858653271]
+mesh = SubResource("BoxMesh_iukxo")

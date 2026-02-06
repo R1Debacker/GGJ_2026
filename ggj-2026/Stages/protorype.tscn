@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cp166t5r07jbs"]
+
+[ext_resource type="PackedScene" uid="uid://xc7b6880bwcp" path="res://Entities/prototype/prototype_floor.tscn" id="1_nheyy"]
+[ext_resource type="PackedScene" uid="uid://cmhe4ut4syuo" path="res://Entities/prototype/prototype_cube.tscn" id="2_hqfmo"]
+[ext_resource type="PackedScene" uid="uid://d1sac2xawsn3d" path="res://Entities/prototype/prototype_rectangle.tscn" id="3_ruli6"]
+[ext_resource type="PackedScene" uid="uid://cwd1rdtf3boqx" path="res://Entities/prototype/prototype_sphere.tscn" id="4_udnt2"]
+[ext_resource type="PackedScene" uid="uid://hqinuqb0rn01" path="res://Entities/camera.tscn" id="5_hqfmo"]
+
+[node name="Protorype" type="Node3D" unique_id=49809672]
+
+[node name="RedProtorypeFloor20x20" parent="." unique_id=211567417 instance=ExtResource("1_nheyy")]
+
+[node name="PrototypeCube" parent="." unique_id=404560309 instance=ExtResource("2_hqfmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8169303, 0.606595, -3.5919912)
+
+[node name="PrototypeRectangle" parent="." unique_id=1858653271 instance=ExtResource("3_ruli6")]
+transform = Transform3D(0.9980453, 0, -0.062494427, 0, 1, 0, 0.062494427, 0, 0.9980453, -0.40547597, 0.5895436, -4.344819)
+
+[node name="PrototypeSphere" parent="." unique_id=663393556 instance=ExtResource("4_udnt2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5422451, 0.65683913, -3.1594472)
+
+[node name="CameraSetup" parent="." unique_id=173811773 instance=ExtResource("5_hqfmo")]

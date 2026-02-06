@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://xc7b6880bwcp"]
+
+[ext_resource type="Texture2D" uid="uid://hslw7jmbvmsb" path="res://Assets/kenney_prototype_textures/dark/texture_03.png" id="1_hodnq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfbnc"]
+albedo_texture = ExtResource("1_hodnq")
+uv1_scale = Vector3(20, 20, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dne5f"]
+material = SubResource("StandardMaterial3D_dfbnc")
+size = Vector2(20, 20)
+
+[node name="RedProtorypeFloor20x20" type="MeshInstance3D" unique_id=211567417]
+mesh = SubResource("PlaneMesh_dne5f")
