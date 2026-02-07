@@ -14,7 +14,8 @@ extends Node
 #@onready var we_did_it: AudioStreamPlayer2D = $WeDidIt
 
 
-const PLAYER = preload("res://Entities/top_view_3d_player.tscn")
+var fps_player : FpsPlayer = null
+const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
 
 var avail_skin := [1,2,3,4]

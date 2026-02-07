@@ -1,7 +1,8 @@
+class_name FpsPlayer
 extends CharacterBody3D
 class_name player3D_fps
 
-@onready var animation_head_bob: AnimationPlayer = $Head/AnimationHeadBob
+@onready var animation_head_bob: AnimationPlayer = %AnimationHeadBob
 
 @export var device_index := 0
 @export var speed: float = 5.0
@@ -15,6 +16,7 @@ var head: Node3D
 var pitch: float = 0.0
 
 func _ready() -> void:
+	Game.fps_player = self
 	head = $Head
 	animation_head_bob.play("headbob")
 
