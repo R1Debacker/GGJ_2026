@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://d38d2murcdjhn"]
+[gd_scene format=3 uid="uid://cso4w5cq41li0"]
 
 [ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_yyg53"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_wia0k"]
 [ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_57cjo"]
-[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/Player/top_view_3d_player.tscn" id="4_kqv30"]
+[ext_resource type="PackedScene" path="res://Entities/Player/top_view_3d_player.tscn" id="4_kqv30"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_bekuv"]
 viewport_path = NodePath("SubViewport Top Camera")
