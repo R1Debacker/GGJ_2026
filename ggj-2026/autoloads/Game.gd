@@ -34,7 +34,7 @@ func get_random_coord() -> Vector3:
 	ran_coord.x = randi_range(-47, 47)
 	ran_coord.z = randi_range(-26, 26)
 
-	while ran_coord.x in range(-15, 15) and ran_coord.z in range(-8, 8):
+	while ran_coord.x in range(-17, 17) and ran_coord.z in range(-10, 10):
 		
 		ran_coord.x = randi_range(-47, 47)
 		ran_coord.z = randi_range(-26, 26)
