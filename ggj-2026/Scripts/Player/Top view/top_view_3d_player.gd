@@ -8,6 +8,7 @@ class_name player3D_top_view
 @export var push_force = 1.0
 @onready var grab_sound: AudioStreamPlayer = $GrabSound
 @onready var fail_sound: AudioStreamPlayer = $FailSound
+@export var skins : Array[Node3D]
 
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
@@ -52,6 +53,7 @@ func _physics_process(delta: float):
 		anim_state.travel("Grabbing")
 		
 		if distanceToRobber <= 4 && dot > -0.2:
+			rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
 			position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
 			success_grab = true
 			Game.fps_player.target_robber = position
@@ -123,6 +125,11 @@ func get_move_input(delta):
 		#else:
 			#velocity.x = move_toward(velocity.x, 0, speed)
 			#velocity.z = move_toward(velocity.z, 0, speed)
+
+func load_skin(index: int):
+	for i in skins.size():
+		if i == index: skins[i].show()
+		else: skins[i].hide()
 
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false

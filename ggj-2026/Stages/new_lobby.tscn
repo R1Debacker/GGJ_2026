@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dybgvvvapukll"]
+
+[ext_resource type="Script" uid="uid://dhvwp5vpei5my" path="res://Scripts/Lobby/new_lobby.gd" id="1_mtan6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5iwf"]
+albedo_color = Color(0.57941246, 0.57941246, 0.57941246, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rxdke"]
+material = SubResource("StandardMaterial3D_g5iwf")
+size = Vector2(96, 54)
+
+[node name="New lobby" type="Node3D" unique_id=1893106369]
+script = ExtResource("1_mtan6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=738405248]
+mesh = SubResource("PlaneMesh_rxdke")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1652205827]
+transform = Transform3D(1, 0, 0, 0, 0.1466528, 0.9891881, 0, -0.9891881, 0.14665282, -3.8146973e-06, 24.024557, 3.256855)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=974299900]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 30, 0)
+projection = 1
+size = 54.0
