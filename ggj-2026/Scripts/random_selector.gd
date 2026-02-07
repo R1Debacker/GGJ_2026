@@ -1,11 +1,11 @@
 extends Node3D
 
-var dir_path := "res://Entities/Rooms/Set1"
-var rotatable := true
+@export var dir_path := "Entities/Rooms/Set1"
+@export var rotatable := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var dir := DirAccess.open(dir_path)
+	var dir := DirAccess.open("res://" + dir_path)
 	if not dir:
 		return
 	

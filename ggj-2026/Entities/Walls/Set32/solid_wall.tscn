@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bs36vk33v8mks"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1te3f"]
+albedo_color = Color(0.13399999, 0.13399999, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bh134"]
+size = Vector3(32, 5, 0.8)
+
+[node name="SolidWall" type="Node3D" unique_id=1554579389]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=894873618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_1te3f")
+mesh = SubResource("BoxMesh_bh134")
