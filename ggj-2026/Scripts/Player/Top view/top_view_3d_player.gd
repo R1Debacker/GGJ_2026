@@ -5,12 +5,14 @@ class_name player3D_top_view
 @export var default_speed := 7.0
 @export var speed_rotation = 10.0
 @export var sprint_factor = 2
+@export var push_force = 1.0
+
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
 
 #var jumping = false
 #var grounded = true
-var last_direction := Vector3.ZERO
+var last_direction := Vector3.FORWARD
 var sprinting := false
 var can_sprint := true
 var sprint_speed = default_speed * sprint_factor
@@ -36,6 +38,18 @@ func _physics_process(delta: float):
 	get_move_input(delta)
 	
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		
+		# On vérifie si l'objet touché est un RigidBody
+		if collision.get_collider() is RigidBody3D:
+			var body = collision.get_collider()
+			
+			var push_dir = -collision.get_normal()
+			push_dir.y = 0 
+			push_dir = push_dir.normalized()
+			
+			body.apply_central_impulse(push_dir * push_force)
 
 func get_move_input(delta):
 	
