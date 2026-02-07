@@ -52,6 +52,7 @@ device_index = 1
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_kqv30")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -29.094595, 0, 15)
+axis_lock_linear_y = true
 
 [node name="top view 3D Player2" parent="." unique_id=532556812 instance=ExtResource("5_57cjo")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 34.637955, 0, 15.758629)
