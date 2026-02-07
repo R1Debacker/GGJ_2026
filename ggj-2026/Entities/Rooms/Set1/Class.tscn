@@ -460,6 +460,9 @@ uv1_scale = Vector3(4, 4, 4)
 material = SubResource("StandardMaterial3D_s43wg")
 size = Vector3(18, 0.5, 32)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g84y5"]
+size = Vector3(18, 0.5, 32)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tg25c"]
 resource_name = "metalic mat"
 vertex_color_use_as_albedo = true
@@ -702,6 +705,11 @@ mesh = SubResource("ArrayMesh_15ht1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes" unique_id=380086936]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("BoxMesh_50pu4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/MeshInstance3D" unique_id=445782704]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/MeshInstance3D/StaticBody3D" unique_id=1265655986]
+shape = SubResource("BoxShape3D_g84y5")
 
 [node name="markers_001" parent="Meshes" unique_id=787053875 instance=ExtResource("3_mlkr3")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -9.444777, 1.9053054, 2.0582912)

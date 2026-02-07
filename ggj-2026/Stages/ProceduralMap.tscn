@@ -4,18 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cc5xnxijhcue3" path="res://Entities/Walls/ProceduralWall32.tscn" id="4_x7ajq"]
 [ext_resource type="PackedScene" uid="uid://c6s5gggqiqc70" path="res://Entities/Walls/ProceduralWall18.tscn" id="5_8bvfq"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
-size = Vector2(32, 18)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqbx"]
-albedo_color = Color(1, 0, 1, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_duc0h"]
-size = Vector2(96, 54)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8bvfq"]
-size = Vector3(96, 0.001, 54)
-
 [sub_resource type="Environment" id="Environment_rsdap"]
 background_energy_multiplier = 2.88
 ambient_light_source = 2
@@ -24,19 +12,6 @@ ambient_light_energy = 0.3
 glow_enabled = true
 
 [node name="Map" type="Node3D" unique_id=61862151]
-
-[node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
-mesh = SubResource("PlaneMesh_5bpvm")
-
-[node name="Plan up" type="MeshInstance3D" parent="." unique_id=2017343130]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.001, 0)
-material_override = SubResource("StandardMaterial3D_unqbx")
-mesh = SubResource("PlaneMesh_duc0h")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Plan up" unique_id=2136449976]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Plan up/StaticBody3D" unique_id=1259429484]
-shape = SubResource("BoxShape3D_8bvfq")
 
 [node name="Rooms" type="Node3D" parent="." unique_id=840179435]
 
