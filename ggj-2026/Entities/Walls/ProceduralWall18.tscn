@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://c6s5gggqiqc70"]
 
 [ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_jfj8p"]
-[ext_resource type="Texture2D" uid="uid://dqpjaix3t0isj" path="res://Assets/kenney_prototype_textures/purple/texture_04.png" id="2_2t1ow"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asl38"]
-albedo_texture = ExtResource("2_2t1ow")
-uv1_scale = Vector3(32, 1, 1)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78n4m"]
+load_path = "res://.godot/imported/texture_04.png-4cb0cf1d2e3b2ac080b22e84c00cb0dd.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfj8p"]
+albedo_texture = SubResource("CompressedTexture2D_78n4m")
+uv1_scale = Vector3(18, 1, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_te6a5"]
-material = SubResource("StandardMaterial3D_asl38")
-size = Vector2(32, 0.8)
+material = SubResource("StandardMaterial3D_jfj8p")
+size = Vector2(18, 0.8)
 
 [node name="ProceduralWall" type="Node3D" unique_id=752109562]
 script = ExtResource("1_jfj8p")

@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://0a4eb2mmvuxw" path="res://Assets/Map/walls/Fbx/wallwindow_001.fbx" id="2_8bvfq"]
 [ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="3_jtw8g"]
 [ext_resource type="PackedScene" uid="uid://d3h8tdb61syer" path="res://Entities/Rooms/Procedural Room.tscn" id="4_m55nd"]
+[ext_resource type="PackedScene" uid="uid://cc5xnxijhcue3" path="res://Entities/Walls/ProceduralWall32.tscn" id="4_x7ajq"]
+[ext_resource type="PackedScene" uid="uid://c6s5gggqiqc70" path="res://Entities/Walls/ProceduralWall18.tscn" id="5_8bvfq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
 size = Vector2(32, 18)
@@ -25,10 +27,6 @@ mesh = SubResource("PlaneMesh_5bpvm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.001, 0)
 material_override = SubResource("StandardMaterial3D_unqbx")
 mesh = SubResource("PlaneMesh_duc0h")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1223354979]
-transform = Transform3D(1, 0, 0, 0, 0.75816846, 0.65205866, 0, -0.65205866, 0.75816846, 0.16363907, 11.1396885, 0)
-shadow_enabled = true
 
 [node name="CenterMap" type="Node3D" parent="." unique_id=1122882301]
 visible = false
@@ -122,3 +120,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -18)
 
 [node name="ProceduralRoom8" parent="Rooms" unique_id=353973130 instance=ExtResource("4_m55nd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
+
+[node name="Walls" type="Node3D" parent="." unique_id=869064624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+
+[node name="Wall32" type="Node3D" parent="Walls" unique_id=2028630665]
+
+[node name="ProceduralWall1" parent="Walls/Wall32" unique_id=752109562 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="ProceduralWall2" parent="Walls/Wall32" unique_id=642800748 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="ProceduralWall3" parent="Walls/Wall32" unique_id=153760572 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="ProceduralWall4" parent="Walls/Wall32" unique_id=1057802759 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+
+[node name="ProceduralWall5" parent="Walls/Wall32" unique_id=965439081 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 9)
+
+[node name="ProceduralWall6" parent="Walls/Wall32" unique_id=725610057 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -9)
+
+[node name="ProceduralWall7" parent="Walls/Wall32" unique_id=2031820899 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 27)
+
+[node name="ProceduralWall8" parent="Walls/Wall32" unique_id=1423021730 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -27)
+
+[node name="ProceduralWall9" parent="Walls/Wall32" unique_id=1167995105 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 9)
+
+[node name="ProceduralWall10" parent="Walls/Wall32" unique_id=261451525 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -9)
+
+[node name="ProceduralWall11" parent="Walls/Wall32" unique_id=2064142558 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 27)
+
+[node name="ProceduralWall12" parent="Walls/Wall32" unique_id=438815392 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -27)
+
+[node name="Wall18" type="Node3D" parent="Walls" unique_id=949807659]
+
+[node name="ProceduralWall1" parent="Walls/Wall18" unique_id=755032499 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 0)
+
+[node name="ProceduralWall2" parent="Walls/Wall18" unique_id=1202709039 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 0)
+
+[node name="ProceduralWall3" parent="Walls/Wall18" unique_id=2147169464 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 0)
+
+[node name="ProceduralWall4" parent="Walls/Wall18" unique_id=1849210887 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 0)
+
+[node name="ProceduralWall5" parent="Walls/Wall18" unique_id=2092095649 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 18)
+
+[node name="ProceduralWall6" parent="Walls/Wall18" unique_id=1093633840 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 18)
+
+[node name="ProceduralWall7" parent="Walls/Wall18" unique_id=2061936690 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 18)
+
+[node name="ProceduralWall8" parent="Walls/Wall18" unique_id=1618282197 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 18)
+
+[node name="ProceduralWall9" parent="Walls/Wall18" unique_id=647375924 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, -18)
+
+[node name="ProceduralWall10" parent="Walls/Wall18" unique_id=821095361 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, -18)
+
+[node name="ProceduralWall11" parent="Walls/Wall18" unique_id=269882775 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, -18)
+
+[node name="ProceduralWall12" parent="Walls/Wall18" unique_id=618726281 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, -18)
