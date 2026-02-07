@@ -12,6 +12,8 @@ class_name player3D_top_view
 
 #var jumping = false
 #var grounded = true
+
+var device_idx
 var last_direction := Vector3.FORWARD
 var sprinting := false
 var can_sprint := true

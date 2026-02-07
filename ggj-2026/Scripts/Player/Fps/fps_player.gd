@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name player3D_fps
 
 @onready var animation_head_bob: AnimationPlayer = $Head/AnimationHeadBob
 
@@ -9,6 +10,7 @@ extends CharacterBody3D
 @export var gravity: float = 9.8
 @export var push_force = 1.0
 
+var device_idx
 var head: Node3D
 var pitch: float = 0.0
 
