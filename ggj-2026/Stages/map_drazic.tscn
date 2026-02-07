@@ -41,6 +41,7 @@ device_index = 1
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_kqv30")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 15)
+device_index = 1
 
 [node name="top view 3D Player2" parent="." unique_id=532556812 instance=ExtResource("5_57cjo")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -6.7507057, 0, 15.758629)
@@ -48,7 +49,6 @@ device_index = 1
 
 [node name="top view 3D Player3" parent="." unique_id=2094275056 instance=ExtResource("6_kqv30")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 4.078577, 0, 15.16988)
-device_index = 1
 
 [node name="top view 3D Player4" parent="." unique_id=1803158357 instance=ExtResource("7_onlq6")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -12.010063, 0, 15.797454)
