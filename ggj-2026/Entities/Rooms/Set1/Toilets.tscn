@@ -1759,6 +1759,15 @@ spot_range = 24.599
 spot_attenuation = 0.5
 spot_angle = 63.75
 
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights" unique_id=2033715444]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -8.63326, 9.730932, 1.7709098)
+light_color = Color(1, 1, 0.8509804, 1)
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 24.599
+spot_attenuation = 0.5
+spot_angle = 63.75
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1844555062]
 transform = Transform3D(8.325, 0, 0, 0, 6.0398264, 0, 0, 0, 1, -1.9265256, 3.2422931, 1.6414256)
 mesh = SubResource("BoxMesh_cndu0")
