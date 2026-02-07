@@ -2528,15 +2528,14 @@ one_shot = true
 
 [node name="FailSound" type="AudioStreamPlayer" parent="." index="6" unique_id=2136086990]
 stream = ExtResource("6_pw7v8")
-volume_db = 20.0
 
 [node name="GrabSound" type="AudioStreamPlayer" parent="." index="7" unique_id=233082504]
 stream = ExtResource("7_gkaem")
-volume_db = 15.0
+volume_db = 20.0
 
 [node name="Victory" type="AudioStreamPlayer" parent="." index="8" unique_id=1108424061]
 stream = ExtResource("8_gkaem")
-volume_db = 15.0
+volume_db = 10.0
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Sprint duration" to="." method="_on_sprint_duration_timeout"]
