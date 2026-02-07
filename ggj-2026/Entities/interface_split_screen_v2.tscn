@@ -12,10 +12,12 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tgje0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_qwddo"]
 viewport_path = NodePath("SubViewportFPS Player")
 
-[node name="CameraSetup" type="Control" unique_id=1332214440]
+[node name="View" type="Node3D" unique_id=1065518466]
+
+[node name="CameraSetup" type="Control" parent="." unique_id=1332214440]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ControlTopCamera" type="Control" parent="." unique_id=1973758461]
+[node name="ControlTopCamera" type="Control" parent="CameraSetup" unique_id=1973758461]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="ControlTopCamera" unique_id=823917385]
+[node name="TextureRect" type="TextureRect" parent="CameraSetup/ControlTopCamera" unique_id=823917385]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,7 +43,7 @@ grow_vertical = 2
 texture = SubResource("ViewportTexture_cqjgo")
 expand_mode = 1
 
-[node name="ControlRobberCamera" type="Control" parent="." unique_id=2070296700]
+[node name="ControlRobberCamera" type="Control" parent="CameraSetup" unique_id=2070296700]
 layout_mode = 1
 anchor_left = 0.33200002
 anchor_top = 0.33200002
@@ -54,7 +56,7 @@ offset_bottom = 0.07998657
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="ControlRobberCamera" unique_id=1364882602]
+[node name="PanelContainer" type="PanelContainer" parent="CameraSetup/ControlRobberCamera" unique_id=1364882602]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,8 +65,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qwddo")
 
-[node name="TextureRect" type="TextureRect" parent="ControlRobberCamera/PanelContainer" unique_id=1085849617]
+[node name="TextureRect" type="TextureRect" parent="CameraSetup/ControlRobberCamera/PanelContainer" unique_id=1085849617]
 process_mode = 3
 layout_mode = 2
-texture = SubResource("ViewportTexture_tgje0")
+texture = SubResource("ViewportTexture_qwddo")
 expand_mode = 1
+
+[node name="SubViewport Top Camera" type="SubViewport" parent="." unique_id=1032100479]
+size = Vector2i(2560, 1440)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport Top Camera" unique_id=150376836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10.751297, 0)
+visible = false
+projection = 1
+fov = 107.5
+size = 53.726
+
+[node name="SubViewportFPS Player" type="SubViewport" parent="." unique_id=2113015314]
+size = Vector2i(1920, 1080)

@@ -2,13 +2,12 @@ extends CharacterBody3D
 class_name player3D_top_view
 
 @export var player_index := 0
-@export var global_speed = 7.0
+@export var global_speed := 7.0
 @export var speed_rotation = 10.0
 @export var sprint_factor = 2
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
 
-var speed := 7.0
 #var jumping = false
 #var grounded = true
 var last_direction := Vector3.ZERO
