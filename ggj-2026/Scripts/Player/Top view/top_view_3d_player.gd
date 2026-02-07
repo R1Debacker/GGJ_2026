@@ -13,7 +13,6 @@ class_name player3D_top_view
 #var jumping = false
 #var grounded = true
 
-var device_idx
 var last_direction := Vector3.FORWARD
 var sprinting := false
 var can_sprint := true
@@ -105,7 +104,6 @@ func _on_sprint_duration_timeout() -> void:
 	sprinting = false
 	print("not sprint anymore")
 	sprint_cooldown.start()
-
 
 func _on_sprint_cooldown_timeout() -> void:
 	can_sprint = true
