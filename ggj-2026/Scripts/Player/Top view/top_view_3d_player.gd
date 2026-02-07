@@ -45,7 +45,7 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 	
-	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X):
+	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing:
 		grabbing = true
 		var vectorToRobber = Game.fps_player.position - position
 		var distanceToRobber = vectorToRobber.length()
