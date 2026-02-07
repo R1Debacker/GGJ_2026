@@ -39,6 +39,17 @@ func _physics_process(delta: float):
 	get_move_input(delta)
 	
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("top_view_grab"):
+		var vectorToRobber = Game.fps_player.position - position
+		var distanceToRobber = vectorToRobber.length()
+		var dot = last_direction.dot(vectorToRobber)
+		if distanceToRobber <= 3 && dot > 0: 
+			var fps_index = Game.fps_player.device_index
+			Game.fps_player.device_index = device_index
+			device_index = fps_index
+		
+	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		

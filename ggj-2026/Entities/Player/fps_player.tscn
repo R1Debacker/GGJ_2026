@@ -71,4 +71,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
 current = true
 
 [node name="AnimationHeadBob" type="AnimationPlayer" parent="Head" unique_id=1462540476]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_sx2qq")
