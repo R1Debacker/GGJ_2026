@@ -60,6 +60,7 @@ gravity = 18.0
 shape = SubResource("CapsuleShape3D_rb5b7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1168506423]
+visible = false
 mesh = SubResource("CapsuleMesh_0e3s8")
 
 [node name="Head" type="Node3D" parent="." unique_id=243561689]

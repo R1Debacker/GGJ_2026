@@ -1,8 +1,9 @@
 extends CharacterBody3D
 class_name player3D_top_view
 
-@export var speed = 7.0
-@export var speed_rotation = 10.0
+@export var player_index := 0
+@export var speed := 7.0
+@export var speed_rotation := 10.0
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
 
@@ -33,11 +34,13 @@ func get_move_input(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	var dir_z = Input.get_axis("top_view_move_down","top_view_move_up") * Vector3.FORWARD
-	var dir_x = Input.get_axis("top_view_move_left","top_view_move_right") * Vector3.RIGHT
+	
+	var dir_z = -Input.get_joy_axis(player_index, JOY_AXIS_LEFT_Y) * Vector3.FORWARD
+	var dir_x = Input.get_joy_axis(player_index, JOY_AXIS_LEFT_X) * Vector3.RIGHT
 	
 	var direction = (dir_z + dir_x)
 	var magnitude = direction.length()
+	if magnitude <= 0.3: direction = Vector3.ZERO
 	direction = direction.normalized()
 	
 	anim_tree.set("parameters/IDLE-WALK-RUN/blend_position", magnitude)

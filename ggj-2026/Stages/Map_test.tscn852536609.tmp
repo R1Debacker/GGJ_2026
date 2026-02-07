@@ -9,17 +9,17 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_duc0h"]
 viewport_path = NodePath("SubViewport Top Camera")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py0s3"]
-bg_color = Color(0, 0, 0, 1)
-draw_center = false
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0, 0, 0, 1)
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_urooj"]
 viewport_path = NodePath("SubViewportFPS Player")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
+size = Vector2(32, 18)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqbx"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_duc0h"]
+size = Vector2(16, 9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xprr7"]
 size = Vector3(1000, 0.1, 1000)
@@ -28,9 +28,11 @@ size = Vector3(1000, 0.1, 1000)
 
 [node name="CameraSetup" type="Control" parent="." unique_id=173811773]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -50,51 +52,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("ViewportTexture_duc0h")
-expand_mode = 1
 
 [node name="ControlRobberCamera" type="Control" parent="CameraSetup" unique_id=523892795]
-layout_mode = 1
-anchor_left = 0.33200002
-anchor_top = 0.33200002
-anchor_right = 0.67200005
-anchor_bottom = 0.665
-offset_left = 0.5359802
-offset_top = -0.13601685
-offset_right = -0.14404297
-offset_bottom = 0.07998657
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="CameraSetup/ControlRobberCamera" unique_id=1973730050]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_py0s3")
+scale = Vector2(0.5, 0.5)
 
-[node name="TextureRect" type="TextureRect" parent="CameraSetup/ControlRobberCamera/PanelContainer" unique_id=975502308]
+[node name="TextureRect" type="TextureRect" parent="CameraSetup/ControlRobberCamera" unique_id=975502308]
 process_mode = 3
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("ViewportTexture_urooj")
-expand_mode = 1
 
 [node name="SubViewport Top Camera" type="SubViewport" parent="." unique_id=554399089]
-size = Vector2i(2560, 1440)
+size = Vector2i(1152, 648)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport Top Camera" unique_id=2079468872]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10.751297, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.445512, 0)
 visible = false
 projection = 1
 fov = 107.5
-size = 53.726
+size = 54.0
+
+[node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
+mesh = SubResource("PlaneMesh_5bpvm")
+
+[node name="Plan up" type="MeshInstance3D" parent="." unique_id=2017343130]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, -0.38606453, -0.1145339)
+material_override = SubResource("StandardMaterial3D_unqbx")
+mesh = SubResource("PlaneMesh_duc0h")
 
 [node name="SubViewportFPS Player" type="SubViewport" parent="." unique_id=644203039]
-size = Vector2i(1920, 1080)
+size = Vector2i(870, 512)
 
 [node name="FPS Player" parent="SubViewportFPS Player" unique_id=121519208 instance=ExtResource("1_d5uff")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.410238, 2.0993738, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0993738, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=168777168]
 
@@ -187,5 +191,4 @@ transform = Transform3D(1, 0, 0, 0, 0.75816846, 0.65205866, 0, -0.65205866, 0.75
 shadow_enabled = true
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("5_py0s3")]
-transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 28.821, 0, -8.377)
-player_index = 1
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0.29904342, -13.4663)
