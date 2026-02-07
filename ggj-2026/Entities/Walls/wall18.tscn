@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cppsmn6ykllil"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y4q6b"]
+load_path = "res://.godot/imported/texture_04.png-4cb0cf1d2e3b2ac080b22e84c00cb0dd.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asrtf"]
+albedo_texture = SubResource("CompressedTexture2D_y4q6b")
+uv1_scale = Vector3(32, 0.5, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_agsyc"]
+material = SubResource("StandardMaterial3D_asrtf")
+size = Vector2(18, 0.4)
+
+[node name="Wall" type="Node3D" unique_id=1714079022]
+
+[node name="size_indicator" type="MeshInstance3D" parent="." unique_id=1739558408]
+mesh = SubResource("PlaneMesh_agsyc")

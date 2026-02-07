@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://iry48jet5edb"]
+
+[ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_co7fe"]
+[ext_resource type="Texture2D" uid="uid://cuiaf3i0bpeuj" path="res://Assets/kenney_prototype_textures/red/texture_10.png" id="2_33g6s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfj8p"]
+albedo_texture = ExtResource("2_33g6s")
+uv1_scale = Vector3(36, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_te6a5"]
+material = SubResource("StandardMaterial3D_jfj8p")
+size = Vector2(18, 0.4)
+
+[node name="ProceduralWall" type="Node3D" unique_id=752109562]
+script = ExtResource("1_co7fe")
+dir_paths = ["Entities/Walls/Set18Ext"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=885048236]
+mesh = SubResource("PlaneMesh_te6a5")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://82huset0mbxy"]
+
+[ext_resource type="Texture2D" uid="uid://dqpjaix3t0isj" path="res://Assets/kenney_prototype_textures/purple/texture_04.png" id="1_5tpp5"]
+[ext_resource type="Script" uid="uid://dcx4wp2snx5xl" path="res://Entities/Walls/hide_at_run.gd" id="2_dw1vy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asl38"]
+albedo_texture = ExtResource("1_5tpp5")
+uv1_scale = Vector3(32, 0.5, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dw1vy"]
+material = SubResource("StandardMaterial3D_asl38")
+size = Vector2(32, 0.4)
+
+[node name="Wall" type="Node3D" unique_id=1714079022]
+
+[node name="size_indicator" type="MeshInstance3D" parent="." unique_id=1739558408]
+mesh = SubResource("PlaneMesh_dw1vy")
+script = ExtResource("2_dw1vy")

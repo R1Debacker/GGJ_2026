@@ -3,17 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dqpjaix3t0isj" path="res://Assets/kenney_prototype_textures/purple/texture_04.png" id="1_3gaw8"]
 [ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_asl38"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asl38"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pryuq"]
 albedo_texture = ExtResource("1_3gaw8")
 uv1_scale = Vector3(32, 0.5, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_te6a5"]
-material = SubResource("StandardMaterial3D_asl38")
+material = SubResource("StandardMaterial3D_pryuq")
 size = Vector2(32, 0.4)
 
-[node name="ProceduralWall" type="Node3D" unique_id=752109562]
+[node name="ProceduralWall2" type="Node3D" unique_id=752109562]
 script = ExtResource("1_asl38")
-dir_path = "Entities/Walls/Set32"
+dir_paths = ["Entities/Walls/Set32Int"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=885048236]
 mesh = SubResource("PlaneMesh_te6a5")

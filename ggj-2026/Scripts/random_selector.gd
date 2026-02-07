@@ -1,25 +1,25 @@
 extends Node3D
 
-@export var dir_path := "Entities/Rooms/Set1"
+@export var dir_paths := ["Entities/Rooms/Set1"]
 @export var rotatable := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var dir := DirAccess.open("res://" + dir_path)
-	if not dir:
-		return
-	
 	var scenes: Array[String] = []
-	for f in dir.get_files():
-		if f.ends_with(".tscn"):
-			scenes.append(f)
+	for dir_path in dir_paths:
+		var dir := DirAccess.open("res://" + dir_path)
+		if not dir:
+			return
+		
+		for f in dir.get_files():
+			if f.ends_with(".tscn"):
+				scenes.append(dir_path + "/" + f)
 
 	if scenes.is_empty():
 		return
 	
 	var file = scenes[randi() % scenes.size()]
-	var path = self.dir_path + "/" + file
-	var packed := load(path) as PackedScene
+	var packed := load(file) as PackedScene
 	
 	if packed:
 		var inst : Node3D = packed.instantiate()

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dsohk3iyis7u1"]
+
+[ext_resource type="PackedScene" uid="uid://82huset0mbxy" path="res://Entities/Walls/wall32.tscn" id="1_wty42"]
+[ext_resource type="PackedScene" uid="uid://7xbpyhl4kw7b" path="res://Entities/Walls/elements/wall_5x.tscn" id="2_3nv34"]
+[ext_resource type="PackedScene" uid="uid://u1x4ig6ohn3y" path="res://Entities/Walls/elements/wall_1x.tscn" id="3_rjsw2"]
+[ext_resource type="PackedScene" uid="uid://bflqkr41sntk4" path="res://Entities/Walls/elements/window_5x.tscn" id="4_816p8"]
+
+[node name="Wall" unique_id=1714079022 instance=ExtResource("1_wty42")]
+
+[node name="Wall" parent="." index="1" unique_id=619975086 instance=ExtResource("2_3nv34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+
+[node name="Wall4" parent="." index="2" unique_id=1188623036 instance=ExtResource("2_3nv34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Wall2" parent="." index="3" unique_id=941262431 instance=ExtResource("2_3nv34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+
+[node name="Wall7" parent="." index="4" unique_id=1678649932 instance=ExtResource("3_rjsw2")]
+
+[node name="Wall8" parent="." index="5" unique_id=594722036 instance=ExtResource("3_rjsw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="WallWindow" parent="." index="6" unique_id=1381021977 instance=ExtResource("4_816p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="WallWindow3" parent="." index="7" unique_id=1603316956 instance=ExtResource("4_816p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="WallWindow2" parent="." index="8" unique_id=1340677064 instance=ExtResource("4_816p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 0)

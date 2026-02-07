@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dla372dg4sbus"]
 
 [ext_resource type="PackedScene" uid="uid://d3h8tdb61syer" path="res://Entities/Rooms/Procedural Room.tscn" id="4_m55nd"]
-[ext_resource type="PackedScene" uid="uid://cc5xnxijhcue3" path="res://Entities/Walls/ProceduralWall32.tscn" id="4_x7ajq"]
-[ext_resource type="PackedScene" uid="uid://c6s5gggqiqc70" path="res://Entities/Walls/ProceduralWall18.tscn" id="5_8bvfq"]
+[ext_resource type="PackedScene" uid="uid://cc5xnxijhcue3" path="res://Entities/Walls/ProceduralWall32_int.tscn" id="4_x7ajq"]
+[ext_resource type="PackedScene" uid="uid://c6s5gggqiqc70" path="res://Entities/Walls/ProceduralWall18_int.tscn" id="5_8bvfq"]
+[ext_resource type="PackedScene" uid="uid://bqqf1th1du5ai" path="res://Entities/Walls/ProceduralWall32_ext.tscn" id="5_jtw8g"]
+[ext_resource type="PackedScene" uid="uid://iry48jet5edb" path="res://Entities/Walls/ProceduralWall18_ext.tscn" id="5_m55nd"]
 
 [sub_resource type="Environment" id="Environment_rsdap"]
 background_energy_multiplier = 2.88
@@ -44,79 +46,90 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 
 [node name="Wall32" type="Node3D" parent="Walls" unique_id=2028630665]
 
-[node name="ProceduralWall1" parent="Walls/Wall32" unique_id=752109562 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+[node name="EXT" type="Node3D" parent="Walls/Wall32" unique_id=1953432699]
 
-[node name="ProceduralWall2" parent="Walls/Wall32" unique_id=642800748 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
-
-[node name="ProceduralWall3" parent="Walls/Wall32" unique_id=153760572 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
-
-[node name="ProceduralWall4" parent="Walls/Wall32" unique_id=1057802759 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
-
-[node name="ProceduralWall5" parent="Walls/Wall32" unique_id=965439081 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 9)
-
-[node name="ProceduralWall6" parent="Walls/Wall32" unique_id=725610057 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -9)
-
-[node name="ProceduralWall7" parent="Walls/Wall32" unique_id=2031820899 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 27)
-
-[node name="ProceduralWall8" parent="Walls/Wall32" unique_id=1423021730 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -27)
-
-[node name="ProceduralWall9" parent="Walls/Wall32" unique_id=1167995105 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 9)
-
-[node name="ProceduralWall10" parent="Walls/Wall32" unique_id=261451525 instance=ExtResource("4_x7ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -9)
-
-[node name="ProceduralWall11" parent="Walls/Wall32" unique_id=2064142558 instance=ExtResource("4_x7ajq")]
+[node name="ProceduralWall4" parent="Walls/Wall32/EXT" unique_id=318080373 instance=ExtResource("5_jtw8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 27)
 
-[node name="ProceduralWall12" parent="Walls/Wall32" unique_id=438815392 instance=ExtResource("4_x7ajq")]
+[node name="ProceduralWall11" parent="Walls/Wall32/EXT" unique_id=1219747644 instance=ExtResource("5_jtw8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -27)
+
+[node name="ProceduralWall7" parent="Walls/Wall32/EXT" unique_id=1127633548 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -27)
+
+[node name="ProceduralWall" parent="Walls/Wall32/EXT" unique_id=612546484 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 27)
+
+[node name="ProceduralWall3" parent="Walls/Wall32/EXT" unique_id=1433905455 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+
+[node name="ProceduralWall13" parent="Walls/Wall32/EXT" unique_id=235762853 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="ProceduralWall2" parent="Walls/Wall32/EXT" unique_id=752109562 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="ProceduralWall5" parent="Walls/Wall32/EXT" unique_id=1772372612 instance=ExtResource("5_jtw8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="INT" type="Node3D" parent="Walls/Wall32" unique_id=1445721476]
+
+[node name="ProceduralWall8" parent="Walls/Wall32/INT" unique_id=1904623446 instance=ExtResource("5_m55nd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+
+[node name="ProceduralWall5" parent="Walls/Wall32/INT" unique_id=965439081 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 9)
+
+[node name="ProceduralWall6" parent="Walls/Wall32/INT" unique_id=725610057 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -9)
+
+[node name="ProceduralWall9" parent="Walls/Wall32/INT" unique_id=1167995105 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 9)
+
+[node name="ProceduralWall10" parent="Walls/Wall32/INT" unique_id=261451525 instance=ExtResource("4_x7ajq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -9)
 
 [node name="Wall18" type="Node3D" parent="Walls" unique_id=949807659]
 
-[node name="ProceduralWall1" parent="Walls/Wall18" unique_id=755032499 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 0)
+[node name="EXT" type="Node3D" parent="Walls/Wall18" unique_id=438779275]
 
-[node name="ProceduralWall2" parent="Walls/Wall18" unique_id=1202709039 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 0)
-
-[node name="ProceduralWall3" parent="Walls/Wall18" unique_id=2147169464 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 0)
-
-[node name="ProceduralWall4" parent="Walls/Wall18" unique_id=1849210887 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 0)
-
-[node name="ProceduralWall5" parent="Walls/Wall18" unique_id=2092095649 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 18)
-
-[node name="ProceduralWall6" parent="Walls/Wall18" unique_id=1093633840 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 18)
-
-[node name="ProceduralWall7" parent="Walls/Wall18" unique_id=2061936690 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 18)
-
-[node name="ProceduralWall8" parent="Walls/Wall18" unique_id=1618282197 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 18)
-
-[node name="ProceduralWall9" parent="Walls/Wall18" unique_id=647375924 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, -18)
-
-[node name="ProceduralWall10" parent="Walls/Wall18" unique_id=821095361 instance=ExtResource("5_8bvfq")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, -18)
-
-[node name="ProceduralWall11" parent="Walls/Wall18" unique_id=269882775 instance=ExtResource("5_8bvfq")]
+[node name="ProceduralWall" parent="Walls/Wall18/EXT" unique_id=916391562 instance=ExtResource("5_m55nd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, -18)
 
-[node name="ProceduralWall12" parent="Walls/Wall18" unique_id=618726281 instance=ExtResource("5_8bvfq")]
+[node name="ProceduralWall5" parent="Walls/Wall18/EXT" unique_id=219084848 instance=ExtResource("5_m55nd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, -18)
+
+[node name="ProceduralWall6" parent="Walls/Wall18/EXT" unique_id=1660933250 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 18)
+
+[node name="ProceduralWall9" parent="Walls/Wall18/EXT" unique_id=221586817 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 18)
+
+[node name="ProceduralWall10" parent="Walls/Wall18/EXT" unique_id=2006078448 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48, 0, 0)
+
+[node name="ProceduralWall11" parent="Walls/Wall18/EXT" unique_id=307071727 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 0)
+
+[node name="ProceduralWall13" parent="Walls/Wall18/EXT" unique_id=759980663 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 0)
+
+[node name="ProceduralWall14" parent="Walls/Wall18/EXT" unique_id=1494930533 instance=ExtResource("5_m55nd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 0)
+
+[node name="INT" type="Node3D" parent="Walls/Wall18" unique_id=84286172]
+
+[node name="ProceduralWall9" parent="Walls/Wall18/INT" unique_id=647375924 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, -18)
+
+[node name="ProceduralWall10" parent="Walls/Wall18/INT" unique_id=821095361 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, -18)
+
+[node name="ProceduralWall5" parent="Walls/Wall18/INT" unique_id=2092095649 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 18)
+
+[node name="ProceduralWall6" parent="Walls/Wall18/INT" unique_id=1093633840 instance=ExtResource("5_8bvfq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16, 0, 18)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1151652054]
 environment = SubResource("Environment_rsdap")

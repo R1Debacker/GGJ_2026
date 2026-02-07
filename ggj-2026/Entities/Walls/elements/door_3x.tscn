@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1j47mxvuk0vw"]
+
+[ext_resource type="Material" uid="uid://c8irhd166olea" path="res://Common/Materials/wall_material.tres" id="1_i8rvv"]
+[ext_resource type="BoxMesh" uid="uid://ccb7bm3m0ge46" path="res://Entities/Walls/wall.tres" id="2_it8hk"]
+
+[node name="Door" type="Node3D" unique_id=619975086]
+
+[node name="Door" type="MeshInstance3D" parent="." unique_id=923764988]
+transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 1, 1.5, 4.5, 0)
+material_override = ExtResource("1_i8rvv")
+mesh = ExtResource("2_it8hk")
