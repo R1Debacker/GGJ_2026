@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://2480fobfbgyu" path="res://Assets/Character/SimplifiedCharacter.glb" id="1_k3upo"]
 [ext_resource type="Script" uid="uid://drcfg4d2dbven" path="res://Scripts/Player/Top view/top_view_3d_player.gd" id="2_cp6nn"]
 [ext_resource type="Texture2D" uid="uid://byomqvygvw72k" path="res://Assets/Character/Creative_Character_free_Textures_4.png" id="3_7fqn3"]
-[ext_resource type="AnimationLibrary" uid="uid://bqwnppw3lcraw" path="res://Assets/Character/Full_animation.res" id="4_61sof"]
+[ext_resource type="AnimationLibrary" path="res://Assets/Character/Full_animation.res" id="4_61sof"]
 [ext_resource type="Texture2D" uid="uid://c8ver634ctdo6" path="res://Assets/Character/textures/Textures_4.png" id="4_picmi"]
+[ext_resource type="AudioStream" uid="uid://dc237k7cou61b" path="res://Assets/Sounds/Miss_grab_V1.mp3" id="6_pw7v8"]
+[ext_resource type="AudioStream" uid="uid://s3ig7inq1ib2" path="res://Assets/Sounds/Grab noise.wav" id="7_gkaem"]
+[ext_resource type="AudioStream" uid="uid://ckxfwhxxy83r4" path="res://Assets/Sounds/Oh yeah v2.mp3" id="8_gkaem"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y645v"]
 resource_name = "Color"
@@ -2224,7 +2227,7 @@ transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_cp6nn")
 skins = [NodePath("Skeleton/Skeleton3D/1"), NodePath("Skeleton/Skeleton3D/2"), NodePath("Skeleton/Skeleton3D/3"), NodePath("Skeleton/Skeleton3D/4"), NodePath("Skeleton/Skeleton3D/5")]
 
-[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
+[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1550349074) index="0" unique_id=1486412654]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -2498,7 +2501,7 @@ mesh = SubResource("ArrayMesh_jkma7")
 skin = SubResource("Skin_bxivb")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1517240265]
+[node name="AnimationPlayer" parent="." index="1" unique_id=263376161]
 libraries/ = ExtResource("4_61sof")
 speed_scale = 1.5
 
@@ -2522,6 +2525,18 @@ one_shot = true
 [node name="Sprint cooldown" type="Timer" parent="." index="5" unique_id=1028422389]
 wait_time = 3.0
 one_shot = true
+
+[node name="FailSound" type="AudioStreamPlayer" parent="." index="6" unique_id=2136086990]
+stream = ExtResource("6_pw7v8")
+volume_db = 20.0
+
+[node name="GrabSound" type="AudioStreamPlayer" parent="." index="7" unique_id=233082504]
+stream = ExtResource("7_gkaem")
+volume_db = 15.0
+
+[node name="Victory" type="AudioStreamPlayer" parent="." index="8" unique_id=1108424061]
+stream = ExtResource("8_gkaem")
+volume_db = 15.0
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="Sprint duration" to="." method="_on_sprint_duration_timeout"]

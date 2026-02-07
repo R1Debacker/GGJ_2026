@@ -9,6 +9,7 @@ class_name player3D_top_view
 @onready var grab_sound: AudioStreamPlayer = $GrabSound
 @onready var fail_sound: AudioStreamPlayer = $FailSound
 @export var skins : Array[Node3D]
+@onready var victory: AudioStreamPlayer = $Victory
 
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
@@ -59,6 +60,8 @@ func _physics_process(delta: float):
 			Game.fps_player.target_robber = position
 			Game.fps_player.grabbed = true
 			grab_sound.play()
+			await grab_sound.finished
+			victory.play()
 			Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
 		else :
 			await get_tree().create_timer(1.0).timeout
