@@ -45,13 +45,12 @@ far = 2000.0
 
 [node name="FPS Player" parent="View/SubViewportFPS Player" parent_id_path=PackedInt32Array(1065518466, 2113015314) index="0" unique_id=121519208 instance=ExtResource("2_wia0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.705303, 0, 0)
-device_index = 1
 
 [node name="Map" parent="." unique_id=61862151 instance=ExtResource("3_57cjo")]
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_kqv30")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 15)
-device_index = 1
+device_index = 2
 
 [node name="top view 3D Player2" parent="." unique_id=532556812 instance=ExtResource("5_57cjo")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -6.7507057, 0, 15.758629)
@@ -59,13 +58,14 @@ device_index = 1
 
 [node name="top view 3D Player3" parent="." unique_id=2094275056 instance=ExtResource("6_kqv30")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 4.078577, 0, 15.16988)
+device_index = 2
 
 [node name="top view 3D Player4" parent="." unique_id=1803158357 instance=ExtResource("7_onlq6")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -12.010063, 0, 15.797454)
-device_index = 1
+device_index = 2
 
 [node name="top view 3D Player5" parent="." unique_id=2016708142 instance=ExtResource("8_o5ygc")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 3.0898247, 0, 11.829308)
-device_index = 1
+device_index = 2
 
 [editable path="View"]
