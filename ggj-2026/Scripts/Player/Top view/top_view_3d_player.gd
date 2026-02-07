@@ -44,6 +44,7 @@ func _physics_process(delta: float):
 		var vectorToRobber = Game.fps_player.position - position
 		var distanceToRobber = vectorToRobber.length()
 		var dot = last_direction.dot(vectorToRobber)
+		anim_state.travel("Grabbing")
 		if distanceToRobber <= 5 && dot > -0.2:
 			Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
 			var fps_index = Game.fps_player.device_index
