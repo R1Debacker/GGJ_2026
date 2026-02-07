@@ -33,25 +33,17 @@ func _physics_process(delta: float) -> void:
 	var x_direction = Input.get_axis("fps_move_back", "fps_move_forward") * forward
 	var z_direction = Input.get_axis("fps_move_left", "fps_move_right") * right
 	direction = x_direction + z_direction
-	#if Input.is_action_pressed("fps_move_forward"):
-		#direction += forward
-	#if Input.is_action_pressed("fps_move_back"):
-		#direction -= forward
-	#if Input.is_action_pressed("fps_move_left"):
-		#direction -= right
-	#if Input.is_action_pressed("fps_move_right"):
-		#direction += right
+	var magnitude = direction.length()
 
 	direction = direction.normalized()
 	if direction != Vector3.ZERO:
-		if animation_head_bob.speed_scale != 2.0:
-			animation_head_bob.speed_scale = 2.0
+		animation_head_bob.speed_scale = magnitude * 2
 	else:
 		if animation_head_bob.speed_scale != 0.0:
 			animation_head_bob.speed_scale = 0.0
 	# mouvement horizontal
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
+	velocity.x = direction.x * speed * magnitude
+	velocity.z = direction.z * speed * magnitude
 
 	## gravité et saut
 	if not is_on_floor():
