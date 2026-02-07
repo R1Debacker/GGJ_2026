@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cevefb80miram"]
+
+[ext_resource type="BoxMesh" uid="uid://ccb7bm3m0ge46" path="res://Entities/Walls/wall.tres" id="1_cnetf"]
+[ext_resource type="Material" uid="uid://c8irhd166olea" path="res://Common/Materials/wall_material.tres" id="1_sb0be"]
+[ext_resource type="PackedScene" uid="uid://bflqkr41sntk4" path="res://Entities/Walls/wall_window.tscn" id="3_gv1c1"]
+[ext_resource type="Texture2D" uid="uid://dqpjaix3t0isj" path="res://Assets/kenney_prototype_textures/purple/texture_04.png" id="4_ua1lm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asl38"]
+albedo_texture = ExtResource("4_ua1lm")
+uv1_scale = Vector3(32, 0.5, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ivrea"]
+material = SubResource("StandardMaterial3D_asl38")
+size = Vector2(32, 0.4)
+
+[node name="DoobleDoorWindow" type="Node3D" unique_id=1554579389]
+
+[node name="size_indicator" type="MeshInstance3D" parent="." unique_id=1127588071]
+mesh = SubResource("PlaneMesh_ivrea")
+
+[node name="WallWindow" parent="." unique_id=1882507094 instance=ExtResource("3_gv1c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="WallWindow3" parent="." unique_id=1499373860 instance=ExtResource("3_gv1c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="WallWindow4" parent="." unique_id=955433889 instance=ExtResource("3_gv1c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="WallWindow2" parent="." unique_id=1043831363 instance=ExtResource("3_gv1c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=521425303]
+
+[node name="Wall" type="MeshInstance3D" parent="Node3D" unique_id=1014448173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall2" type="MeshInstance3D" parent="Node3D" unique_id=1427412637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall8" type="MeshInstance3D" parent="Node3D" unique_id=974501472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall9" type="MeshInstance3D" parent="Node3D" unique_id=1470434801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall10" type="MeshInstance3D" parent="Node3D" unique_id=905593648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall11" type="MeshInstance3D" parent="Node3D" unique_id=144074295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall3" type="MeshInstance3D" parent="Node3D" unique_id=1209671636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall4" type="MeshInstance3D" parent="Node3D" unique_id=457355356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall5" type="MeshInstance3D" parent="Node3D" unique_id=123982826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall6" type="MeshInstance3D" parent="Node3D" unique_id=1141527458]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, -15.75, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="Wall7" type="MeshInstance3D" parent="Node3D" unique_id=1248515902]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 15.75, 2.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=250140254]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 4.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=1570318666]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 6, 4.5, 0)
+material_override = ExtResource("1_sb0be")
+mesh = ExtResource("1_cnetf")

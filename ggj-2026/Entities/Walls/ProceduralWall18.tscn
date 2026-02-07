@@ -7,11 +7,11 @@ load_path = "res://.godot/imported/texture_04.png-4cb0cf1d2e3b2ac080b22e84c00cb0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfj8p"]
 albedo_texture = SubResource("CompressedTexture2D_78n4m")
-uv1_scale = Vector3(18, 1, 1)
+uv1_scale = Vector3(18, 0.5, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_te6a5"]
 material = SubResource("StandardMaterial3D_jfj8p")
-size = Vector2(18, 0.8)
+size = Vector2(18, 0.4)
 
 [node name="ProceduralWall" type="Node3D" unique_id=752109562]
 script = ExtResource("1_jfj8p")
