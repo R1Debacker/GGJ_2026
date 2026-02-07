@@ -162,4 +162,4 @@ text = "
 Click on START to Start the Game"
 
 [node name="SpawnPosition" type="Node2D" parent="." unique_id=642151194]
-position = Vector2(942, 391)
+position = Vector2(300, 200)

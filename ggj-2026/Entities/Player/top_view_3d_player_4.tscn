@@ -540,7 +540,7 @@ height = 1.922
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_dxuk5")
 
-[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1550349074) index="0" unique_id=1486412654]
+[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -681,12 +681,12 @@ skeleton = NodePath("..")
 [node name="Hat_057" type="MeshInstance3D" parent="Skeleton/Skeleton3D" index="3" unique_id=1553378683]
 mesh = SubResource("ArrayMesh_p33jd")
 skin = SubResource("Skin_xha5r")
-skeleton = NodePath("../../..")
+skeleton = NodePath("..")
 
 [node name="Male_emotion_happy_002" type="MeshInstance3D" parent="Skeleton/Skeleton3D" index="4" unique_id=1380640595]
 mesh = SubResource("ArrayMesh_fyj41")
 skin = SubResource("Skin_xha5r")
-skeleton = NodePath("../../..")
+skeleton = NodePath("..")
 
 [node name="Shoe_Sneakers_009" type="MeshInstance3D" parent="Skeleton/Skeleton3D" index="5" unique_id=620934398]
 mesh = SubResource("ArrayMesh_nd16m")
@@ -698,7 +698,7 @@ mesh = SubResource("ArrayMesh_0wcok")
 skin = SubResource("Skin_xrb60")
 skeleton = NodePath("..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=263376161]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1517240265]
 speed_scale = 1.5
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=447910337]
