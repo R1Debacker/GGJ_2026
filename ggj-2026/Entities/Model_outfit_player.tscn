@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://d27hfe66nk5l5"]
+
+[ext_resource type="PackedScene" uid="uid://beh8825kmsuu0" path="res://Assets/Character/Creative_Character_free.glb" id="1_gjho4"]
+
+[node name="Creative_Character_free" unique_id=1649699095 instance=ExtResource("1_gjho4")]
+
+[node name="Clown_nose_001" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="1" unique_id=1627208374]
+visible = false
+
+[node name="Costume_10_001" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="2" unique_id=2054277982]
+visible = false
+
+[node name="Costume_6_001" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="3" unique_id=138676348]
+visible = false
+
+[node name="Glasses_004" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="4" unique_id=1841615415]
+visible = false
+
+[node name="Glasses_006" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="5" unique_id=584719403]
+visible = false
+
+[node name="Gloves_006" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="6" unique_id=1091162278]
+visible = false
+
+[node name="Hairstyle_male_010" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="8" unique_id=699990203]
+visible = false
+
+[node name="Hairstyle_male_012" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="9" unique_id=2071040166]
+visible = false
+
+[node name="Hat_010" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="10" unique_id=393157056]
+visible = false
+
+[node name="Hat_049" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="11" unique_id=355454237]
+visible = false
+
+[node name="Hat_057" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="12" unique_id=1592861619]
+visible = false
+
+[node name="Headphones_002" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="13" unique_id=1511102008]
+visible = false
+
+[node name="Male_emotion_angry_003" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="14" unique_id=1190561083]
+visible = false
+
+[node name="Male_emotion_happy_002" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="15" unique_id=1686639376]
+visible = false
+
+[node name="Male_emotion_usual_001" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="16" unique_id=1291973596]
+visible = false
+
+[node name="Moustache_002" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="18" unique_id=1865437313]
+visible = false
+
+[node name="Outerwear_029" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="19" unique_id=459830985]
+visible = false
+
+[node name="Outerwear_036" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="20" unique_id=587262004]
+visible = false
+
+[node name="Pacifier_001" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="21" unique_id=1811970060]
+visible = false
+
+[node name="Pants_010" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="22" unique_id=11649068]
+visible = false
+
+[node name="Pants_014" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="23" unique_id=853839815]
+visible = false
+
+[node name="Shoe_Slippers_002" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="24" unique_id=941439477]
+visible = false
+
+[node name="Shoe_Slippers_005" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="25" unique_id=309779086]
+visible = false
+
+[node name="Socks_008" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="28" unique_id=1647973460]
+visible = false
+
+[node name="T_Shirt_009" parent="Skeleton/Skeleton3D" parent_id_path=PackedInt32Array(1718673446) index="29" unique_id=1934856760]
+visible = false
