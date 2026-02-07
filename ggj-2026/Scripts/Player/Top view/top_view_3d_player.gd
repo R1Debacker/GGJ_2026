@@ -40,12 +40,12 @@ func _physics_process(delta: float):
 func get_move_input(delta):
 	
 	speed = default_speed
+	animation_player.speed_scale = 1.5
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 		
 	if Input.is_action_just_pressed("top_view_sprint") and can_sprint and not sprinting:
 		sprinting = true
-		#if Input.is_action_just_pressed("top_view_sprint"):
 		sprint_duration.start()
 		print("sprint start")
 		
@@ -57,6 +57,7 @@ func get_move_input(delta):
 		
 	if sprinting:
 		speed = sprint_speed
+		animation_player.speed_scale = 3.0
 		
 	var dir_z = -Input.get_joy_axis(player_index, JOY_AXIS_LEFT_Y) * Vector3.FORWARD
 	var dir_x = Input.get_joy_axis(player_index, JOY_AXIS_LEFT_X) * Vector3.RIGHT
@@ -66,11 +67,7 @@ func get_move_input(delta):
 	if magnitude <= 0.3: direction = Vector3.ZERO
 	direction = direction.normalized()
 	
-	anim_tree.set("parameters/IDLE-WALK-RUN/blend_position", magnitude)
-	
-	#animation_player.speed_scale = 1.5
-	#animation_player.speed_scale = 2.0
-		
+	anim_tree.set("parameters/IDLE-WALK-RUN/blend_position", magnitude)	
 	
 	if direction != Vector3.ZERO:
 		last_direction = direction

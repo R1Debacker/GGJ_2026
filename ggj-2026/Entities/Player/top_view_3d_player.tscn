@@ -325,7 +325,7 @@ graph_offset = Vector2(10, -32)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bqdlq"]
 radius = 0.201
-height = 1.802
+height = 1.922
 
 [node name="top view 3D Player" unique_id=863512122 instance=ExtResource("1_k3upo")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
@@ -492,7 +492,7 @@ parameters/conditions/jumping = false
 parameters/IDLE-WALK-RUN/blend_position = 0.0036275387
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=575934891]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9202517, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8555777, 0)
 shape = SubResource("CapsuleShape3D_bqdlq")
 
 [node name="Sprint duration" type="Timer" parent="." index="4" unique_id=1446024278]
