@@ -331,7 +331,7 @@ height = 1.802
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_cp6nn")
 
-[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(562029223) index="0" unique_id=874623409]
+[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -479,7 +479,7 @@ mesh = SubResource("ArrayMesh_0wcok")
 skin = SubResource("Skin_xrb60")
 skeleton = NodePath("..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1545922745]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1517240265]
 speed_scale = 1.5
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=447910337]
@@ -494,3 +494,9 @@ parameters/IDLE-WALK-RUN/blend_position = 0.0036275387
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=575934891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9202517, 0)
 shape = SubResource("CapsuleShape3D_bqdlq")
+
+[node name="Sprint duration" type="Timer" parent="." index="4" unique_id=1446024278]
+wait_time = 2.0
+
+[node name="Sprint cooldown" type="Timer" parent="." index="5" unique_id=1028422389]
+wait_time = 5.0

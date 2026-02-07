@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3h8tdb61syer"]
 
-[ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/procedural_room.gd" id="1_df51k"]
+[ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_df51k"]
 [ext_resource type="Texture2D" uid="uid://emhv3mfke8ki" path="res://Assets/kenney_prototype_textures/orange/texture_10.png" id="1_xpr41"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpr41"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bg8bdmlr2wdwa"]
+
+[ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_7ydjf"]
+[ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_aqyef"]
+[ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_oh4ot"]
+[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/Player/top_view_3d_player.tscn" id="4_aqyef"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_aqyef"]
+viewport_path = NodePath("SubViewport Top Camera")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oh4ot"]
+viewport_path = NodePath("SubViewportFPS Player")
+
+[node name="Map_Erwann" type="Node3D" unique_id=947808649]
+
+[node name="View" parent="." unique_id=1065518466 instance=ExtResource("1_7ydjf")]
+
+[node name="TextureRect" parent="View/CameraSetup/ControlTopCamera" parent_id_path=PackedInt32Array(1065518466, 1973758461) index="0" unique_id=823917385]
+texture = SubResource("ViewportTexture_aqyef")
+
+[node name="TextureRect" parent="View/CameraSetup/ControlRobberCamera/PanelContainer" parent_id_path=PackedInt32Array(1065518466, 1364882602) index="0" unique_id=1085849617]
+texture = SubResource("ViewportTexture_oh4ot")
+
+[node name="FPS Player" parent="View/SubViewportFPS Player" parent_id_path=PackedInt32Array(1065518466, 2113015314) index="0" unique_id=121519208 instance=ExtResource("2_aqyef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.705303, 0, 0)
+
+[node name="Map" parent="." unique_id=61862151 instance=ExtResource("3_oh4ot")]
+
+[node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_aqyef")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 15)
+player_index = 1
+
+[editable path="View"]
