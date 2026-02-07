@@ -1,6 +1,5 @@
 class_name FpsPlayer
 extends CharacterBody3D
-class_name player3D_fps
 
 @onready var animation_head_bob: AnimationPlayer = %AnimationHeadBob
 
