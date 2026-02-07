@@ -7,7 +7,7 @@ script = ExtResource("1_v4uk6")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=393819509]
 offset_right = 1920.0
-offset_bottom = 1076.0
+offset_bottom = 1080.0
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=533356994]
 layout_mode = 2
@@ -24,6 +24,3 @@ theme_override_font_sizes/font_size = 35
 text = "
 
 Click on START to Start the Game"
-
-[node name="SpawnPosition" type="Node2D" parent="." unique_id=642151194]
-position = Vector2(300, 200)
