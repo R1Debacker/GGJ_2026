@@ -16,6 +16,13 @@ size = Vector2(96, 54)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8bvfq"]
 size = Vector3(96, 0.001, 54)
 
+[sub_resource type="Environment" id="Environment_rsdap"]
+background_energy_multiplier = 2.88
+ambient_light_source = 2
+ambient_light_color = Color(0.83, 0.78227496, 0.63909996, 1)
+ambient_light_energy = 0.3
+glow_enabled = true
+
 [node name="Map" type="Node3D" unique_id=61862151]
 
 [node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
@@ -135,3 +142,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -48,
 
 [node name="ProceduralWall12" parent="Walls/Wall18" unique_id=618726281 instance=ExtResource("5_8bvfq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, -18)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1151652054]
+environment = SubResource("Environment_rsdap")
