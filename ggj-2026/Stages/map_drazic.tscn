@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d38d2murcdjhn"]
+
+[ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_yyg53"]
+[ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_wia0k"]
+[ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_57cjo"]
+[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/Player/top_view_3d_player.tscn" id="4_kqv30"]
+[ext_resource type="PackedScene" uid="uid://bs36vk33v8mks" path="res://Entities/Walls/Set32/solid_wall.tscn" id="5_onlq6"]
+[ext_resource type="PackedScene" uid="uid://cvvcjt0kbcam6" path="res://Entities/Walls/Set18/solid_wall.tscn" id="6_o5ygc"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yyg53"]
+viewport_path = NodePath("SubViewport Top Camera")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wia0k"]
+viewport_path = NodePath("SubViewportFPS Player")
+
+[node name="Map_Erwann" type="Node3D" unique_id=947808649]
+
+[node name="View" parent="." unique_id=1065518466 instance=ExtResource("1_yyg53")]
+
+[node name="TextureRect" parent="View/CameraSetup/ControlTopCamera" parent_id_path=PackedInt32Array(1065518466, 1973758461) index="0" unique_id=823917385]
+texture = SubResource("ViewportTexture_yyg53")
+
+[node name="TextureRect" parent="View/CameraSetup/ControlRobberCamera/PanelContainer" parent_id_path=PackedInt32Array(1065518466, 1364882602) index="0" unique_id=1085849617]
+texture = SubResource("ViewportTexture_wia0k")
+
+[node name="Camera3D" parent="View/SubViewport Top Camera" parent_id_path=PackedInt32Array(1065518466, 1032100479) index="0" unique_id=150376836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 50, 0)
+visible = true
+projection = 0
+fov = 60.0
+size = 0.3
+far = 2000.0
+
+[node name="FPS Player" parent="View/SubViewportFPS Player" parent_id_path=PackedInt32Array(1065518466, 2113015314) index="0" unique_id=121519208 instance=ExtResource("2_wia0k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.705303, 0, 0)
+
+[node name="Map" parent="." unique_id=61862151 instance=ExtResource("3_57cjo")]
+
+[node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_kqv30")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 15)
+player_index = 1
+
+[node name="SolidWall" parent="." unique_id=1554579389 instance=ExtResource("5_onlq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.55915, 0.04999733, -8.715359)
+visible = false
+
+[node name="SolidWall2" parent="." unique_id=456783442 instance=ExtResource("5_onlq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.55915, 0.04999733, 8.948187)
+visible = false
+
+[node name="SolidWall3" parent="." unique_id=2094993871 instance=ExtResource("5_onlq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3823204, 0.04999733, -8.715359)
+visible = false
+
+[node name="SolidWall4" parent="." unique_id=602168296 instance=ExtResource("6_o5ygc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.831754, 0.049999237, 18.034931)
+visible = false
+
+[editable path="View"]
