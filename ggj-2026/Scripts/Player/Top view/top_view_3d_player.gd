@@ -50,13 +50,13 @@ func get_move_input(delta):
 	anim_tree.set("parameters/IDLE-WALK-RUN/blend_position", magnitude)
 	
 	if sprinting:
-		#animation_player.speed_scale = 2.0
+		animation_player.speed_scale = 2.0
 		if Input.is_action_just_pressed("top_view_sprint"):
 			sprint_duration.start()
 		speed = global_speed * sprint_factor
 	else:
 		speed = global_speed
-		#animation_player.speed_scale = 1.5
+		animation_player.speed_scale = 1.5
 	
 	if direction != Vector3.ZERO:
 		last_direction = direction
