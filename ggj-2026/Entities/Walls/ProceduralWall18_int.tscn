@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c6s5gggqiqc70"]
 
-[ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_jfj8p"]
+[ext_resource type="Script" uid="uid://dbosg0a5rfe47" path="res://Scripts/random_selector.gd" id="1_xqmx4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78n4m"]
 load_path = "res://.godot/imported/texture_04.png-4cb0cf1d2e3b2ac080b22e84c00cb0dd.s3tc.ctex"
@@ -14,8 +14,8 @@ material = SubResource("StandardMaterial3D_jfj8p")
 size = Vector2(18, 0.4)
 
 [node name="ProceduralWall" type="Node3D" unique_id=752109562]
-script = ExtResource("1_jfj8p")
-dir_path = "Entities/Walls/Set18"
+script = ExtResource("1_xqmx4")
+dir_paths = ["Entities/Walls/Set18Int"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=885048236]
 mesh = SubResource("PlaneMesh_te6a5")
