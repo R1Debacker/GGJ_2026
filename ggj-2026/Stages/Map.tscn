@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0a4eb2mmvuxw" path="res://Assets/Map/walls/Fbx/wallwindow_001.fbx" id="3_wlj70"]
 [ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/top_view_3d_player.tscn" id="5_5bpvm"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
-[ext_resource type="PackedScene" uid="uid://csbssr4qyr3bq" path="res://Entities/Rooms/Class.tscn" id="6_xprr7"]
+[ext_resource type="PackedScene" uid="uid://csbssr4qyr3bq" path="res://Entities/Rooms/Set1/Class.tscn" id="6_xprr7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_duc0h"]
 viewport_path = NodePath("SubViewport Top Camera")

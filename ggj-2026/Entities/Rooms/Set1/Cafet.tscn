@@ -275,13 +275,13 @@ transform = Transform3D(0.1201542, 0, -0.99275523, 0, 1, 0, 0.99275523, 0, 0.120
 transform = Transform3D(-0.99999976, 0, -0.0005585253, 0, 1, 0, 0.0005585253, 0, -0.99999976, -0.6515533, 1.5558565, 0.09016478)
 
 [node name="CAFETERIAvendingmachine" parent="." unique_id=1781449500 instance=ExtResource("9_ak1cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.655835, 3.0511465, 7.095155)
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 13.26772, 2.1389313, 7.095155)
 
 [node name="CAFETERIAvendingmachine2" parent="." unique_id=1214252419 instance=ExtResource("9_ak1cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.937895, 3.0511465, 7.095155)
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 11.62051, 2.1389313, 7.095155)
 
 [node name="CAFETERIAvendingmachine3" parent="." unique_id=655418674 instance=ExtResource("9_ak1cr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1613426, 3.0511465, 7.095155)
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 9.980761, 2.1389313, 7.095155)
 
 [node name="CAFETERIAshowcasewood" parent="." unique_id=599300640 instance=ExtResource("10_melvn")]
 transform = Transform3D(-0.6959755, 0, 0.7180655, 0, 1, 0, -0.7180655, 0, -0.6959755, 11.8968525, 1.5315971, -4.8312244)

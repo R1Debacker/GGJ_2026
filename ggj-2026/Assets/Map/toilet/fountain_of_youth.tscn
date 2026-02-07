@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://g7stklyps0es"]
+
+[ext_resource type="PackedScene" uid="uid://dlvxgd75hcond" path="res://Assets/Map/toilet/FBX/fountainOfYouth.fbx" id="1_qh613"]
+
+[node name="fountainOfYouth" unique_id=232187314 instance=ExtResource("1_qh613")]

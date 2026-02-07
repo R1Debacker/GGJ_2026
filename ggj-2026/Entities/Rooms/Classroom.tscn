@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://b5emmqjvowbff"]
-
-[ext_resource type="PackedScene" uid="uid://xili4dbq80fd" path="res://Assets/Map/classroom/FBX/classroom_demoscene.fbx" id="1_ghr6q"]
-
-[node name="classroom_demoscene" unique_id=1158050187 instance=ExtResource("1_ghr6q")]
