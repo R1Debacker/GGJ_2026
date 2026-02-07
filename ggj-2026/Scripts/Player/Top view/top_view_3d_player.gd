@@ -48,6 +48,7 @@ func _physics_process(delta: float):
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
+			position = Game.get_random_coord()
 		
 	
 	for i in get_slide_collision_count():

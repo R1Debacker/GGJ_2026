@@ -13,6 +13,12 @@ ambient_light_color = Color(0.83, 0.78227496, 0.63909996, 1)
 ambient_light_energy = 0.3
 glow_enabled = true
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_8bvfq"]
+size = Vector2(96, 54)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtw8g"]
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="Map" type="Node3D" unique_id=61862151]
 
 [node name="Rooms" type="Node3D" parent="." unique_id=840179435]
@@ -133,3 +139,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16,
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1151652054]
 environment = SubResource("Environment_rsdap")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=682454088]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 0)
+mesh = SubResource("PlaneMesh_8bvfq")
+surface_material_override/0 = SubResource("StandardMaterial3D_jtw8g")
