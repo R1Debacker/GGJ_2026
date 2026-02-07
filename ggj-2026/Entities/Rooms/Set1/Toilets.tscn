@@ -150,9 +150,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_63j3f")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_cndu0"]
-size = Vector3(0.754969, 1.4665895, 1.0904231)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_6y0f1"]
 size = Vector3(0.754969, 1.4665895, 1.0904231)
 
@@ -1631,6 +1628,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3yjfc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cndu0"]
+size = Vector3(18, 0.5, 32)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byykp"]
 resource_name = "carpetWhite"
 vertex_color_use_as_albedo = true
@@ -1746,12 +1746,6 @@ mesh = SubResource("ArrayMesh_bvrl7")
 
 [node name="toiletdemoscene_9" type="MeshInstance3D" parent="MeshInstance3D/Toilet" unique_id=2133604245]
 mesh = SubResource("ArrayMesh_3l26a")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/Toilet" unique_id=1372994687]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5281618, 0.7332947, 4.1545763)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Toilet/StaticBody3D" unique_id=1737395081]
-shape = SubResource("BoxShape3D_cndu0")
 
 [node name="Toilet2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1769088363]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.50348955, 0.12670422, 8.756383)
@@ -2149,6 +2143,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0022248747, 0)
 mesh = SubResource("ArrayMesh_wkkhm")
 
 [node name="textureDeformerHandle1" type="Node3D" parent="MeshInstance3D/fountainOfYouth" unique_id=38754984]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=877408680]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=2051608532]
+shape = SubResource("BoxShape3D_cndu0")
 
 [node name="bathtub" type="MeshInstance3D" parent="." unique_id=1543767666]
 transform = Transform3D(0.45855787, 0, 0.19931051, 0, 0.5, 0, -0.19931051, 0, 0.45855787, -0.67228484, 0.25839925, -5.860537)
