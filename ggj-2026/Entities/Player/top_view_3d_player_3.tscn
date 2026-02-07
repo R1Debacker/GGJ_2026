@@ -531,6 +531,7 @@ height = 1.922
 
 [node name="top view 3D Player" unique_id=863512122 instance=ExtResource("1_6in87")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
+axis_lock_linear_y = true
 script = ExtResource("2_uoytg")
 
 [node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
