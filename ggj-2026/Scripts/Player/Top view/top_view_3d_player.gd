@@ -10,7 +10,7 @@ class_name player3D_top_view
 
 #var jumping = false
 #var grounded = true
-var last_direction := Vector3.ZERO
+var last_direction := Vector3.FORWARD
 var sprinting := false
 var can_sprint := true
 var speed = global_speed

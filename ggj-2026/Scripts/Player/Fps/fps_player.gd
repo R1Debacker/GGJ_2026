@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var sensitivity: float = 0.003
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
+@export var push_force = 1.0
 
 var head: Node3D
 var pitch: float = 0.0
@@ -54,3 +55,16 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		
+		# On vérifie si l'objet touché est un RigidBody
+		if collision.get_collider() is RigidBody3D:
+			var body = collision.get_collider()
+			
+			var push_dir = -collision.get_normal()
+			push_dir.y = 0 
+			push_dir = push_dir.normalized()
+			
+			body.apply_central_impulse(push_dir * push_force)
