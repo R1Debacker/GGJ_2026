@@ -31,11 +31,13 @@ func get_random_coord() -> Vector3:
 	
 	var ran_coord = Vector3(0,0,0)
 	
-	ran_coord.x = randi() % 97
-	ran_coord.z = randi() % 55
-	while ran_coord.x in [32,64] and ran_coord.z in [18,36]:
-		ran_coord.x = randi() % 97
-		ran_coord.z = randi() % 55
+	ran_coord.x = randi_range(-47, 47)
+	ran_coord.z = randi_range(-26, 26)
+
+	while ran_coord.x in range(-15, 15) and ran_coord.z in range(-8, 8):
+		
+		ran_coord.x = randi_range(-47, 47)
+		ran_coord.z = randi_range(-26, 26)
 			
 	return ran_coord
 	
