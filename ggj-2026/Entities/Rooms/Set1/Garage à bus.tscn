@@ -504,197 +504,208 @@ size = Vector3(2.0752702, 2.178404, 2.0752702)
 
 [node name="Node3D" type="Node3D" unique_id=212877767]
 
-[node name="BUS" type="MeshInstance3D" parent="." unique_id=1186635878]
-transform = Transform3D(1.9909635, 0.18194357, -2.2367299, -0.120970346, 2.9944777, 0.13590303, 2.2408547, 0, 1.9946351, 7.0836353, 3.3576703, 0)
+[node name="Meshes" type="Node3D" parent="." unique_id=1047114554]
+
+[node name="BUS" type="MeshInstance3D" parent="Meshes" unique_id=1186635878]
+transform = Transform3D(2.5540776, 0.17416437, -1.564083, -0.12097033, 2.9944775, 0.135903, 1.5690937, -0.05263308, 2.5563989, 4.9933133, 3.3576703, 0.46887136)
 mesh = SubResource("ArrayMesh_7bi00")
 
-[node name="schoolbus_1" type="MeshInstance3D" parent="BUS" unique_id=968717674]
+[node name="schoolbus_1" type="MeshInstance3D" parent="Meshes/BUS" unique_id=968717674]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.600314, -0.06054774, -0.650834)
 mesh = SubResource("ArrayMesh_1rceg")
 
-[node name="schoolbus_2" type="MeshInstance3D" parent="BUS" unique_id=723298514]
+[node name="schoolbus_2" type="MeshInstance3D" parent="Meshes/BUS" unique_id=723298514]
 transform = Transform3D(2.8847853e-07, 1.6132888, 0, -1.6132888, 2.8847853e-07, 0, 0, 0, 1.6132889, -2.1559615, 0.65497804, -0.38422993)
 mesh = SubResource("ArrayMesh_afxp3")
 
-[node name="schoolbus_3" type="MeshInstance3D" parent="BUS" unique_id=788759909]
+[node name="schoolbus_3" type="MeshInstance3D" parent="Meshes/BUS" unique_id=788759909]
 transform = Transform3D(1.0494533, 0, 0, 0, -2.5020915e-07, -1.0494531, 0, 1.0494531, -2.5020915e-07, 1.582418, -0.632553, 0)
 mesh = SubResource("ArrayMesh_4srcb")
 
-[node name="schoolbus_4" type="MeshInstance3D" parent="BUS" unique_id=47268783]
+[node name="schoolbus_4" type="MeshInstance3D" parent="Meshes/BUS" unique_id=47268783]
 transform = Transform3D(1.0494533, 0, 0, 0, -2.5020915e-07, -1.0494531, 0, 1.0494531, -2.5020915e-07, -2.4976206, -0.632553, -0.6272099)
 mesh = SubResource("ArrayMesh_k678b")
 
-[node name="schoolbus_5" type="MeshInstance3D" parent="BUS" unique_id=1087232227]
+[node name="schoolbus_5" type="MeshInstance3D" parent="Meshes/BUS" unique_id=1087232227]
 transform = Transform3D(1.0494533, 0, 0, 0, -2.5020915e-07, -1.0494531, 0, 1.0494531, -2.5020915e-07, -2.4976206, -0.632553, 0.6272098)
 mesh = SubResource("ArrayMesh_5nxww")
 
-[node name="schoolbus_6" type="MeshInstance3D" parent="BUS" unique_id=1897852639]
+[node name="schoolbus_6" type="MeshInstance3D" parent="Meshes/BUS" unique_id=1897852639]
 transform = Transform3D(-1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 0, 0, 1, -2.048736, -0.06054774, -0.64564395)
 mesh = SubResource("ArrayMesh_odvvn")
 
-[node name="schoolbus_7" type="MeshInstance3D" parent="BUS" unique_id=2039522872]
+[node name="schoolbus_7" type="MeshInstance3D" parent="Meshes/BUS" unique_id=2039522872]
 transform = Transform3D(2.8847853e-07, -1.6132888, 2.4359983e-07, -1.6132888, -1.9231902e-07, 1.1463107e-14, 1.1463107e-14, -2.4359983e-07, -1.6132889, 2.8282144, 0.65497804, 0)
 mesh = SubResource("ArrayMesh_2c53d")
 
-[node name="schoolbus_8" type="MeshInstance3D" parent="BUS" unique_id=1055826855]
+[node name="schoolbus_8" type="MeshInstance3D" parent="Meshes/BUS" unique_id=1055826855]
 transform = Transform3D(2.6229475e-07, -1.4668585, 2.2148947e-07, -1.4668585, -1.7486317e-07, 2.0845315e-14, 1.0422657e-14, -2.214895e-07, -1.4668586, 2.8496397, -0.07430417, 0)
 mesh = SubResource("ArrayMesh_cvubm")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="BUS" unique_id=2027596895]
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/BUS" unique_id=2027596895]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BUS/StaticBody3D" unique_id=1225152357]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/BUS/StaticBody3D" unique_id=1225152357]
 shape = SubResource("BoxShape3D_pbgts")
 
-[node name="Sol" type="MeshInstance3D" parent="." unique_id=541633838]
+[node name="Sol" type="MeshInstance3D" parent="Meshes" unique_id=541633838]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("BoxMesh_k2ec2")
 
-[node name="Barrel" type="RigidBody3D" parent="." unique_id=1651082776]
+[node name="Barrel" type="RigidBody3D" parent="Meshes" unique_id=1651082776]
 transform = Transform3D(1.4931543, 0.066919886, 0.1265385, -0.06668086, 1.4985063, -0.005650921, -0.12666462, 0, 1.4946425, -9.705103, 0, 1.8193398)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel" unique_id=1074550865]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel" unique_id=1074550865]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel" unique_id=616203392]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel" unique_id=616203392]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel3" type="RigidBody3D" parent="." unique_id=1175947419]
+[node name="Barrel3" type="RigidBody3D" parent="Meshes" unique_id=1175947419]
 transform = Transform3D(-6.53329e-08, -1.5, -5.5366858e-09, 1.4946424, -6.556708e-08, 0.12666461, -0.12666462, 0, 1.4946425, -2.1849089, 0.75135875, 2.8403797)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel3" unique_id=1468694219]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel3" unique_id=1468694219]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel3" unique_id=1482846391]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel3" unique_id=1482846391]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel9" type="RigidBody3D" parent="." unique_id=1991469718]
+[node name="Barrel9" type="RigidBody3D" parent="Meshes" unique_id=1991469718]
 transform = Transform3D(1.4946425, 0, 0.12666461, 0, 1.5, 0, -0.12666461, 0, 1.4946425, -7.9818516, 0, 3.0154557)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel9" unique_id=1511985331]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel9" unique_id=1511985331]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel9" unique_id=1938521204]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel9" unique_id=1938521204]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel10" type="RigidBody3D" parent="." unique_id=1170563607]
+[node name="Barrel10" type="RigidBody3D" parent="Meshes" unique_id=1170563607]
 transform = Transform3D(-1.4763212, 0, -0.26547253, 0, 1.4999999, 0, 0.26547253, 0, -1.4763212, -8.915587, 0, 3.423965)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel10" unique_id=541293372]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel10" unique_id=541293372]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel10" unique_id=576367654]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel10" unique_id=576367654]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel11" type="RigidBody3D" parent="." unique_id=1335701751]
+[node name="Barrel11" type="RigidBody3D" parent="Meshes" unique_id=1335701751]
 transform = Transform3D(-1.4813931, 0, 0.23553073, 0, 1.4999999, 0, -0.23553073, 0, -1.4813931, -8.604032, 1.5604796, 2.9865832)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel11" unique_id=1892012647]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel11" unique_id=1892012647]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel11" unique_id=1892133313]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel11" unique_id=1892133313]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel12" type="RigidBody3D" parent="." unique_id=1098195784]
+[node name="Barrel12" type="RigidBody3D" parent="Meshes" unique_id=1098195784]
 transform = Transform3D(-1.4813931, 0, 0.23553073, 0, 1.4999999, 0, -0.23553073, 0, -1.4813931, -8.735356, 3.1306467, 2.3235097)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel12" unique_id=2077726244]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel12" unique_id=2077726244]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel12" unique_id=171558527]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel12" unique_id=171558527]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel4" type="RigidBody3D" parent="." unique_id=1865337266]
+[node name="Barrel4" type="RigidBody3D" parent="Meshes" unique_id=1865337266]
 transform = Transform3D(0.5952893, 0, -1.3768191, 0, 1.4999999, 0, 1.3768191, 0, 0.5952893, -7.8078394, 0, 1.9945376)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel4" unique_id=1341741616]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel4" unique_id=1341741616]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel4" unique_id=387239744]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel4" unique_id=387239744]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel7" type="RigidBody3D" parent="." unique_id=1818848841]
+[node name="Barrel7" type="RigidBody3D" parent="Meshes" unique_id=1818848841]
 transform = Transform3D(0.3050525, 0, -1.4686536, 0, 1.4999999, 0, 1.4686536, 0, 0.3050525, -8.278068, 1.5734799, 1.9945376)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel7" unique_id=1792873170]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel7" unique_id=1792873170]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel7" unique_id=71413541]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel7" unique_id=71413541]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel8" type="RigidBody3D" parent="." unique_id=579674473]
+[node name="Barrel8" type="RigidBody3D" parent="Meshes" unique_id=579674473]
 transform = Transform3D(-0.86015034, 0, 1.2288781, 0, 1.4999999, 0, -1.2288781, 0, -0.86015034, -9.26607, 1.5734799, 1.9945376)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel8" unique_id=1045351167]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel8" unique_id=1045351167]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel8" unique_id=379592850]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel8" unique_id=379592850]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel5" type="RigidBody3D" parent="." unique_id=2929992]
+[node name="Barrel5" type="RigidBody3D" parent="Meshes" unique_id=2929992]
 transform = Transform3D(1.4946425, 0, 0.12666461, 0, 1.5, 0, -0.12666461, 0, 1.4946425, -8.81706, 0, 2.431963)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel5" unique_id=1395230012]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel5" unique_id=1395230012]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel5" unique_id=862489349]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel5" unique_id=862489349]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel6" type="RigidBody3D" parent="." unique_id=797014153]
+[node name="Barrel6" type="RigidBody3D" parent="Meshes" unique_id=797014153]
 transform = Transform3D(-0.27147394, 0, 1.4752295, 0, 1.4999999, 0, -1.4752295, 0, -0.27147394, -9.71464, 0, 2.8403797)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel6" unique_id=1436415420]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel6" unique_id=1436415420]
 transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.5879354e-09, 0, 0.31823292, 0.009423971, 0.68438977, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel6" unique_id=1769844478]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel6" unique_id=1769844478]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="Barrel2" type="RigidBody3D" parent="." unique_id=1462206717]
+[node name="Barrel2" type="RigidBody3D" parent="Meshes" unique_id=1462206717]
 transform = Transform3D(1.4946425, 0, 0.12666461, 0, 1.5, 0, -0.12666461, 0, 1.4946425, -8.726358, -0.24504787, 1.3816087)
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Barrel2" unique_id=120581256]
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes/Barrel2" unique_id=120581256]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel2" unique_id=170643581]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel2" unique_id=170643581]
 transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
-[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="." unique_id=1992155657]
-transform = Transform3D(-1.385857e-08, -0.3464851, 0.2222468, 0.31823298, -2.116072e-08, 5.587937e-09, 5.7152674e-09, 0.33808526, 0.22776861, 0.53478, 0.68438977, -4.412308)
+[node name="CHEMISTRYbarrel2" type="MeshInstance3D" parent="Meshes" unique_id=1992155657]
+transform = Transform3D(-1.1612705e-08, -0.23386861, 0.2786338, 0.31823295, -2.116072e-08, 5.587936e-09, 9.479945e-09, 0.4238621, 0.15373799, -2.5519414, 0.68438977, -1.8603146)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CHEMISTRYbarrel2" unique_id=1138662901]
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/CHEMISTRYbarrel2" unique_id=1138662901]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CHEMISTRYbarrel2/StaticBody3D" unique_id=1537226487]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/CHEMISTRYbarrel2/StaticBody3D" unique_id=1537226487]
 shape = SubResource("BoxShape3D_y1hmp")
 
-[node name="CHEMISTRYbarrel3" type="MeshInstance3D" parent="." unique_id=870305928]
-transform = Transform3D(-1.385857e-08, -0.3464851, 0.2222468, 0.31823298, -2.116072e-08, 5.587937e-09, 5.7152674e-09, 0.33808526, 0.22776861, 3.3866658, 0.68438977, -6.913963)
+[node name="CHEMISTRYbarrel3" type="MeshInstance3D" parent="Meshes" unique_id=870305928]
+transform = Transform3D(-1.1612705e-08, -0.23386861, 0.2786338, 0.31823295, -2.116072e-08, 5.587936e-09, 9.479945e-09, 0.4238621, 0.15373799, -0.5456761, 0.68438977, -5.0800085)
 mesh = SubResource("ArrayMesh_cktub")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CHEMISTRYbarrel3" unique_id=48164896]
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/CHEMISTRYbarrel3" unique_id=48164896]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CHEMISTRYbarrel3/StaticBody3D" unique_id=596661631]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/CHEMISTRYbarrel3/StaticBody3D" unique_id=596661631]
 shape = SubResource("BoxShape3D_y1hmp")
+
+[node name="Lights" type="Node3D" parent="." unique_id=2110183267]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1660542513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0421772, 6.5094805, -0.560729)
+light_color = Color(0.72, 0.68976, 0.46080002, 1)
+light_energy = 5.0
+shadow_enabled = true
+omni_range = 663.465

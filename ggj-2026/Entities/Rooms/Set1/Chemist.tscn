@@ -1038,6 +1038,7 @@ transform = Transform3D(-0.53050077, 0, 2.6065629, 0, 2.66, 0, -2.6065629, 0, -0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.509252, 5.6813273, -9.479077)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1045,6 +1046,7 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.8532538, 5.6813273, -9.479077)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1052,6 +1054,7 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.853254, 5.6813273, -2.9372466)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1059,6 +1062,7 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.1398056, 5.6813273, -2.937246)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1066,6 +1070,7 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.139805, 5.6813273, 6.9261837)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1073,6 +1078,7 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.8679943, 5.6813273, 6.9261837)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
 
@@ -1080,5 +1086,6 @@ spot_angle = 60.0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.8679943, 5.6813273, 6.9261837)
 light_color = Color(0.31314883, 0.9394557, 0.6471791, 1)
 light_energy = 6.0
+shadow_enabled = true
 spot_range = 16.856
 spot_angle = 60.0
