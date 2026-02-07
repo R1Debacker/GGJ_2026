@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5tiv4k631g10" path="res://Entities/Rooms/Set1/Cafet.tscn" id="2_py0s3"]
 [ext_resource type="PackedScene" uid="uid://0a4eb2mmvuxw" path="res://Assets/Map/walls/Fbx/wallwindow_001.fbx" id="3_gt0m2"]
 [ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="4_7wl3r"]
-[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/Player/top_view_3d_player.tscn" id="5_py0s3"]
+[ext_resource type="PackedScene" uid="uid://bjnl52581i1yy" path="res://Entities/Player/top_view_3d_player.tscn" id="5_py0s3"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_duc0h"]
 viewport_path = NodePath("SubViewport Top Camera")
@@ -95,6 +95,7 @@ size = Vector2i(1920, 1080)
 
 [node name="FPS Player" parent="SubViewportFPS Player" unique_id=121519208 instance=ExtResource("1_d5uff")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.410238, 2.0993738, 0)
+player_index = 1
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=168777168]
 
@@ -188,4 +189,3 @@ shadow_enabled = true
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("5_py0s3")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 28.821, 0, -8.377)
-player_index = 1
