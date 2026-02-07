@@ -44,6 +44,9 @@ func _physics_process(delta: float):
 		var vectorToRobber = Game.fps_player.position - position
 		var distanceToRobber = vectorToRobber.length()
 		var dot = last_direction.dot(vectorToRobber)
+		
+		anim_state.travel("Grabbing")
+		
 		if distanceToRobber <= 3 && dot > 0: 
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
