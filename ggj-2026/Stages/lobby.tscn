@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dv4q1wf3e2ot5"]
+
+[ext_resource type="Script" path="res://Scripts/Lobby/lobby.gd" id="1_v4uk6"]
+
+[node name="Lobby" type="Node2D" unique_id=394056528]
+script = ExtResource("1_v4uk6")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=393819509]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=533356994]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 75
+text = "Click on A to join the Game"
+
+[node name="Label2" type="Label" parent="PanelContainer" unique_id=1168043948]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "
+
+Click on START to Start the Game"

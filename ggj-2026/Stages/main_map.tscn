@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ehclpewwo2hn"]
+
+[ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_ehnf5"]
+[ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_s8388"]
+[ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_1yspq"]
+[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/Player/top_view_3d_player.tscn" id="4_wj35c"]
+[ext_resource type="PackedScene" uid="uid://c8go3hllg2q6a" path="res://Entities/Player/top_view_3d_player_1.tscn" id="5_q8we8"]
+[ext_resource type="PackedScene" uid="uid://dvk5ain0tcuvn" path="res://Entities/Player/top_view_3d_player_2.tscn" id="6_smwyg"]
+[ext_resource type="PackedScene" uid="uid://t2ys6y5e7a7v" path="res://Entities/Player/top_view_3d_player_3.tscn" id="7_4clhs"]
+[ext_resource type="PackedScene" uid="uid://c1xhfbj83skre" path="res://Entities/Player/top_view_3d_player_4.tscn" id="8_1mamy"]
+[ext_resource type="AudioStream" uid="uid://c4544r6qm7fl" path="res://Assets/Sounds/Background music.mp3" id="9_cp0ci"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r04bp"]
+viewport_path = NodePath("SubViewport Top Camera")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_up624"]
+viewport_path = NodePath("SubViewportFPS Player")
+
+[node name="MainMap" type="Node3D" unique_id=947808649]
+
+[node name="View" parent="." unique_id=1065518466 instance=ExtResource("1_ehnf5")]
+
+[node name="TextureRect" parent="View/CameraSetup/ControlTopCamera" parent_id_path=PackedInt32Array(1065518466, 1973758461) index="0" unique_id=823917385]
+texture = SubResource("ViewportTexture_r04bp")
+
+[node name="ControlRobberCamera" parent="View/CameraSetup" parent_id_path=PackedInt32Array(1065518466, 1332214440) index="1" unique_id=2070296700]
+anchor_left = 0.35200003
+anchor_top = 0.349
+anchor_right = 0.651
+anchor_bottom = 0.651
+offset_left = -0.5040283
+offset_top = -0.15200806
+offset_right = 0.047973633
+offset_bottom = 0.15197754
+
+[node name="TextureRect" parent="View/CameraSetup/ControlRobberCamera/PanelContainer" parent_id_path=PackedInt32Array(1065518466, 1364882602) index="0" unique_id=1085849617]
+texture = SubResource("ViewportTexture_up624")
+
+[node name="Camera3D" parent="View/SubViewport Top Camera" parent_id_path=PackedInt32Array(1065518466, 1032100479) index="0" unique_id=150376836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 52, 0)
+visible = true
+projection = 0
+fov = 60.0
+size = 0.3
+far = 2000.0
+
+[node name="FPS Player" parent="View/SubViewportFPS Player" parent_id_path=PackedInt32Array(1065518466, 2113015314) index="0" unique_id=121519208 instance=ExtResource("2_s8388")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.167881, 0, -18.103546)
+device_index = 1
+
+[node name="Map" parent="." unique_id=61862151 instance=ExtResource("3_1yspq")]
+
+[node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_wj35c")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -29.094595, 0, 15)
+
+[node name="top view 3D Player2" parent="." unique_id=532556812 instance=ExtResource("5_q8we8")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 34.637955, 0, 15.758629)
+device_index = 2
+
+[node name="top view 3D Player3" parent="." unique_id=2094275056 instance=ExtResource("6_smwyg")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 38.96083, 0, -0.5772381)
+device_index = 2
+
+[node name="top view 3D Player4" parent="." unique_id=1803158357 instance=ExtResource("7_4clhs")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, -30.360703, 0, 0.5066061)
+device_index = 4
+
+[node name="top view 3D Player5" parent="." unique_id=2016708142 instance=ExtResource("8_1mamy")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 3.0898247, 0, 11.829308)
+visible = false
+device_index = -1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1187000995]
+stream = ExtResource("9_cp0ci")
+autoplay = true
+parameters/looping = false
+
+[editable path="View"]

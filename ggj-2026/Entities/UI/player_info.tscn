@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cwcp4b6ng3nmg"]
+
+[ext_resource type="Script" uid="uid://775fmeu7thu0" path="res://Scripts/UI/player_info.gd" id="1_chqqm"]
+
+[node name="PlayerInfo" type="Control" unique_id=430864840]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+script = ExtResource("1_chqqm")
+
+[node name="Control" type="Control" parent="." unique_id=1973843490]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1090688618]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -53.5
+offset_top = -50.0
+offset_right = 53.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=883323314]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=8467085]
+layout_mode = 2
+
+[node name="TxtDeviceIndex" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer" unique_id=1651781104]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "Player :"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="TxtDeviceIndex2" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer" unique_id=1403243836]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "<PLAYER_ID>"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+
+[node name="HSplitContainer2" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=555977948]
+layout_mode = 2
+
+[node name="TxtScore" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer2" unique_id=1731127351]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "Score :"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="TxtScore2" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer2" unique_id=1468638995]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "<SCORE>"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+
+[node name="HSplitContainer3" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=2034775624]
+layout_mode = 2
+
+[node name="TxtRobCount" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer3" unique_id=684680329]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "Rob Count :"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="TxtRobCount2" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HSplitContainer3" unique_id=954378021]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 10
+text = "<COUNT>"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
