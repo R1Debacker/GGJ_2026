@@ -98,7 +98,6 @@ func get_move_input(delta):
 		#velocity.x = move_toward(velocity.x, 0, speed)
 		#velocity.z = move_toward(velocity.z, 0, speed)
 
-
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false
 	sprinting = false

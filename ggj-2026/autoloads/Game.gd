@@ -25,3 +25,16 @@ var nb_players : int :
 	get:
 		return players.size()
 const MAX_PLAYER := 10
+
+func get_random_coord() -> Vector3:
+	
+	var ran_coord = Vector3(0,0,0)
+	
+	ran_coord.x = randi() % 97
+	ran_coord.z = randi() % 55
+	while ran_coord.x in [32,64] and ran_coord.z in [18,36]:
+		ran_coord.x = randi() % 97
+		ran_coord.z = randi() % 55
+			
+	return ran_coord
+	
