@@ -1319,6 +1319,10 @@ size = Vector3(11.9, 4.2, 5.6)
 
 [sub_resource type="BoxMesh" id="BoxMesh_cndu0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqeq5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0d0ws"]
+
 [node name="Node3D" type="Node3D" unique_id=1658696053]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=757966291]
@@ -1622,10 +1626,20 @@ spot_range = 24.599
 spot_attenuation = 0.5
 spot_angle = 63.75
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1844555062]
-transform = Transform3D(8.325, 0, 0, 0, 6.0398264, 0, 0, 0, 1, -1.9265256, 3.2422931, 1.6414256)
+[node name="Wallsupport" type="MeshInstance3D" parent="." unique_id=1844555062]
+transform = Transform3D(8.325, 0, 0, 0, 4.805614, 0, 0, 0, 1, -1.9265256, 2.6719205, 1.6414256)
 mesh = SubResource("BoxMesh_cndu0")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1189920927]
-transform = Transform3D(-1.9855139e-07, 0, -0.99999994, 0, 6.039826, 0, 4.542327, 0, -4.371139e-08, -6.599406, 3.2422931, 1.6414256)
+[node name="StaticBody3D" type="StaticBody3D" parent="Wallsupport" unique_id=1444341208]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wallsupport/StaticBody3D" unique_id=1013197614]
+shape = SubResource("BoxShape3D_bqeq5")
+
+[node name="Wallsupport2" type="MeshInstance3D" parent="." unique_id=1189920927]
+transform = Transform3D(-1.9855139e-07, 0, -0.99999994, 0, 4.805614, 0, 4.542327, 0, -4.371139e-08, -6.599406, 2.6719205, 1.6414256)
 mesh = SubResource("BoxMesh_cndu0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wallsupport2" unique_id=814683958]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wallsupport2/StaticBody3D" unique_id=1283481279]
+shape = SubResource("BoxShape3D_0d0ws")
