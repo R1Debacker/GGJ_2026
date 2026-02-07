@@ -447,7 +447,7 @@ blend_shape_mode = 0
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_xmu6k")
 
-[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1550349074) index="0" unique_id=1486412654]
+[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -578,9 +578,9 @@ bones/43/scale = Vector3(1.000001, 0.99999976, 1.0000001)
 [node name="Costume_10_001" type="MeshInstance3D" parent="Skeleton/Skeleton3D" index="1" unique_id=118751482]
 mesh = SubResource("ArrayMesh_ttxtk")
 skin = SubResource("Skin_xha5r")
-skeleton = NodePath("../../..")
+skeleton = NodePath("..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=263376161]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1517240265]
 speed_scale = 1.5
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=447910337]

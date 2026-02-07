@@ -1,7 +1,7 @@
 extends CharacterBody3D
 class_name player3D_top_view
 
-@export var player_index := 0
+@export var device_index := 0
 @export var default_speed := 7.0
 @export var speed_rotation = 10.0
 @export var sprint_factor = 2
@@ -73,8 +73,8 @@ func get_move_input(delta):
 		speed = sprint_speed
 		animation_player.speed_scale = 3.0
 		
-	var dir_z = -Input.get_joy_axis(player_index, JOY_AXIS_LEFT_Y) * Vector3.FORWARD
-	var dir_x = Input.get_joy_axis(player_index, JOY_AXIS_LEFT_X) * Vector3.RIGHT
+	var dir_z = -Input.get_joy_axis(device_index, JOY_AXIS_LEFT_Y) * Vector3.FORWARD
+	var dir_x = Input.get_joy_axis(device_index, JOY_AXIS_LEFT_X) * Vector3.RIGHT
 	
 	var direction = (dir_z + dir_x)
 	var magnitude = direction.length()
