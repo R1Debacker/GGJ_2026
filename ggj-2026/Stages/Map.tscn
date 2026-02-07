@@ -34,6 +34,7 @@ material_override = SubResource("StandardMaterial3D_unqbx")
 mesh = SubResource("PlaneMesh_duc0h")
 
 [node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("6_unqbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0993738, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=168777168]
 
@@ -120,3 +121,7 @@ transform = Transform3D(0.49399543, 0, 0, 0, 1, 0, 0, 0, 1, 14.794287, 3.0568752
 
 [node name="wall_003" parent="." unique_id=2051753093 instance=ExtResource("2_unqbx")]
 transform = Transform3D(-6.8092887e-09, 0, -1, 0, 1, 0, 0.15577836, 0, -4.371139e-08, 16.16369, 3.0568752, 8.216493)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1223354979]
+transform = Transform3D(1, 0, 0, 0, 0.75816846, 0.65205866, 0, -0.65205866, 0.75816846, 0.16363907, 11.1396885, 0)
+shadow_enabled = true
