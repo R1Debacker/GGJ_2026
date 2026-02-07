@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cob670vutfsvm"]
 
 [ext_resource type="Script" uid="uid://43f2tp83214k" path="res://Scripts/UI/create_player_info.gd" id="1_n6m36"]
-[ext_resource type="PackedScene" uid="uid://cwcp4b6ng3nmg" path="res://Entities/UI/player_info.tscn" id="1_tby4x"]
 
 [node name="ScoreUi" type="Control" unique_id=1105480432]
 layout_mode = 3
@@ -26,15 +25,3 @@ theme_override_constants/margin_bottom = 10
 [node name="HSplitContainer" type="HBoxContainer" parent="MarginContainer" unique_id=230270579]
 layout_mode = 2
 script = ExtResource("1_n6m36")
-
-[node name="PlayerInfo" parent="MarginContainer/HSplitContainer" unique_id=430864840 instance=ExtResource("1_tby4x")]
-layout_mode = 2
-
-[node name="PlayerInfo2" parent="MarginContainer/HSplitContainer" unique_id=869112858 instance=ExtResource("1_tby4x")]
-layout_mode = 2
-
-[node name="PlayerInfo3" parent="MarginContainer/HSplitContainer" unique_id=394594952 instance=ExtResource("1_tby4x")]
-layout_mode = 2
-
-[node name="PlayerInfo4" parent="MarginContainer/HSplitContainer" unique_id=276328347 instance=ExtResource("1_tby4x")]
-layout_mode = 2
