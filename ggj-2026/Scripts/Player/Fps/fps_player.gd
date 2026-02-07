@@ -11,12 +11,7 @@ var pitch: float = 0.0
 
 func _ready() -> void:
 	head = $Head
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	animation_head_bob.play("headbob")
-
-func _unhandled_input(event) -> void:
-	if event is InputEventKey and event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector3.ZERO
