@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://ct17yusl84mtl"]
 
 [ext_resource type="PackedScene" uid="uid://dqbshqkto4q78" path="res://Stages/Cafetaria.tscn" id="1_okasm"]
-[ext_resource type="PackedScene" uid="uid://brb58g2dngv7" path="res://Assets/Map/chemestry lab/FBX/CHEMISTRYlabdemoscene.fbx" id="2_5bpvm"]
-[ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="2_unqbx"]
-[ext_resource type="PackedScene" uid="uid://d01r87xg7ix6h" path="res://Assets/Map/computer/FBX/COMPUTERdemoscene.fbx" id="3_unqbx"]
-[ext_resource type="PackedScene" uid="uid://cu0lbomwkbxiq" path="res://Assets/Map/walls/Fbx/wallwindow_003.fbx" id="4_xprr7"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
-size = Vector2(160, 90)
+size = Vector2(16, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqbx"]
+albedo_color = Color(1, 0, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xprr7"]
 size = Vector3(1000, 0.1, 1000)
@@ -22,30 +21,24 @@ size = Vector3(1000, 0.1, 1000)
 [node name="Rooms" type="Node3D" parent="." unique_id=765140343]
 
 [node name="CAFET" parent="Rooms" unique_id=707961321 instance=ExtResource("1_okasm")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -13.406042, -9.536743e-07, -70.21332)
-
-[node name="CHEMISTRYlabdemoscene" parent="Rooms" unique_id=1175353361 instance=ExtResource("2_5bpvm")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -172.02528, 0, -70.917274)
-
-[node name="COMPUTERdemoscene" parent="Rooms" unique_id=798190842 instance=ExtResource("3_unqbx")]
-transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, -344.86093, 3.8146973e-06, -32.64467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.075165, 0, 12.796007)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2079468872]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -366.3991, 365.4412, -131.88945)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.445512, 0)
+projection = 1
 fov = 107.5
+size = 37.723
 
-[node name="wallwindow_003" parent="." unique_id=1891746427 instance=ExtResource("4_xprr7")]
-transform = Transform3D(-1.3113416e-06, 0, -30, 0, 30, 0, 30, 0, -1.3113416e-06, -248.63019, 28.238682, -2.8169098)
+[node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5bpvm")
 
-[node name="wall_001" parent="." unique_id=2055470771 instance=ExtResource("2_unqbx")]
-transform = Transform3D(-1.673521e-06, 0, -29.999998, 0, 29.999998, 0, 38.2857, 0, -1.3113415e-06, -248.67163, 28.105976, -69.82887)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=612208476]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -339.1975, 0, -217.63339)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2017343130]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.38606453, -0.1145339)
+material_override = SubResource("StandardMaterial3D_unqbx")
 mesh = SubResource("PlaneMesh_5bpvm")
 
 [node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("6_unqbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0652413, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=168777168]
 
