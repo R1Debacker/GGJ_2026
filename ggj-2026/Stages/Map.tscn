@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ct17yusl84mtl"]
 
+[ext_resource type="PackedScene" uid="uid://c5tiv4k631g10" path="res://Entities/Rooms/Cafet.tscn" id="2_duc0h"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
@@ -20,7 +21,7 @@ size = Vector3(1000, 0.1, 1000)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.445512, 0)
 projection = 1
 fov = 107.5
-size = 37.723
+size = 53.883
 
 [node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
 mesh = SubResource("PlaneMesh_5bpvm")
@@ -36,3 +37,27 @@ mesh = SubResource("PlaneMesh_duc0h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1477505128]
 shape = SubResource("BoxShape3D_xprr7")
+
+[node name="Node3D" parent="." unique_id=848399862 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
+
+[node name="Node3D2" parent="." unique_id=1506412383 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 18)
+
+[node name="Node3D3" parent="." unique_id=828341912 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+
+[node name="Node3D4" parent="." unique_id=1638592988 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 18)
+
+[node name="Node3D5" parent="." unique_id=1469000758 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0)
+
+[node name="Node3D6" parent="." unique_id=576138313 instance=ExtResource("2_duc0h")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -32, 0, -18)
+
+[node name="Node3D7" parent="." unique_id=2073491579 instance=ExtResource("2_duc0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+
+[node name="Node3D8" parent="." unique_id=713254999 instance=ExtResource("2_duc0h")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 32, 0, -18)
