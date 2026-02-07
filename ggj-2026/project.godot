@@ -107,3 +107,4 @@ top_view_sprint={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/quality/msaa_3d=2
