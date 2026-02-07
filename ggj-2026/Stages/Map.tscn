@@ -1,27 +1,20 @@
 [gd_scene format=3 uid="uid://ct17yusl84mtl"]
 
-[ext_resource type="PackedScene" uid="uid://dqbshqkto4q78" path="res://Stages/Cafetaria.tscn" id="1_okasm"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5bpvm"]
-size = Vector2(16, 9)
+size = Vector2(32, 18)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unqbx"]
 albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_duc0h"]
+size = Vector2(16, 9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xprr7"]
 size = Vector3(1000, 0.1, 1000)
 
 [node name="Map" type="Node3D" unique_id=61862151]
-
-[node name="Floors" type="Node3D" parent="." unique_id=1076775878]
-
-[node name="Walls" type="Node3D" parent="." unique_id=479656442]
-
-[node name="Rooms" type="Node3D" parent="." unique_id=765140343]
-
-[node name="CAFET" parent="Rooms" unique_id=707961321 instance=ExtResource("1_okasm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.075165, 0, 12.796007)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2079468872]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.445512, 0)
@@ -30,13 +23,12 @@ fov = 107.5
 size = 37.723
 
 [node name="Plan FPS" type="MeshInstance3D" parent="." unique_id=612208476]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("PlaneMesh_5bpvm")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2017343130]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.38606453, -0.1145339)
+[node name="Plan up" type="MeshInstance3D" parent="." unique_id=2017343130]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, -0.38606453, -0.1145339)
 material_override = SubResource("StandardMaterial3D_unqbx")
-mesh = SubResource("PlaneMesh_5bpvm")
+mesh = SubResource("PlaneMesh_duc0h")
 
 [node name="FPS Player" parent="." unique_id=121519208 instance=ExtResource("6_unqbx")]
 
