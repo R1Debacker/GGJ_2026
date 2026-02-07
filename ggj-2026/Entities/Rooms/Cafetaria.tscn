@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://dqbshqkto4q78"]
-
-[ext_resource type="PackedScene" uid="uid://xndycpg7f6wf" path="res://Assets/Map/catferia/FBX/CAFETERIAdemoscene.fbx" id="1_eqlt8"]
-
-[node name="CAFETERIAdemoscene" unique_id=707961321 instance=ExtResource("1_eqlt8")]
