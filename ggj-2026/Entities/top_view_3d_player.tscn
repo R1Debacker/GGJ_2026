@@ -494,3 +494,9 @@ parameters/IDLE-WALK-RUN/blend_position = 0.0036275387
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=575934891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9202517, 0)
 shape = SubResource("CapsuleShape3D_bqdlq")
+
+[node name="Sprint duration" type="Timer" parent="." index="4" unique_id=1446024278]
+wait_time = 2.0
+
+[node name="Sprint cooldown" type="Timer" parent="." index="5" unique_id=1028422389]
+wait_time = 5.0
