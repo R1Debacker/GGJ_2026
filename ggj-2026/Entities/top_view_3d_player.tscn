@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bjnl52581i1yy"]
+[gd_scene format=4 uid="uid://isq6hm8vmrja"]
 
 [ext_resource type="PackedScene" uid="uid://2480fobfbgyu" path="res://Assets/Character/SimplifiedCharacter.glb" id="1_k3upo"]
 [ext_resource type="Script" uid="uid://drcfg4d2dbven" path="res://Scripts/Player/Top view/top_view_3d_player.gd" id="2_cp6nn"]
@@ -330,6 +330,7 @@ height = 1.802
 [node name="top view 3D Player" unique_id=863512122 instance=ExtResource("1_k3upo")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_cp6nn")
+sprint_factor = 6
 
 [node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(562029223) index="0" unique_id=874623409]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -495,13 +496,8 @@ parameters/IDLE-WALK-RUN/blend_position = 0.0036275387
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9202517, 0)
 shape = SubResource("CapsuleShape3D_bqdlq")
 
-[node name="Sprint duration" type="Timer" parent="." index="4" unique_id=1446024278]
+[node name="Sprint duration" type="Timer" parent="." index="4" unique_id=1421093416]
 wait_time = 2.0
 one_shot = true
 
-[node name="Sprint cooldown" type="Timer" parent="." index="5" unique_id=1028422389]
-wait_time = 3.0
-one_shot = true
-
 [connection signal="timeout" from="Sprint duration" to="." method="_on_sprint_duration_timeout"]
-[connection signal="timeout" from="Sprint cooldown" to="." method="_on_sprint_cooldown_timeout"]
