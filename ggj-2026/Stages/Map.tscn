@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c5tiv4k631g10" path="res://Entities/Rooms/Cafet.tscn" id="2_duc0h"]
 [ext_resource type="PackedScene" uid="uid://dwr76db0g068u" path="res://Assets/Map/walls/Fbx/wall_001.fbx" id="2_unqbx"]
 [ext_resource type="PackedScene" uid="uid://0a4eb2mmvuxw" path="res://Assets/Map/walls/Fbx/wallwindow_001.fbx" id="3_wlj70"]
+[ext_resource type="PackedScene" uid="uid://djtraiouswj0s" path="res://Entities/top_view_3d_player.tscn" id="5_5bpvm"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="6_unqbx"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_duc0h"]
@@ -188,3 +189,6 @@ transform = Transform3D(-6.8092887e-09, 0, -1, 0, 1, 0, 0.15577836, 0, -4.371139
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1223354979]
 transform = Transform3D(1, 0, 0, 0, 0.75816846, 0.65205866, 0, -0.65205866, 0.75816846, 0.16363907, 11.1396885, 0)
 shadow_enabled = true
+
+[node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("5_5bpvm")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 25.23524, 0.049999237, 0.8047657)
