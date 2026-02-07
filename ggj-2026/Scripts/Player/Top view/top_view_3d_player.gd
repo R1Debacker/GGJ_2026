@@ -40,7 +40,7 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("top_view_grab"):
+	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X):
 		var vectorToRobber = Game.fps_player.position - position
 		var distanceToRobber = vectorToRobber.length()
 		var dot = last_direction.dot(vectorToRobber)
@@ -48,6 +48,7 @@ func _physics_process(delta: float):
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
+			position = Game.get_random_coord()
 		
 	
 	for i in get_slide_collision_count():
@@ -70,12 +71,12 @@ func get_move_input(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 		
-	if Input.is_action_just_pressed("top_view_sprint") and can_sprint and not sprinting:
+	if Input.get_joy_axis(device_index, JOY_AXIS_TRIGGER_RIGHT) > 0.9 and can_sprint and not sprinting:
 		sprinting = true
 		sprint_duration.start()
 		print("sprint start")
 		
-	if Input.is_action_just_released("top_view_sprint") and sprinting:
+	if Input.get_joy_axis(device_index, JOY_AXIS_TRIGGER_RIGHT) < 0.5 and sprinting:
 		sprint_duration.stop()
 		can_sprint = false
 		sprinting = false
