@@ -18,26 +18,25 @@ var fps_player : FpsPlayer = null
 const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
 
-var avail_skin := [1,2,3,4]
+var players_data : Array[Dictionary] = []
 
-var players : Array = []
-var players_idx : Array = []
 var nb_players : int :
 	get:
-		return players.size()
+		return players_data.size()
+
 const MAX_PLAYER := 10
 
 func get_random_coord() -> Vector3:
 	
 	var ran_coord = Vector3(0,0,0)
 	
-	ran_coord.x = randi_range(-47, 47)
-	ran_coord.z = randi_range(-26, 26)
+	ran_coord.x = randi_range(-46, 46)
+	ran_coord.z = randi_range(-25, 25)
 
-	while ran_coord.x in range(-17, 17) and ran_coord.z in range(-10, 10):
+	while ran_coord.x in range(-18, 18) and ran_coord.z in range(-11, 11):
 		
-		ran_coord.x = randi_range(-47, 47)
-		ran_coord.z = randi_range(-26, 26)
+		ran_coord.x = randi_range(-46, 46)
+		ran_coord.z = randi_range(-25, 25)
 			
 	return ran_coord
 	

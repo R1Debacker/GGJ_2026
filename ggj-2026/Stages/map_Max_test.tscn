@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5ot6ktklo17t"]
 
 [ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_73o6b"]
+[ext_resource type="Script" uid="uid://dulxyrrwkfnnl" path="res://Scripts/Init players.gd" id="1_i5ofi"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_i5ofi"]
 [ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_2w5vt"]
 
@@ -11,6 +12,7 @@ viewport_path = NodePath("SubViewport Top Camera")
 viewport_path = NodePath("SubViewportFPS Player")
 
 [node name="Map_Erwann" type="Node3D" unique_id=947808649]
+script = ExtResource("1_i5ofi")
 
 [node name="View" parent="." unique_id=1065518466 instance=ExtResource("1_73o6b")]
 
