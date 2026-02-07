@@ -1,5 +1,5 @@
 extends Node
-#
+
 #@onready var timer: Timer = $Timer
 #@onready var menu_button_sound: AudioStreamPlayer2D = $menu_button_sound
 #@onready var bubble_pop: AudioStreamPlayer2D = $BubblePop
@@ -15,7 +15,7 @@ extends Node
 
 
 var fps_player : FpsPlayer = null
-const PLAYER = preload("res://Entities/top_view_3d_player.tscn")
+const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
 
 var avail_skin := [1,2,3,4]
