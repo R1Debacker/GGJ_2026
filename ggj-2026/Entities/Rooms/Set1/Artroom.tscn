@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8nrw5wfcdlpv" path="res://Assets/Map/white-tiles-textures-background.jpg" id="1_6aohs"]
 [ext_resource type="Texture2D" uid="uid://6ehtftfycvl0" path="res://Assets/Map/Artroom/Artroom_ImphenziaPalette01-256-Gradient.png" id="2_6aohs"]
 [ext_resource type="Texture2D" uid="uid://7rivbm3wo6il" path="res://Assets/Map/Artroom/Artroom_color.jpg" id="3_oi44m"]
+[ext_resource type="Texture2D" uid="uid://ce60n7x15ijtr" path="res://Assets/Map/Artroom/Maxime.png" id="4_lp5aw"]
 [ext_resource type="ArrayMesh" uid="uid://c7a2rfgu5jcfj" path="res://Assets/Map/Artroom/12338_Statue_v1_L3.obj" id="4_oi44m"]
 [ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="5_oi44m"]
 
@@ -241,6 +242,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ks5w5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwyfl"]
+albedo_texture = ExtResource("4_lp5aw")
+uv1_scale = Vector3(2.605, 1.98, 2.605)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xfese"]
+material = SubResource("StandardMaterial3D_rwyfl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jf66i"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_iy0hh"]
 _surfaces = [{
@@ -628,6 +638,17 @@ shape = SubResource("BoxShape3D_bofmx")
 transform = Transform3D(1, 0, 2.9802322e-08, 0, 1.0000001, 0, -2.9802322e-08, 0, 1, 3.3401613, -1.122715, 3.2805824)
 mesh = SubResource("ArrayMesh_hjkwb")
 
+[node name="PaintMax" type="RigidBody3D" parent="Meshes" unique_id=475653033]
+transform = Transform3D(0.9777503, 0, -0.20977215, 0, 1, 0, 0.20977215, 0, 0.9777503, -0.34604543, 0.29621983, 4.3463426)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes/PaintMax" unique_id=96423950]
+transform = Transform3D(0.92606926, -0.48003182, 0.0030252172, -0.11206007, 0.90448916, 0.003578771, 0.8568795, 0.6370792, -0.002801471, -0.2889105, 0.58690906, 0.64552736)
+mesh = SubResource("BoxMesh_xfese")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/PaintMax" unique_id=995775669]
+transform = Transform3D(1.0185881, 0, 0.003245298, 0, 1.2059854, 0, 0.75291616, 0, -0.004390423, -0.71191263, 0.58690906, 0.1620841)
+shape = SubResource("BoxShape3D_jf66i")
+
 [node name="TableColl" type="RigidBody3D" parent="Meshes" unique_id=2121437153]
 transform = Transform3D(-1.2264863, 0, -0.8635572, 0, 1.5000002, 0, 0.8635572, 0, -1.2264863, -4.3778033, 2.4237878, -10.294497)
 
@@ -789,14 +810,14 @@ shadow_enabled = true
 spot_range = 13.978
 spot_angle = 62.85
 
-[node name="Statue2" type="MeshInstance3D" parent="." unique_id=582963139]
+[node name="Statue2" type="MeshInstance3D" parent="." unique_id=44272586]
 transform = Transform3D(0.028268844, -0.020636676, -9.020577e-10, -3.9776178e-17, -1.5298984e-09, 0.034999993, -0.020636676, -0.028268844, -1.2356703e-09, 3.8513012, 0.20262957, -8.751726)
 mesh = ExtResource("4_oi44m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Statue2" unique_id=1664384046]
+[node name="StaticBody3D" type="StaticBody3D" parent="Statue2" unique_id=858203228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.961403, -3.9646988, 93.565796)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Statue2/StaticBody3D" unique_id=1086500594]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Statue2/StaticBody3D" unique_id=1737720304]
 shape = SubResource("BoxShape3D_6aohs")
 
 [node name="PushButton" parent="Statue2" unique_id=2135814083 instance=ExtResource("5_oi44m")]
