@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6ehtftfycvl0" path="res://Assets/Map/Artroom/Artroom_ImphenziaPalette01-256-Gradient.png" id="2_6aohs"]
 [ext_resource type="Texture2D" uid="uid://7rivbm3wo6il" path="res://Assets/Map/Artroom/Artroom_color.jpg" id="3_oi44m"]
 [ext_resource type="ArrayMesh" uid="uid://c7a2rfgu5jcfj" path="res://Assets/Map/Artroom/12338_Statue_v1_L3.obj" id="4_oi44m"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="5_oi44m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lp5aw"]
 albedo_texture = ExtResource("1_6aohs")
@@ -781,3 +782,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.961403, -3.9646988, 93.565
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Statue2/StaticBody3D" unique_id=1086500594]
 shape = SubResource("BoxShape3D_6aohs")
+
+[node name="PushButton" parent="Statue2" unique_id=2135814083 instance=ExtResource("5_oi44m")]
+transform = Transform3D(-16.846268, -8.145232e-14, -23.076607, -23.076607, -1.248897e-06, 16.846268, -1.0087107e-06, 28.571436, 7.363739e-07, -211.4231, 13.948334, 2.725628)

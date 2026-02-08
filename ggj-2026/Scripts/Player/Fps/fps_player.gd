@@ -2,6 +2,7 @@ class_name FpsPlayer
 extends CharacterBody3D
 
 @onready var animation_head_bob: AnimationPlayer = %AnimationHeadBob
+@onready var button_timer: Timer = $ButtonTimer
 
 @export var device_index := 0 :
 	set(idx):

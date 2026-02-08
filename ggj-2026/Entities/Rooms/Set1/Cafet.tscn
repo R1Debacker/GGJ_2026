@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://brju8qhy52cdc" path="res://Assets/Map/catferia/FBX/CAFETERIAcarrot.fbx" id="16_ak1cr"]
 [ext_resource type="Texture2D" uid="uid://ccwibgpm21lx7" path="res://Assets/Map/catferia/FBX/interior_tiles_disp_4k.png" id="17_61af3"]
 [ext_resource type="PackedScene" uid="uid://vid413rwwakg" path="res://Assets/Map/catferia/FBX/CAFETERIAcoffemaker.fbx" id="17_o6yc6"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="19_ak1cr"]
 [ext_resource type="Texture2D" uid="uid://d2gj82fac1bol" path="res://Assets/Map/catferia/FBX/CAFETERIAchair_0.png" id="19_melvn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4j16"]
@@ -2038,6 +2039,9 @@ shape = SubResource("BoxShape3D_ls2cu")
 [node name="Mesh chaise bleue" type="MeshInstance3D" parent="Meshes/Chaise bleue12" unique_id=1180657464]
 transform = Transform3D(0.74656165, 0, 0, 0, 0.74656165, 0, 0, 0, 0.74656165, 0.38287544, -0.10643339, 0)
 mesh = SubResource("ArrayMesh_h5tpx")
+
+[node name="PushButton" parent="Meshes" unique_id=2135814083 instance=ExtResource("19_ak1cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4237056, 0.32859153, 3.7808557)
 
 [node name="Lights" type="Node3D" parent="." unique_id=41372080]
 

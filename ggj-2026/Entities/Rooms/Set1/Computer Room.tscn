@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://deeb4xihfql44" path="res://Assets/Map/computer/FBX/COMPUTERdemoscene_0.png" id="1_pqloo"]
 [ext_resource type="Texture2D" uid="uid://6nnsle8by0b7" path="res://Assets/Map/computer/wood_planks_grey_disp_4k.png" id="2_pqloo"]
 [ext_resource type="Texture2D" uid="uid://b6kvjs80st7a2" path="res://Assets/Map/classroom/FBX/locker_001_0.png" id="3_wspe0"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="4_hlo4q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_miegi"]
 resource_name = "normal "
@@ -1618,3 +1619,6 @@ light_energy = 5.571
 shadow_enabled = true
 spot_range = 15.13
 spot_angle = 65.78
+
+[node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("4_hlo4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0011573, 0.32169908, -7.2621374)

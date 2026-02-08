@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 Game="*uid://df2e5dfko7l67"
+ButtonManager="*uid://qh2lmb5eluum"
 
 [filesystem]
 

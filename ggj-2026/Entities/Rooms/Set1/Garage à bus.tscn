@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://behqbhyubxj8x" path="res://Assets/Map/classroom/FBX/schoolbus_0.png" id="1_k2ec2"]
 [ext_resource type="Texture2D" uid="uid://b3ieslwl3nfic" path="res://Assets/Map/chemestry lab/FBX/CHEMISTRYbarrel_0.png" id="1_xo1o2"]
 [ext_resource type="Texture2D" uid="uid://cqquo5ri54mjj" path="res://Assets/Map/concrete_floor_damaged_01_disp_4k.png" id="2_pbgts"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="4_y1hmp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkpnv"]
 resource_name = "fer"
@@ -717,3 +718,6 @@ light_color = Color(0.72, 0.68976, 0.46080002, 1)
 light_energy = 5.0
 shadow_enabled = true
 omni_range = 663.465
+
+[node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("4_y1hmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.258509, 0.30809802, -0.3330261)
