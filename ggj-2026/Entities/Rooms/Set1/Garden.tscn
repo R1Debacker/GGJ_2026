@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dw2cdk1e76ojf"]
+[gd_scene format=4 uid="uid://dau782cfdpttt"]
 
 [ext_resource type="Texture2D" uid="uid://b8ijeu1gmivog" path="res://Assets/Map/Garden/pavement_02_disp_4k.png" id="1_h42av"]
 [ext_resource type="Texture2D" uid="uid://cux3gkde7kyl5" path="res://Assets/Map/Garden/stylized_bush_0.png" id="1_om2i5"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://byao2ffaqd006" path="res://Assets/Map/Garden/playground_16.png" id="23_sdevo"]
 [ext_resource type="Texture2D" uid="uid://cb6xq1dbx66et" path="res://Assets/Map/Garden/playground_17.png" id="24_120or"]
 [ext_resource type="Texture2D" uid="uid://d5qoe8qn1pxk" path="res://Assets/Map/Garden/low_poly_grass_0.png" id="26_dx6dg"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="27_dx6dg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huj6v"]
 albedo_texture = ExtResource("1_h42av")
@@ -1292,3 +1293,6 @@ mesh = SubResource("ArrayMesh_o7oo2")
 [node name="Cone_011_Material_001_0" type="MeshInstance3D" parent="." unique_id=790721542]
 transform = Transform3D(0.030939111, -0.029921073, 1.0089541e-08, 1.4002411e-17, 2.900873e-09, 0.1716142, -0.03840336, -0.024105476, 8.128492e-09, -14.6032095, 0.21017647, -10.728614)
 mesh = SubResource("ArrayMesh_aj00w")
+
+[node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("27_dx6dg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2423928, 0.32762504, -3.4560494)
