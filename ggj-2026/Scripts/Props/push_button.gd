@@ -5,7 +5,7 @@ extends Node3D
 var is_active := false
 
 func _ready() -> void:
-	set_active_button(true)
+	set_active_button(false)
 	ButtonManager.buttons.append(self)
 	
 func set_active_button(active: bool):

@@ -19,6 +19,7 @@ var head: Node3D
 var pitch: float = 0
 var grabbed := false
 var target_robber := Vector3.ZERO
+var is_controlled := false
 
 
 func _ready() -> void:
@@ -26,6 +27,15 @@ func _ready() -> void:
 	head = $Head
 	animation_head_bob.play("headbob")
 	#global_position = Game.get_random_coord()
+
+func _process(delta: float) -> void:
+	if device_index != -1 && !is_controlled:
+		is_controlled = true
+		button_timer.start()
+		ButtonManager.set_active_buttons()
+	if device_index == -1 && is_controlled:
+		is_controlled = false
+		ButtonManager.clear_buttons()
 
 func _physics_process(delta: float) -> void:
 	var forward = -transform.basis.z
