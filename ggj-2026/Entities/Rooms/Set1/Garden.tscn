@@ -446,8 +446,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4s6ki")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_naene"]
-size = Vector3(0.5129949, 1.417176, 1.9412501)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pt1pv"]
+points = PackedVector3Array(-5.042553e-05, -0.80462456, 1.0222712, 0.22139704, -0.8021276, 1.0351925, -0.22144769, -0.8029599, 1.0342424, -0.22034296, -0.5811447, 0.59776515, -5.042553e-05, -0.58183825, 0.5857938, 0.25629637, -0.69475734, 1.1214619, -5.042553e-05, -0.7971336, 1.039563, 0.22029233, -0.57406986, 0.60745615, -0.256347, -0.69475734, 1.1212718, -0.256347, -0.47044513, 0.6906852, -0.22104597, 0.4065504, -0.8154178, -5.042553e-05, 0.3851874, -0.8161779, 0.22099534, 0.4065504, -0.8154178, 0.2073369, -0.6893472, 1.1250722, -0.20738754, -0.6894859, 1.1248822, 0.25629637, -0.46267673, 0.7011363, 0.25649723, 0.60686386, -0.6174164, 0.256447, 0.5186372, -0.42131516, -0.25649765, 0.5186372, -0.42131516, -0.25649765, 0.60686386, -0.6174164, -0.25639722, 0.60658646, -0.81484777, -0.22601724, 0.61255145, -0.8161779, -0.20050809, 0.42985559, -0.8161779, 0.20045745, 0.42985559, -0.8161779, 0.2259666, 0.61255145, -0.8161779, 0.25634655, 0.60658646, -0.81484777, -0.20738754, 0.52349246, -0.41827485, 0.2073369, 0.52349246, -0.41827485, 0.2259666, 0.61227405, -0.61722636, -0.22601724, 0.61227405, -0.61722636)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75634"]
 resource_name = "PlasticRoof"
@@ -1130,15 +1130,15 @@ shape = SubResource("BoxShape3D_om2i5")
 [node name="Toboggan" type="Node3D" parent="Playground" unique_id=2012481747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8068529, 1.2557132)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="Playground/Toboggan" unique_id=1350175799]
+[node name="RigidBody3D" type="RigidBody3D" parent="Playground/Toboggan" unique_id=1364672274]
 
 [node name="Object_10" type="MeshInstance3D" parent="Playground/Toboggan/RigidBody3D" unique_id=1420758092]
-transform = Transform3D(0.99999994, -1.1641532e-10, 1.4901161e-08, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.99999976, -3.4924597e-10, 2.9802322e-08, 0, 0.9999999, 0, 1.4901161e-08, -9.313226e-10, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1v4qw")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Playground/Toboggan/RigidBody3D" unique_id=1487057643]
-transform = Transform3D(0.99999994, -1.1641532e-10, 1.4901161e-08, 0, 0.99999994, 0, 0, 0, 1, -1.7881393e-07, -0.096036494, 0.15444714)
-shape = SubResource("BoxShape3D_naene")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Playground/Toboggan/RigidBody3D" unique_id=367695574]
+transform = Transform3D(0.99999976, -3.4924597e-10, 2.9802322e-08, 0, 0.9999999, 0, 1.4901161e-08, -9.313226e-10, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_pt1pv")
 
 [node name="Toit" type="Node3D" parent="Playground" unique_id=1193656964]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8802385, 0)
