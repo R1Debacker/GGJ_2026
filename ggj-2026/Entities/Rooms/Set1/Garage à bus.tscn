@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ieslwl3nfic" path="res://Assets/Map/chemestry lab/FBX/CHEMISTRYbarrel_0.png" id="1_xo1o2"]
 [ext_resource type="Texture2D" uid="uid://cqquo5ri54mjj" path="res://Assets/Map/concrete_floor_damaged_01_disp_4k.png" id="2_pbgts"]
 [ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="4_y1hmp"]
+[ext_resource type="Texture2D" uid="uid://dj3brhiam8r7a" path="res://Assets/Map/Hugo.png" id="5_ymdo4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkpnv"]
 resource_name = "fer"
@@ -500,11 +501,17 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rjfkl")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k2ec2"]
-height = 2.178404
+height = 2.1058803
 radius = 1.0376351
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y1hmp"]
 size = Vector3(2.0752702, 2.178404, 2.0752702)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y6li"]
+albedo_texture = ExtResource("5_ymdo4")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ihj7v"]
+material = SubResource("StandardMaterial3D_2y6li")
 
 [node name="Node3D" type="Node3D" unique_id=212877767]
 
@@ -579,7 +586,7 @@ transform = Transform3D(0.31823292, 0, 5.5879354e-09, 0, 0.4841008, 0, -5.587935
 mesh = SubResource("ArrayMesh_cktub")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/Barrel3" unique_id=1482846391]
-transform = Transform3D(0.31823292, 0, 3.7252903e-09, 0, 0.48410082, 0, -3.7252903e-09, 0, 0.31823292, 0.009423971, 0.8477552, -0.016784191)
+transform = Transform3D(0.31823352, -4.8577546e-14, 3.7252903e-09, -1.7869647e-15, 0.48410082, 1.4150175e-17, -7.8231096e-08, 3.381978e-15, 0.31823292, 0.00942421, 0.68337345, -0.016784191)
 shape = SubResource("CylinderShape3D_k2ec2")
 
 [node name="Barrel9" type="RigidBody3D" parent="Meshes" unique_id=1991469718]
@@ -721,3 +728,7 @@ omni_range = 663.465
 
 [node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("4_y1hmp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.258509, 0.30809802, -0.3330261)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1546962762]
+transform = Transform3D(0.19811362, -0.116837405, 0.00012079959, -0.0002049765, -0.0005853641, -0.22999915, 0.11683728, 0.19811279, -0.0006083371, -2.761418, 0.66906273, -1.3869146)
+mesh = SubResource("PlaneMesh_ihj7v")
