@@ -38,7 +38,9 @@ var gravity = 18
 
 func _ready() -> void:
 	anim_tree.active = true
-	load_skin(Game.players_data[device_index]["id_skin"])
+	#if not Game.get_player_data_by_index(device_index).empty():
+		#var player_data = Game.get_player_data_by_index(device_index)
+		#load_skin(player_data["id_skin"])
 
 func _physics_process(delta: float):
 	# Add the gravity.
@@ -156,6 +158,7 @@ func _on_sprint_cooldown_timeout() -> void:
 
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	var new_position = Game.get_random_coord()
 	if anim_name == "Grabbing":
 		grabbing = false
 		if success_grab:
@@ -164,15 +167,16 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
 			if fps_index != -1:
-				var new_position = Game.get_random_coord()
 				while new_position.distance_to(position) < 25:
 					new_position = Game.get_random_coord()
-				position = new_position
+				anim_state.travel("Death_Backward")
 			else:
 				self.queue_free()
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
-
+			
+	if anim_name == "Death_Backward":
+		position = new_position
 
 func _on_skin_timer_timeout() -> void:
 	can_change_skin = true
