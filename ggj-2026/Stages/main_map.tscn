@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_ehnf5"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_s8388"]
 [ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_1yspq"]
-[ext_resource type="PackedScene" uid="uid://bjnl52581i1yy" path="res://Entities/Player/top_view_3d_player.tscn" id="6_2cw51"]
 [ext_resource type="AudioStream" uid="uid://c4544r6qm7fl" path="res://Assets/Sounds/Background music.mp3" id="9_cp0ci"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_4p4bd"]
@@ -53,8 +52,5 @@ stream = ExtResource("9_cp0ci")
 volume_db = -10.0
 autoplay = true
 parameters/looping = false
-
-[node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("6_2cw51")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2452564, 0, -14.800933)
 
 [editable path="View"]

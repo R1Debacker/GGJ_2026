@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 
 			add_child(player)
 			player.device_index = device_idx
-			player.global_position = Game.get_random_coord()/4
+			player.position = Game.get_random_coord()/4
 			players.append(player)
 			
 

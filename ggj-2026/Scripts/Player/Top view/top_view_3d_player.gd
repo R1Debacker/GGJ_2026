@@ -25,6 +25,7 @@ var can_sprint := true
 var sprint_speed = default_speed * sprint_factor
 var speed
 var can_change_skin = true
+var gravity = 18
 
 @onready var model := $Skeleton/Skeleton3D
 @onready var anim_tree = $AnimationTree
@@ -40,8 +41,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float):
 	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
 	get_move_input(delta)
 	
