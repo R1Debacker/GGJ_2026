@@ -49,24 +49,27 @@ func _physics_process(delta: float):
 	
 	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing:
 		grabbing = true
-		var vectorToRobber = Game.fps_player.position - position
-		var distanceToRobber = vectorToRobber.length()
-		var dot = last_direction.dot(vectorToRobber)
-		anim_state.travel("Grabbing")
-		
-		if distanceToRobber <= 4 && dot > -0.2:
-			rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
-			position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
-			success_grab = true
-			Game.fps_player.target_robber = position
-			Game.fps_player.grabbed = true
-			grab_sound.play()
-			await grab_sound.finished
-			victory.play()
-			Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
-		else :
-			await get_tree().create_timer(1.0).timeout
-			fail_sound.play()
+		if Game.fps_player == null:
+			anim_state.travel("Grabbing")
+		else:
+			var vectorToRobber = Game.fps_player.position - position
+			var distanceToRobber = vectorToRobber.length()
+			var dot = last_direction.dot(vectorToRobber)
+			anim_state.travel("Grabbing")
+			
+			if distanceToRobber <= 4 && dot > -0.2:
+				rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
+				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
+				success_grab = true
+				Game.fps_player.target_robber = position
+				Game.fps_player.grabbed = true
+				grab_sound.play()
+				await grab_sound.finished
+				victory.play()
+				Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
+			else :
+				await get_tree().create_timer(1.0).timeout
+				fail_sound.play()
 	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
