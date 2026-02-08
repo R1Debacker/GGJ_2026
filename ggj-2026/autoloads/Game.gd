@@ -1,6 +1,6 @@
 extends Node
 
-var WIN_SCORE := 1
+var WIN_SCORE := 100
 var fps_player : FpsPlayer = null
 const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
