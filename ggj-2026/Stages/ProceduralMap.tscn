@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dla372dg4sbus"]
 
+[ext_resource type="Script" uid="uid://bywl8vqp85xwd" path="res://Scripts/Random/random_manager.gd" id="1_jtw8g"]
 [ext_resource type="PackedScene" uid="uid://d3h8tdb61syer" path="res://Entities/Rooms/Procedural Room.tscn" id="4_m55nd"]
 [ext_resource type="PackedScene" uid="uid://cc5xnxijhcue3" path="res://Entities/Walls/ProceduralWall32_int.tscn" id="4_x7ajq"]
 [ext_resource type="PackedScene" uid="uid://c6s5gggqiqc70" path="res://Entities/Walls/ProceduralWall18_int.tscn" id="5_8bvfq"]
@@ -22,6 +23,7 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="Map" type="Node3D" unique_id=61862151]
 
 [node name="Rooms" type="Node3D" parent="." unique_id=840179435]
+script = ExtResource("1_jtw8g")
 
 [node name="ProceduralRoom1" parent="Rooms" unique_id=798644741 instance=ExtResource("4_m55nd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 18)

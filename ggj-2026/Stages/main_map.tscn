@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5gaklgxdhfxe"]
 
-[ext_resource type="Script" path="res://Scripts/Init players.gd" id="1_4p4bd"]
+[ext_resource type="Script" uid="uid://dulxyrrwkfnnl" path="res://Scripts/Init players.gd" id="1_4p4bd"]
 [ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_ehnf5"]
 [ext_resource type="PackedScene" uid="uid://dih0gjvh85w7h" path="res://Entities/Player/fps_player.tscn" id="2_s8388"]
 [ext_resource type="PackedScene" uid="uid://dla372dg4sbus" path="res://Stages/ProceduralMap.tscn" id="3_1yspq"]
