@@ -44,16 +44,19 @@ func _physics_process(delta: float):
 	
 	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X):
 		grabbing = true
-		var vectorToRobber = Game.fps_player.position - position
-		var distanceToRobber = vectorToRobber.length()
-		var dot = last_direction.dot(vectorToRobber)
-		anim_state.travel("Grabbing")
-		if distanceToRobber <= 4 && dot > -0.2:
-			position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
-			success_grab = true
-			Game.fps_player.target_robber = position
-			Game.fps_player.grabbed = true
-			Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
+		if Game.fps_player == null:
+			anim_state.travel("Grabbing")
+		else:
+			var vectorToRobber = Game.fps_player.position - position
+			var distanceToRobber = vectorToRobber.length()
+			var dot = last_direction.dot(vectorToRobber)
+			anim_state.travel("Grabbing")
+			if distanceToRobber <= 4 && dot > -0.2:
+				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
+				success_grab = true
+				Game.fps_player.target_robber = position
+				Game.fps_player.grabbed = true
+				Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
 		
 	
 	for i in get_slide_collision_count():
