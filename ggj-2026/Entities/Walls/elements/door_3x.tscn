@@ -5,7 +5,10 @@
 
 [node name="Door" type="Node3D" unique_id=619975086]
 
-[node name="Door" type="MeshInstance3D" parent="." unique_id=923764988]
-transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 1, 1.5, 4.5, 0)
+[node name="Node3D" type="Node3D" parent="." unique_id=1284272503]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Door" type="MeshInstance3D" parent="Node3D" unique_id=923764988]
+transform = Transform3D(3, 0, 0, 0, 0.4, 0, 0, 0, 1, 1.5, 4, 0)
 material_override = ExtResource("1_i8rvv")
 mesh = ExtResource("2_it8hk")
