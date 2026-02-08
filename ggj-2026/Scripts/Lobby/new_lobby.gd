@@ -12,6 +12,9 @@ var players : Array[player3D_top_view]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	ButtonManager.buttons.clear()
+	Game.players_data.clear()
+	Game.fps_player = null
 	pass
 		
 func start():
