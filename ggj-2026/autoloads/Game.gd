@@ -17,6 +17,16 @@ extends Node
 var fps_player : FpsPlayer = null
 const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
+var list_room_centers : Array[Vector3] = [
+	Vector3(-32, 0.5, -18),
+	Vector3(0, 0.5, -18),
+	Vector3(32, 0.5, -18),
+	Vector3(-32, 0.5, 0),
+	Vector3(32, 0.5, 0),
+	Vector3(-32, 0.5, 18),
+	Vector3(0, 0.5, 18),
+	Vector3(-32, 0.5, 18),
+]
 
 var players_data : Array[Dictionary] = []
 
