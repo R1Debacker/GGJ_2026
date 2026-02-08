@@ -1,6 +1,6 @@
 extends Control
 
-@export var device_idx: int
+var device_idx: int
 var rob_count = 0
 
 var player_data : Dictionary = {}
@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 		return
 	
 	player_data['score'] += delta
+	print(player_data['score'])
 	txt_score.clear()
 	txt_score.add_text(str(roundi(player_data['score'])))
 	
