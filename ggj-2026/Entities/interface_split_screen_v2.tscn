@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://du40surynppr0"]
 
+[ext_resource type="PackedScene" uid="uid://cob670vutfsvm" path="res://Entities/UI/info_manager.tscn" id="1_qwddo"]
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_cqjgo"]
 viewport_path = NodePath("SubViewport Top Camera")
 
@@ -70,6 +72,9 @@ process_mode = 3
 layout_mode = 2
 texture = SubResource("ViewportTexture_qwddo")
 expand_mode = 1
+
+[node name="ScoreUi" parent="CameraSetup/ControlRobberCamera/PanelContainer" unique_id=1105480432 instance=ExtResource("1_qwddo")]
+layout_mode = 2
 
 [node name="SubViewport Top Camera" type="SubViewport" parent="." unique_id=1032100479]
 size = Vector2i(2560, 1440)

@@ -6,6 +6,10 @@ class_name player3D_top_view
 @export var speed_rotation = 10.0
 @export var sprint_factor = 2
 @export var push_force = 1.0
+@onready var grab_sound: AudioStreamPlayer = $GrabSound
+@onready var fail_sound: AudioStreamPlayer = $FailSound
+@export var skins : Array[Node3D]
+@onready var victory: AudioStreamPlayer = $Victory
 
 #@export var acceration = 4.0
 #@export var jump_speed = 8.0
@@ -42,22 +46,26 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 	
-	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X):
+	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing:
 		grabbing = true
-		if Game.fps_player == null:
-			anim_state.travel("Grabbing")
-		else:
-			var vectorToRobber = Game.fps_player.position - position
-			var distanceToRobber = vectorToRobber.length()
-			var dot = last_direction.dot(vectorToRobber)
-			anim_state.travel("Grabbing")
-			if distanceToRobber <= 4 && dot > -0.2:
-				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
-				success_grab = true
-				Game.fps_player.target_robber = position
-				Game.fps_player.grabbed = true
-				Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
+		var vectorToRobber = Game.fps_player.position - position
+		var distanceToRobber = vectorToRobber.length()
+		var dot = last_direction.dot(vectorToRobber)
+		anim_state.travel("Grabbing")
 		
+		if distanceToRobber <= 4 && dot > -0.2:
+			rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
+			position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
+			success_grab = true
+			Game.fps_player.target_robber = position
+			Game.fps_player.grabbed = true
+			grab_sound.play()
+			await grab_sound.finished
+			victory.play()
+			Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
+		else :
+			await get_tree().create_timer(1.0).timeout
+			fail_sound.play()
 	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -120,6 +128,11 @@ func get_move_input(delta):
 		#else:
 			#velocity.x = move_toward(velocity.x, 0, speed)
 			#velocity.z = move_toward(velocity.z, 0, speed)
+
+func load_skin(index: int):
+	for i in skins.size():
+		if i == index: skins[i].show()
+		else: skins[i].hide()
 
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false

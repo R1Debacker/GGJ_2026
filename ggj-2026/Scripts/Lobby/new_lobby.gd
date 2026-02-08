@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass
 		
 func start():
-	get_tree().change_scene_to_file("res://Stages/map_Max_test.tscn")
+	get_tree().change_scene_to_file("res://Stages/main_map.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
