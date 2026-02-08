@@ -118,10 +118,10 @@ func _robber_init_placement():
 	head.rotation.x = 0
 
 func _on_button_timer_timeout() -> void:
-	var player = Game.PLAYER.instantiate()
 	loose_mask.play()
-	player.device_index = device_index
+	var player_data = Game.get_player_data_by_index(device_index)
+	var parent = get_tree().root.get_child(0)
+	var player = player3D_top_view.spawn(parent, player_data)
 	player.position = position
-	get_tree().root.get_child(0).add_child(player)
 	device_index = -1
 	_robber_init_placement()

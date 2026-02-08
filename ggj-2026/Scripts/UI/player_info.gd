@@ -33,7 +33,6 @@ func _process(delta: float) -> void:
 		return
 	
 	player_data['score'] += delta
-	print(player_data['score'])
 	txt_score.clear()
 	txt_score.add_text(str(roundi(player_data['score'])))
 	
