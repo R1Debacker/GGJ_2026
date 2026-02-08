@@ -167,18 +167,23 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
 			dying = true
-			rotate(Vector3.UP, 180)
-			anim_state.travel("Death_Backward")
+			if device_index != -1:
+				for player_data in Game.players_data:
+					if player_data["idx"] == device_index:
+						load_skin(player_data["id_skin"])
+						break
+				rotate(Vector3.UP, 180)
+				anim_state.travel("Death_Backward")
+			else:
+				self.queue_free()
+				
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
 			Game.fps_player.button_timer.start()
 			
 	if anim_name == "Death_Backward":
 		dying = false
-		if device_index == -1:
-			self.queue_free()
-		else:
-			position = new_position
+		position = new_position
 
 func _on_skin_timer_timeout() -> void:
 	can_change_skin = true
