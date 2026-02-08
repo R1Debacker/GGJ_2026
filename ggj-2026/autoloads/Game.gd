@@ -26,6 +26,12 @@ var nb_players : int :
 
 const MAX_PLAYER := 10
 
+func get_player_data_by_index(index: int):
+	for player_data in self.players_data:
+		if player_data['idx'] == index:
+			return player_data
+	return false
+
 func get_random_coord() -> Vector3:
 	
 	var ran_coord = Vector3(0,0,0)

@@ -15,8 +15,14 @@ func _process(delta: float) -> void:
 			continue
 
 		if Input.is_joy_button_pressed(device_idx, JOY_BUTTON_A):
-
-			Game.players_data.append({"idx":device_idx,"id_skin":0,"robber":false,"score":0})
+			var player_data = {
+				"idx" : device_idx,
+				"id_skin" : 0,
+				"robber" : false,
+				"score" : 0,
+				"rob_count": 0,
+			}
+			Game.players_data.append(player_data)
 			var player = Game.PLAYER.instantiate()
 
 			add_child(player)

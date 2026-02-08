@@ -3,14 +3,17 @@ extends CharacterBody3D
 
 @onready var animation_head_bob: AnimationPlayer = %AnimationHeadBob
 
-@export var device_index := 0
+@export var device_index := 0 :
+	set(idx):
+		device_index = idx
+		_increment_rob_count()
+		return 
 @export var speed: float = 5.0
 @export var sensitivity: float = 0.003
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
 @export var push_force = 1.0
 
-var device_idx
 var head: Node3D
 var pitch: float = 0
 var grabbed := false
@@ -78,3 +81,11 @@ func _physics_process(delta: float) -> void:
 			push_dir = push_dir.normalized()
 			
 			body.apply_central_impulse(push_dir * push_force)
+
+func _increment_rob_count():
+	if device_index == null:
+		return
+	var player_data = Game.get_player_data_by_index(device_index)
+	if player_data:
+		player_data['rob_count'] += 1
+	

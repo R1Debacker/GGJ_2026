@@ -156,3 +156,4 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			position = Game.get_random_coord()
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
+			
