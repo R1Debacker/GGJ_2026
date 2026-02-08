@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6nnsle8by0b7" path="res://Assets/Map/computer/wood_planks_grey_disp_4k.png" id="2_pqloo"]
 [ext_resource type="Texture2D" uid="uid://b6kvjs80st7a2" path="res://Assets/Map/classroom/FBX/locker_001_0.png" id="3_wspe0"]
 [ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="4_hlo4q"]
+[ext_resource type="Texture2D" uid="uid://cedo8ltepuioh" path="res://Assets/Map/computer/FBX/Drazic.png" id="5_bbs75"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_miegi"]
 resource_name = "normal "
@@ -942,6 +943,15 @@ shadow_mesh = SubResource("ArrayMesh_gus8p")
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vebu"]
 size = Vector3(0.9947069, 2.4686427, 0.9947069)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y6li"]
+albedo_texture = ExtResource("5_bbs75")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7itwt"]
+material = SubResource("StandardMaterial3D_2y6li")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5000"]
+size = Vector3(2, 0.001, 2)
+
 [node name="Node3D" type="Node3D" unique_id=1017692584]
 
 [node name="Meshes" type="Node3D" parent="." unique_id=198962071]
@@ -1622,3 +1632,18 @@ spot_angle = 65.78
 
 [node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("4_hlo4q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0011573, 0.32169908, -7.2621374)
+
+[node name="Generic6DOFJoint3D" type="Generic6DOFJoint3D" parent="." unique_id=854055031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7979872, 2.5286446, 1.1543261)
+node_a = NodePath("../Meshes/Desk/Ordi")
+node_b = NodePath("../drazic")
+
+[node name="drazic" type="RigidBody3D" parent="." unique_id=547365741]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="drazic" unique_id=1963823389]
+transform = Transform3D(-0.35392752, 0.12393667, -5.417444e-09, -0.00033311744, -0.0009513042, -0.37499863, -0.12393622, -0.35392624, 0.0010079418, -2.6939538, 2.4957843, 1.1074902)
+mesh = SubResource("PlaneMesh_7itwt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="drazic" unique_id=1285894207]
+transform = Transform3D(-0.35392752, 0.12393667, -5.417444e-09, -0.00033311744, -0.0009513042, -0.37499863, -0.12393622, -0.35392624, 0.0010079418, -2.6939538, 2.4957843, 1.1074902)
+shape = SubResource("BoxShape3D_g5000")
