@@ -152,7 +152,8 @@ shape = SubResource("BoxShape3D_juy7o")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.4475758, 0)
 gizmo_extents = 0.5
 script = ExtResource("2_juy7o")
-delay = 3.0
+delay = 2.0
+player_rank = 1
 
 [node name="Top3" type="MeshInstance3D" parent="Stairs" unique_id=143048752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.50698376, 0)
@@ -168,16 +169,18 @@ shape = SubResource("BoxShape3D_hhf7w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8951516, 0)
 gizmo_extents = 0.5
 script = ExtResource("2_juy7o")
-delay = 6.0
+delay = 3.0
+player_rank = 2
 
 [node name="Marker3D4" type="Marker3D" parent="Stairs" unique_id=363408661]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4021354, -4)
 gizmo_extents = 0.5
 script = ExtResource("2_juy7o")
-delay = 6.0
+delay = 5.0
+player_rank = 3
 
 [node name="Timer" type="Timer" parent="." unique_id=1231382797]
-wait_time = 10.0
+wait_time = 15.0
 one_shot = true
 autostart = true
 

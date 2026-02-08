@@ -1,7 +1,6 @@
 extends Control
 
 @export var device_idx: int
-var score : float = 0
 var rob_count = 0
 
 var player_data : Dictionary = {}
@@ -17,7 +16,7 @@ func _ready() -> void:
 	txt_rob_count.clear()
 	txt_rob_count.add_text(str(rob_count))
 	txt_score.clear()
-	txt_score.add_text(str(score))
+	txt_score.add_text('0')
 	player_data = Game.get_player_data_by_index(device_idx)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +36,5 @@ func _process(delta: float) -> void:
 	txt_score.clear()
 	txt_score.add_text(str(roundi(player_data['score'])))
 	
-	if score >= Game.WIN_SCORE:
-		Game.stop_game()
-		
+	if player_data['score'] >= Game.WIN_SCORE:
+		Game.start_endgame_lobby()
