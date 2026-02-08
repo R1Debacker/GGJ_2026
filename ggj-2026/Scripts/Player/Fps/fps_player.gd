@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 		# rotation verticale de la tête
 		var y_rotation = -Input.get_joy_axis(device_index, JOY_AXIS_RIGHT_Y)
 		if abs(y_rotation) <= 0.3: y_rotation = 0
-		pitch = clamp(pitch + y_rotation  * sensitivity, deg_to_rad(-30), deg_to_rad(30))
+		pitch = clamp(pitch + y_rotation  * sensitivity, deg_to_rad(-50), deg_to_rad(30))
 		head.rotation.x = pitch
 		
 		var x_direction = -Input.get_joy_axis(device_index, JOY_AXIS_LEFT_Y) * forward

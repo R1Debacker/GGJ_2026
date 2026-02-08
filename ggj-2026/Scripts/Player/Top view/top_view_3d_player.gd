@@ -20,6 +20,7 @@ class_name player3D_top_view
 var last_direction := Vector3.FORWARD
 var sprinting := false
 var grabbing := false
+var dying := false
 var success_grab := false
 var can_sprint := true
 var sprint_speed = default_speed * sprint_factor
@@ -51,7 +52,7 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 	
-	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing:
+	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing && !dying:
 		grabbing = true
 		if Game.fps_player == null:
 			anim_state.travel("Grabbing")
@@ -62,6 +63,7 @@ func _physics_process(delta: float):
 			anim_state.travel("Grabbing")
 			
 			if distanceToRobber <= 4 && dot > -0.2:
+				Game.fps_player.button_timer.stop()
 				rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
 				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
 				success_grab = true
@@ -91,7 +93,7 @@ func get_move_input(delta):
 	
 	speed = default_speed
 	animation_player.speed_scale = 1.5
-	if grabbing:
+	if grabbing || dying:
 		velocity = Vector3.ZERO
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -158,6 +160,8 @@ func _on_sprint_cooldown_timeout() -> void:
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	var new_position = Game.get_random_coord()
+	while new_position.distance_to(position) < 25:
+		new_position = Game.get_random_coord()
 	if anim_name == "Grabbing":
 		grabbing = false
 		if success_grab:
@@ -165,17 +169,19 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
-			if fps_index != -1:
-				while new_position.distance_to(position) < 25:
-					new_position = Game.get_random_coord()
-				anim_state.travel("Death_Backward")
-			else:
-				self.queue_free()
+			dying = true
+			rotate(Vector3.UP, 180)
+			anim_state.travel("Death_Backward")
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
+			Game.fps_player.button_timer.start()
 			
 	if anim_name == "Death_Backward":
-		position = new_position
+		dying = false
+		if device_index == -1:
+			self.queue_free()
+		else:
+			position = new_position
 
 func _on_skin_timer_timeout() -> void:
 	can_change_skin = true
