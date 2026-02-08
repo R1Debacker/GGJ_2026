@@ -10,7 +10,6 @@ extends CharacterBody3D
 @export var gravity: float = 9.8
 @export var push_force = 1.0
 
-var device_idx
 var head: Node3D
 var pitch: float = 0
 var grabbed := false
@@ -21,6 +20,7 @@ func _ready() -> void:
 	Game.fps_player = self
 	head = $Head
 	animation_head_bob.play("headbob")
+	#global_position = Game.get_random_coord()
 
 func _physics_process(delta: float) -> void:
 	var forward = -transform.basis.z
