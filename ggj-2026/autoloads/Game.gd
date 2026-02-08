@@ -1,19 +1,6 @@
 extends Node
 
-#@onready var timer: Timer = $Timer
-#@onready var menu_button_sound: AudioStreamPlayer2D = $menu_button_sound
-#@onready var bubble_pop: AudioStreamPlayer2D = $BubblePop
-#@onready var back_sound: AudioStreamPlayer2D = $BackSound
-#@onready var ellie: AudioStreamPlayer2D = $Ellie
-#@onready var menu_music: AudioStreamPlayer2D = $MenuMusic
-#@onready var bubble_pop_petites: AudioStreamPlayer2D = $"Bubble pop petites"
-#@onready var sylvain: AudioStreamPlayer2D = $Sylvain
-#@onready var beep: AudioStreamPlayer2D = $beep
-#@onready var okaaaaay_letsgo: AudioStreamPlayer2D = $OkaaaaayLetsgo
-#@onready var souffrir_ok: AudioStreamPlayer2D = $SouffrirOk
-#@onready var we_did_it: AudioStreamPlayer2D = $WeDidIt
-
-
+var WIN_SCORE: float = 100
 var fps_player : FpsPlayer = null
 const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
@@ -56,4 +43,21 @@ func get_random_coord() -> Vector3:
 		ran_coord.z = randi_range(-23, 23)
 		
 	return ran_coord
-	
+
+func _compare_scores_desc(a: Dictionary, b: Dictionary) -> int:
+	if a["score"] > b["score"]:
+		return -1
+	elif a["score"] < b["score"]:
+		return 1
+	return 0
+
+func get_rank_players_data():
+	var ranked_player_data = players_data.duplicate()
+	ranked_player_data.sort_custom(_compare_scores_desc)
+	return ranked_player_data
+
+func stop_game():
+	get_tree().change_scene_to_file("res://Stages/endgame_lobby.tscn")
+
+func start_lobby():
+	get_tree().change_scene_to_file("res://Stages/new_lobby.tscn")

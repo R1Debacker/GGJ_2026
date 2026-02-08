@@ -40,6 +40,14 @@ var gravity = 18
 func _ready() -> void:
 	anim_tree.active = true
 
+
+static func spawn(parent: Node, player_data: Dictionary):
+	var player = Game.PLAYER.instantiate()
+	parent.add_child(player)
+	player.device_index = player_data["idx"]
+	player.load_skin(player_data["id_skin"])
+	return player
+
 func _physics_process(delta: float):
 	# Add the gravity.
 	if not is_on_floor():

@@ -284,10 +284,12 @@ spot_angle = 28.598948
 
 [node name="LobyMusic" type="AudioStreamPlayer" parent="." unique_id=1472441911]
 stream = ExtResource("5_a7u3u")
+volume_db = -15.0
 autoplay = true
 
 [node name="Scratch" type="AudioStreamPlayer" parent="." unique_id=1972486802]
 stream = ExtResource("5_br6fm")
+volume_db = -5.0
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1053105973]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -7.1602306, 1.2379589, 0.942698)
