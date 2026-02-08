@@ -112,9 +112,10 @@ func _robber_init_placement():
 			dist_to_center = start_position.distance_to(point)
 			nearest_center = point
 			
-	position = start_position
+	global_position = start_position
+	
 	rotation.y = transform.looking_at(nearest_center).basis.get_euler().y
-
+	head.rotation.x = 0
 
 func _on_button_timer_timeout() -> void:
 	var player = Game.PLAYER.instantiate()

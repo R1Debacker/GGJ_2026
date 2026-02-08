@@ -7,6 +7,7 @@ func _ready() -> void:
 		var player = Game.PLAYER.instantiate()
 		add_child(player)
 		player.device_index = player_data["idx"]
+		
 		player.global_position = Game.get_random_coord()
 		
 		player.load_skin(player_data["id_skin"])

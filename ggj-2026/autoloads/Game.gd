@@ -25,7 +25,7 @@ var list_room_centers : Array[Vector3] = [
 	Vector3(32, 0.5, 0),
 	Vector3(-32, 0.5, 18),
 	Vector3(0, 0.5, 18),
-	Vector3(-32, 0.5, 18),
+	Vector3(32, 0.5, 18),
 ]
 
 var players_data : Array[Dictionary] = []
