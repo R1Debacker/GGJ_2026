@@ -1,11 +1,14 @@
 extends Node3D
 
 var players : Array[player3D_top_view]
-@onready var label: Label = $CanvasLayer/Label
 @onready var scratch: AudioStreamPlayer = $Scratch
 @onready var loby_music: AudioStreamPlayer = $LobyMusic
 @onready var label_top: Label = $CanvasLayer/LabelTop
 @onready var label_bottom: Label = $CanvasLayer/LabelBottom
+
+@export var base_font_size_top := 80
+@export var base_font_size_bottom := 60
+@export var base_window_width := 1080
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,11 +22,17 @@ func start():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	label_top.text = "A or X to join the room"
 	if len(players)>1:
 		label_top.text = "A or X to join the room\n Start to launch"
 	if len(players)>0:
 		label_bottom.text = "L1/R1 or LB/RB to switch skin"
+	
+	#if get_window().size_changed:
+		#var ratio = get_window().size.x / base_window_width
+		#label_bottom.add_theme_font_size_override("Theme",ratio * base_font_size_bottom)
+		#label_top.add_theme_font_size_override("Theme",ratio * base_font_size_top)
 	
 	for device_idx in range(Game.MAX_PLAYER):
 
