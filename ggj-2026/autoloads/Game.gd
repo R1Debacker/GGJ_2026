@@ -1,6 +1,6 @@
 extends Node
 
-var WIN_SCORE: float = 100
+var WIN_SCORE := 1
 var fps_player : FpsPlayer = null
 const PLAYER = preload("res://Entities/Player/top_view_3d_player.tscn")
 var turn :int =0
@@ -56,7 +56,7 @@ func get_rank_players_data():
 	ranked_player_data.sort_custom(_compare_scores_desc)
 	return ranked_player_data
 
-func stop_game():
+func start_endgame_lobby():
 	get_tree().change_scene_to_file("res://Stages/endgame_lobby.tscn")
 
 func start_lobby():
