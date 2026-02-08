@@ -105,9 +105,11 @@ func get_move_input(delta):
 			sprint_duration.stop()
 			can_sprint = false
 			sprinting = false
+			push_force = 1
 			sprint_cooldown.start()
 			
 		if sprinting:
+			push_force = 3
 			speed = sprint_speed
 			animation_player.speed_scale = 3.0
 			
@@ -139,7 +141,7 @@ func load_skin(index: int):
 	if can_change_skin:
 		can_change_skin = false
 		$SkinTimer.start()
-		var mod_index = index%skins.size()
+		var mod_index = posmod(index, skins.size())
 		for i in skins.size():
 			if i == mod_index: skins[i].show()
 			else: skins[i].hide()
@@ -147,6 +149,7 @@ func load_skin(index: int):
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false
 	sprinting = false
+	push_force = 1
 	print("not sprint anymore")
 	sprint_cooldown.start()
 
@@ -167,18 +170,23 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
 			dying = true
-			rotate(Vector3.UP, 180)
-			anim_state.travel("Death_Backward")
+			if device_index != -1:
+				for player_data in Game.players_data:
+					if player_data["idx"] == device_index:
+						load_skin(player_data["id_skin"])
+						break
+				rotate(Vector3.UP, 180)
+				anim_state.travel("Death_Backward")
+			else:
+				self.queue_free()
+				
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
 			Game.fps_player.button_timer.start()
 			
 	if anim_name == "Death_Backward":
 		dying = false
-		if device_index == -1:
-			self.queue_free()
-		else:
-			position = new_position
+		position = new_position
 
 func _on_skin_timer_timeout() -> void:
 	can_change_skin = true

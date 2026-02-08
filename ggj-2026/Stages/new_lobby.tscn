@@ -209,7 +209,7 @@ size = 13.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1992227837]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=266655628]
+[node name="LabelTop" type="Label" parent="CanvasLayer" unique_id=266655628]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -406,3 +406,19 @@ shape = SubResource("SphereShape3D_r7mi0")
 [node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D10" unique_id=2107719064]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
+[node name="LabelBottom" type="Label" parent="CanvasLayer" unique_id=796332178]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -106.0
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_yv3x7")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1

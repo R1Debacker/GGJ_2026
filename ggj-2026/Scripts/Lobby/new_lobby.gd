@@ -4,6 +4,8 @@ var players : Array[player3D_top_view]
 @onready var label: Label = $CanvasLayer/Label
 @onready var scratch: AudioStreamPlayer = $Scratch
 @onready var loby_music: AudioStreamPlayer = $LobyMusic
+@onready var label_top: Label = $CanvasLayer/LabelTop
+@onready var label_bottom: Label = $CanvasLayer/LabelBottom
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +19,11 @@ func start():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	label.text = "Press A to join the room\n and Start to launch the game"
+	label_top.text = "A or X to join the room"
+	if len(players)>1:
+		label_top.text = "A or X to join the room\n Start to launch"
+	if len(players)>0:
+		label_bottom.text = "L1/R1 or LB/RB to switch skin"
 	
 	for device_idx in range(Game.MAX_PLAYER):
 
@@ -47,7 +53,7 @@ func _process(delta: float) -> void:
 			change_skin(device_idx, true)
 		if Input.is_joy_button_pressed(device_idx, JOY_BUTTON_LEFT_SHOULDER):
 			change_skin(device_idx, false)
-		if Input.is_joy_button_pressed(device_idx, JOY_BUTTON_START):
+		if Input.is_joy_button_pressed(device_idx, JOY_BUTTON_START) and len(players)>0:
 			start()
 		
 func change_skin(device_idx: int, next: bool):
@@ -62,7 +68,6 @@ func change_skin(device_idx: int, next: bool):
 							player_data["id_skin"] = player_data["id_skin"] - 1
 						player.load_skin(player_data["id_skin"])
 					break
-
 			break
 	
 func  is_in_datas(device_idx: int) -> bool:
