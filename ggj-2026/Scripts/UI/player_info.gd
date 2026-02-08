@@ -20,6 +20,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var player_data = Game.get_player_data_by_index(device_idx)
+	if player_data.is_empty():
+		return
 	
 	if rob_count != player_data['rob_count']:
 		rob_count = player_data['rob_count']
@@ -28,6 +30,6 @@ func _process(delta: float) -> void:
 	
 	if Game.fps_player.device_index != device_idx:
 		return
-	score += 0.1 * delta
+	score += delta
 	txt_score.clear()
-	txt_score.add_text(str(round(score)))
+	txt_score.add_text(str(roundi(score)))

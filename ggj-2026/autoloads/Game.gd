@@ -36,11 +36,11 @@ var nb_players : int :
 
 const MAX_PLAYER := 10
 
-func get_player_data_by_index(index: int):
+func get_player_data_by_index(index: int) -> Dictionary:
 	for player_data in self.players_data:
 		if player_data['idx'] == index:
 			return player_data
-	return false
+	return {}
 
 func is_invalid_position(pos: Vector3) -> bool:
 	var in_area = pos.x > -20 and pos.x < 20 and pos.z > -12 and pos.z < 12
