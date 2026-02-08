@@ -42,6 +42,13 @@ func _ready() -> void:
 		#var player_data = Game.get_player_data_by_index(device_index)
 		#load_skin(player_data["id_skin"])
 
+
+static func spawn(parent: Node, player_data: Dictionary):
+	var player = Game.PLAYER.instantiate()
+	parent.add_child(player)
+	player.device_index = player_data["idx"]
+	return player
+
 func _physics_process(delta: float):
 	# Add the gravity.
 	if not is_on_floor():
