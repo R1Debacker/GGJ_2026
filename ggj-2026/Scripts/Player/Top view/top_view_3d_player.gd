@@ -67,9 +67,8 @@ func _physics_process(delta: float):
 				success_grab = true
 				Game.fps_player.target_robber = position
 				Game.fps_player.grabbed = true
-				grab_sound.play()
-				await grab_sound.finished
 				victory.play()
+				grab_sound.play()
 				Input.start_joy_vibration(device_index, 0.5, 0.5, 0.1) 
 			else :
 				await get_tree().create_timer(1.0).timeout

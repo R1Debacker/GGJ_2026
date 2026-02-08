@@ -75,5 +75,7 @@ unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_sx2qq")
 
 [node name="ButtonTimer" type="Timer" parent="." unique_id=1239444218]
-wait_time = 15.0
+wait_time = 25.0
 one_shot = true
+
+[connection signal="timeout" from="ButtonTimer" to="." method="_on_button_timer_timeout"]

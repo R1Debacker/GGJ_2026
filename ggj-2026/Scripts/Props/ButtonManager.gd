@@ -4,6 +4,8 @@ var nb_buttons_active := 3
 var buttons : Array[PushButton]
 
 func on_button_pushed(button: PushButton):
+	Game.fps_player.button_timer.stop()
+	Game.fps_player.button_timer.start()
 	set_active_buttons(button)
 
 func clear_buttons():

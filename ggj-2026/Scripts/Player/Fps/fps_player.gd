@@ -112,3 +112,12 @@ func _robber_init_placement():
 			
 	position = start_position
 	rotation.y = transform.looking_at(nearest_center).basis.get_euler().y
+
+
+func _on_button_timer_timeout() -> void:
+	var player = Game.PLAYER.instantiate()
+	player.device_index = device_index
+	player.global_position = Game.get_random_coord()
+	get_tree().root.get_child(0).add_child(player)
+	device_index = -1
+	_robber_init_placement()

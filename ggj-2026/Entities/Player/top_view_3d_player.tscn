@@ -2666,7 +2666,7 @@ mesh = SubResource("ArrayMesh_jkma7")
 skin = SubResource("Skin_bxivb")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1545922745]
+[node name="AnimationPlayer" parent="." index="1" unique_id=263376161]
 libraries/ = ExtResource("4_61sof")
 speed_scale = 1.5
 
