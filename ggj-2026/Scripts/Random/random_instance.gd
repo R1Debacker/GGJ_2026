@@ -4,8 +4,7 @@ class_name RandomInstance
 @export var rotatable := true
 @export var flipable_z := true
 
-func instanciate(scene_path):
-	var packed := load(scene_path) as PackedScene
+func instanciate(packed : PackedScene):
 	if not packed:
 		return
 	
@@ -20,7 +19,6 @@ func instanciate(scene_path):
 		# Flip Z
 		var lights = inst.get_node_or_null("Lights")
 		if not lights:
-			print("Room " + scene_path + " has no Lights node")
 			return
 		
 		lights.reparent(self)

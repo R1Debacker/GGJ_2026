@@ -1,39 +1,34 @@
 extends Node
 
-@export var dir_paths := ["Entities/Rooms/Set1"]
+# 1. On remplace les chemins (String) par les scènes réelles (PackedScene).
+# Dans l'inspecteur, glissez tous vos fichiers de Rooms dans ce tableau.
+@export var room_scenes: Array[PackedScene] = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var scene_paths = get_scenes()
-	var pickable_scene_paths: Array[String] = []
-	
-	if scene_paths.is_empty():
+	# Sécurité : Si on a oublié de remplir le tableau
+	if room_scenes.is_empty():
+		print("ERREUR : Aucune scène n'a été assignée dans le tableau 'room_scenes' !")
 		return
+	
+	var pickable_scenes: Array[PackedScene] = []
 	var rooms = get_rooms()
 	
 	for room in rooms:
-		if pickable_scene_paths.size() == 0:
-			pickable_scene_paths = scene_paths.duplicate()
+		if pickable_scenes.size() == 0:
+			pickable_scenes = room_scenes.duplicate()
 		
-		var idx = randi_range(0, pickable_scene_paths.size() - 1)
-		var scene_path = pickable_scene_paths.pop_at(idx)
-		room.instanciate(scene_path)
+		var idx = randi_range(0, pickable_scenes.size() - 1)
+		# On récupère directement la ressource PackedScene, plus besoin de load()
+		var selected_scene = pickable_scenes.pop_at(idx)
+		
+		# 2. On envoie la scène directement
+		room.instanciate(selected_scene)
 
 func get_rooms() -> Array[RandomInstance]:
-	var rooms: Array[RandomInstance]
+	var rooms: Array[RandomInstance] = []
 	for room in get_children():
 		if room is RandomInstance:
 			rooms.append(room)
 	return rooms 
 
-func get_scenes() -> Array[String]:
-	var scene_paths: Array[String] = []
-	for dir_path in dir_paths:
-		var dir := DirAccess.open("res://" + dir_path)
-		if not dir:
-			continue
-		
-		for f in dir.get_files():
-			if f.ends_with(".tscn"):
-				scene_paths.append(dir_path + "/" + f)
-	return scene_paths
+# La fonction get_scenes() est supprimée car elle n'est plus nécessaire.
