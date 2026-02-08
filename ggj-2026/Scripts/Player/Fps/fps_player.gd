@@ -120,7 +120,7 @@ func _on_button_timer_timeout() -> void:
 	var player = Game.PLAYER.instantiate()
 	loose_mask.play()
 	player.device_index = device_index
-	player.global_position = Game.get_random_coord()
+	player.position = position
 	get_tree().root.get_child(0).add_child(player)
 	device_index = -1
 	_robber_init_placement()

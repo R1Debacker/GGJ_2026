@@ -105,9 +105,11 @@ func get_move_input(delta):
 			sprint_duration.stop()
 			can_sprint = false
 			sprinting = false
+			push_force = 1
 			sprint_cooldown.start()
 			
 		if sprinting:
+			push_force = 3
 			speed = sprint_speed
 			animation_player.speed_scale = 3.0
 			
@@ -139,7 +141,7 @@ func load_skin(index: int):
 	if can_change_skin:
 		can_change_skin = false
 		$SkinTimer.start()
-		var mod_index = index%skins.size()
+		var mod_index = posmod(index, skins.size())
 		for i in skins.size():
 			if i == mod_index: skins[i].show()
 			else: skins[i].hide()
@@ -147,6 +149,7 @@ func load_skin(index: int):
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false
 	sprinting = false
+	push_force = 1
 	print("not sprint anymore")
 	sprint_cooldown.start()
 

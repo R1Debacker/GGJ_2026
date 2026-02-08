@@ -57,7 +57,6 @@ func change_skin(device_idx: int, next: bool):
 							player_data["id_skin"] = player_data["id_skin"] - 1
 						player.load_skin(player_data["id_skin"])
 					break
-
 			break
 	
 func  is_in_datas(device_idx: int) -> bool:
