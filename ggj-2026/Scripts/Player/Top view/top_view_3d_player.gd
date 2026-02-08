@@ -24,6 +24,7 @@ var success_grab := false
 var can_sprint := true
 var sprint_speed = default_speed * sprint_factor
 var speed
+var can_change_skin = true
 
 @onready var model := $Skeleton/Skeleton3D
 @onready var anim_tree = $AnimationTree
@@ -133,9 +134,13 @@ func get_move_input(delta):
 			#velocity.z = move_toward(velocity.z, 0, speed)
 
 func load_skin(index: int):
-	for i in skins.size():
-		if i == index: skins[i].show()
-		else: skins[i].hide()
+	if can_change_skin:
+		can_change_skin = false
+		$SkinTimer.start()
+		var mod_index = index%skins.size()
+		for i in skins.size():
+			if i == mod_index: skins[i].show()
+			else: skins[i].hide()
 
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false
@@ -159,3 +164,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			position = Game.get_random_coord()
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
+
+
+func _on_skin_timer_timeout() -> void:
+	can_change_skin = true
