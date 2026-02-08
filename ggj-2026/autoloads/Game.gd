@@ -32,11 +32,16 @@ func get_player_data_by_index(index: int):
 			return player_data
 	return false
 
+func is_invalid_position(pos: Vector3) -> bool:
+	var in_area = pos.x > -20 and pos.x < 20 and pos.z > -12 and pos.z < 12
+	var blocked_x = pos.x in [-16, 16]
+	var blocked_z = pos.z in [-9, 9]
+	return in_area or blocked_x or blocked_z
+
 func get_random_coord() -> Vector3:
 	
-	var ran_coord = Vector3(0,0,0)
-	while -20 < ran_coord.x and ran_coord.x < 20 and -12 < ran_coord.z and ran_coord.z < 12:
-		
+	var ran_coord = Vector3(0,0.5,0)
+	while is_invalid_position(ran_coord):
 		ran_coord.x = randi_range(-44, 44)
 		ran_coord.z = randi_range(-23, 23)
 		

@@ -10,6 +10,9 @@ albedo_color = Color(0.83293146, 0.797755, 0.86352104, 1)
 material = SubResource("StandardMaterial3D_g5iwf")
 size = Vector2(24, 13.5)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a7u3u"]
+data = PackedVector3Array(12, 0, 6.75, -12, 0, 6.75, 12, 0, -6.75, -12, 0, 6.75, -12, 0, -6.75, 12, 0, -6.75)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yv3x7"]
 albedo_color = Color(0.22959551, 0.14858207, 0.092593096, 1)
 
@@ -50,6 +53,11 @@ script = ExtResource("1_mtan6")
 
 [node name="Ground" type="MeshInstance3D" parent="." unique_id=738405248]
 mesh = SubResource("PlaneMesh_rxdke")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground" unique_id=950349302]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D" unique_id=1204585034]
+shape = SubResource("ConcavePolygonShape3D_a7u3u")
 
 [node name="Walls" type="Node3D" parent="." unique_id=1905468503]
 

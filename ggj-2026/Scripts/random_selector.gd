@@ -9,7 +9,7 @@ func _ready() -> void:
 	for dir_path in dir_paths:
 		var dir := DirAccess.open("res://" + dir_path)
 		if not dir:
-			return
+			continue
 		
 		for f in dir.get_files():
 			if f.ends_with(".tscn"):
@@ -28,7 +28,3 @@ func _ready() -> void:
 	if self.rotatable and randi() % 2 == 0:
 		# Rotate
 		rotate(Vector3.UP, PI)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
