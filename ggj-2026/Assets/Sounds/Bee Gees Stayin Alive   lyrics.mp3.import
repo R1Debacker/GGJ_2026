@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tpx5rhg1e5ey"
+path="res://.godot/imported/Bee Gees Stayin Alive   lyrics.mp3-4fca4bb951c022fd2181cb402ff8137f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Bee Gees Stayin Alive   lyrics.mp3"
+dest_files=["res://.godot/imported/Bee Gees Stayin Alive   lyrics.mp3-4fca4bb951c022fd2181cb402ff8137f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

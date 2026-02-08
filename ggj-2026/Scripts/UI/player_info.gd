@@ -4,6 +4,8 @@ extends Control
 var score : float = 0
 var rob_count = 0
 
+var player_data : Dictionary = {}
+
 @onready var txt_score: RichTextLabel = $Control/CenterContainer/VBoxContainer/HSplitContainer2/TxtScore2
 @onready var txt_device_index: RichTextLabel = $Control/CenterContainer/VBoxContainer/HSplitContainer/TxtDeviceIndex2
 @onready var txt_rob_count: RichTextLabel = $Control/CenterContainer/VBoxContainer/HSplitContainer3/TxtRobCount2
@@ -16,13 +18,13 @@ func _ready() -> void:
 	txt_rob_count.add_text(str(rob_count))
 	txt_score.clear()
 	txt_score.add_text(str(score))
+	player_data = Game.get_player_data_by_index(device_idx)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var player_data = Game.get_player_data_by_index(device_idx)
 	if player_data.is_empty():
 		return
-	
+
 	if rob_count != player_data['rob_count']:
 		rob_count = player_data['rob_count']
 		txt_rob_count.clear()
@@ -30,6 +32,11 @@ func _process(delta: float) -> void:
 	
 	if Game.fps_player.device_index != device_idx:
 		return
-	score += delta
+	
+	player_data['score'] += delta
 	txt_score.clear()
-	txt_score.add_text(str(roundi(score)))
+	txt_score.add_text(str(roundi(player_data['score'])))
+	
+	if score >= Game.WIN_SCORE:
+		Game.stop_game()
+		
