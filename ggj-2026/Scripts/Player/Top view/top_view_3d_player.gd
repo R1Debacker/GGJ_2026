@@ -38,9 +38,6 @@ var gravity = 18
 
 func _ready() -> void:
 	anim_tree.active = true
-	#if not Game.get_player_data_by_index(device_index).empty():
-		#var player_data = Game.get_player_data_by_index(device_index)
-		#load_skin(player_data["id_skin"])
 
 func _physics_process(delta: float):
 	# Add the gravity.
