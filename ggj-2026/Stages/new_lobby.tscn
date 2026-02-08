@@ -106,7 +106,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o358d")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_r7mi0"]
-radius = 1.0110307
+radius = 1.0788219
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_618h6"]
 resource_name = "non_disco_mat"
@@ -321,21 +321,6 @@ shape = SubResource("SphereShape3D_r7mi0")
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=459645882]
-transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.042245, 1.2379589, -3.5361505)
-
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D4" unique_id=2070107949]
-transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("ArrayMesh_1n37l")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=846966586]
-transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
-shape = SubResource("SphereShape3D_r7mi0")
-
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D4" unique_id=1641657476]
-transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
-mesh = SubResource("ArrayMesh_ghrnn")
-
 [node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1483249366]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.042245, 1.2379589, 3.8031564)
 
@@ -363,6 +348,51 @@ transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0
 shape = SubResource("SphereShape3D_r7mi0")
 
 [node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D6" unique_id=431534672]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_ghrnn")
+
+[node name="RigidBody3D11" type="RigidBody3D" parent="." unique_id=1826509283]
+transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -6.123945, 1.2379589, -2.6863246)
+
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D11" unique_id=1160135534]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1n37l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11" unique_id=1221472881]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("SphereShape3D_r7mi0")
+
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D11" unique_id=2082725642]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_ghrnn")
+
+[node name="RigidBody3D12" type="RigidBody3D" parent="." unique_id=92301983]
+transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.143451, 1.2379589, -2.6863246)
+
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D12" unique_id=404774210]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1n37l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D12" unique_id=64751536]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("SphereShape3D_r7mi0")
+
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D12" unique_id=1159951050]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_ghrnn")
+
+[node name="RigidBody3D13" type="RigidBody3D" parent="." unique_id=1739911742]
+transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.143451, 1.2379589, 1.6288862)
+
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D13" unique_id=1924355865]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1n37l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D13" unique_id=1175671789]
+transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("SphereShape3D_r7mi0")
+
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D13" unique_id=81172380]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 

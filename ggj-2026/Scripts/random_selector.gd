@@ -1,30 +1,20 @@
 extends Node3D
 
-@export var dir_paths := ["Entities/Rooms/Set1"]
+# Au lieu de chemins de dossiers, on utilise une liste de scènes prêtes à l'emploi.
+# Glissez tous vos murs ici dans l'inspecteur.
+@export var wall_scenes: Array[PackedScene] = []
 @export var rotatable := true
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var scenes: Array[String] = []
-	for dir_path in dir_paths:
-		var dir := DirAccess.open("res://" + dir_path)
-		if not dir:
-			continue
-		
-		for f in dir.get_files():
-			if f.ends_with(".tscn"):
-				scenes.append(dir_path + "/" + f)
-
-	if scenes.is_empty():
+	# Sécurité
+	if wall_scenes.is_empty():
 		return
 	
-	var file = scenes[randi() % scenes.size()]
-	var packed := load(file) as PackedScene
+	# pick_random() est une fonction native de Godot 4 (plus propre que randi % size)
+	var selected_scene = wall_scenes.pick_random()
 	
-	if packed:
-		var inst : Node3D = packed.instantiate()
-		add_child(inst)
+	var inst : Node3D = selected_scene.instantiate()
+	add_child(inst)
 	
-	if self.rotatable and randi() % 2 == 0:
-		# Rotate
+	if rotatable and randi() % 2 == 0:
 		rotate(Vector3.UP, PI)
