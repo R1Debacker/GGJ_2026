@@ -8,7 +8,7 @@ func _ready() -> void:
 		
 		player.device_index = player_data["idx"]
 		player.global_position = Game.get_random_coord()
-		
+		print(player.global_position)
 		add_child(player)
 
 

@@ -1,5 +1,7 @@
 extends Node3D
 
+@onready var label: Label = $CanvasLayer/Label
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -9,6 +11,8 @@ func start():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	label.text = "Press A to join the room\n and Start to launch the game"
+	
 	for device_idx in range(Game.MAX_PLAYER):
 
 		if device_idx < len(Game.players_data):
@@ -21,7 +25,7 @@ func _process(delta: float) -> void:
 
 			add_child(player)
 			player.device_index = device_idx
-			player.global_position = Game.get_random_coord()
+			player.global_position = Game.get_random_coord()/4
 			
 
 	for player_data in Game.players_data:
