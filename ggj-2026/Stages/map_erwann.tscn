@@ -28,6 +28,9 @@ speed = 7.0
 
 [node name="Map" parent="." unique_id=61862151 instance=ExtResource("3_oh4ot")]
 
+[node name="MeshInstance3D" parent="Map" index="3" unique_id=682454088]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 11.631027, 0)
+
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("4_aqyef")]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 26.650692, 0.06269048, 4.7521057)
 
