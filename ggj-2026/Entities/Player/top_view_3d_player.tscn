@@ -2367,10 +2367,10 @@ height = 1.9070137
 script = ExtResource("2_cp6nn")
 skins = [NodePath("Skeleton/Skeleton3D/1"), NodePath("Skeleton/Skeleton3D/2"), NodePath("Skeleton/Skeleton3D/3"), NodePath("Skeleton/Skeleton3D/4"), NodePath("Skeleton/Skeleton3D/5")]
 
-[node name="Skeleton" parent="." index="0" unique_id=562029223]
+[node name="Skeleton" parent="." index="0" unique_id=1550349074]
 transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 
-[node name="Skeleton3D" parent="Skeleton" index="0" unique_id=874623409]
+[node name="Skeleton3D" parent="Skeleton" index="0" unique_id=1486412654]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -2666,7 +2666,7 @@ mesh = SubResource("ArrayMesh_jkma7")
 skin = SubResource("Skin_bxivb")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1545922745]
+[node name="AnimationPlayer" parent="." index="1" unique_id=263376161]
 libraries/ = ExtResource("4_61sof")
 speed_scale = 1.5
 

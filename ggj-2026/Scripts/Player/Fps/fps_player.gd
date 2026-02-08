@@ -19,13 +19,23 @@ var head: Node3D
 var pitch: float = 0
 var grabbed := false
 var target_robber := Vector3.ZERO
+var is_controlled := false
 
 
 func _ready() -> void:
 	Game.fps_player = self
 	head = $Head
 	animation_head_bob.play("headbob")
-	#global_position = Game.get_random_coord()
+	_robber_init_placement()
+
+func _process(delta: float) -> void:
+	if device_index != -1 && !is_controlled:
+		is_controlled = true
+		button_timer.start()
+		ButtonManager.set_active_buttons()
+	if device_index == -1 && is_controlled:
+		is_controlled = false
+		ButtonManager.clear_buttons()
 
 func _physics_process(delta: float) -> void:
 	var forward = -transform.basis.z
@@ -90,4 +100,23 @@ func _increment_rob_count():
 	var player_data = Game.get_player_data_by_index(device_index)
 	if player_data:
 		player_data['rob_count'] += 1
-	
+		
+func _robber_init_placement():
+	var start_position = Game.get_random_coord()
+	var dist_to_center = 1000
+	var nearest_center
+	for point in Game.list_room_centers:
+		if start_position.distance_to(point) < dist_to_center :
+			dist_to_center = start_position.distance_to(point)
+			nearest_center = point
+			
+	position = start_position
+	rotation.y = transform.looking_at(nearest_center).basis.get_euler().y
+
+
+func _on_button_timer_timeout() -> void:
+	var player = Game.PLAYER.instantiate()
+	player.device_index = device_index
+	player.global_position = Game.get_random_coord()
+	device_index = -1
+	_robber_init_placement()

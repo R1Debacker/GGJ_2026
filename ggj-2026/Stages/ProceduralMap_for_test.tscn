@@ -166,4 +166,4 @@ size = 0.3
 far = 2000.0
 
 [node name="top view 3D Player" parent="." unique_id=863512122 instance=ExtResource("7_kg40n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34088516, 0, -12.628012)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.692753, 0, -2.613659)
