@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://csbssr4qyr3bq"]
+[gd_scene format=4 uid="uid://bhmsiu1t370ll"]
 
 [ext_resource type="Texture2D" uid="uid://je8bg0arc67m" path="res://Assets/Map/classroom/FBX/classroom_demoscene_0.png" id="1_2pckg"]
 [ext_resource type="Texture2D" uid="uid://behmovc6k2se" path="res://Assets/Map/walls/Fbx/floorpattern_0.png" id="2_cay4o"]
@@ -419,6 +419,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vfd26")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mpmx"]
+size = Vector3(1.752938, 1.7739427, 0.6098232)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nl3it"]
+size = Vector3(1.752938, 1.7739427, 0.6098232)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_ou65a"]
 _surfaces = [{
 "aabb": AABB(-2.6133227, 0.83293253, -3.1146636, 5.4776936, 0.05044049, 4.6912584),
@@ -695,9 +701,21 @@ transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -0.1
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -2.7255824, -0.17090803, 4.413857)
 mesh = SubResource("ArrayMesh_8hndq")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/demoscene_16/demoscene_9" unique_id=1948758213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.447422, 0.88697135, 4.560478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/demoscene_16/demoscene_9/StaticBody3D" unique_id=715146991]
+shape = SubResource("BoxShape3D_3mpmx")
+
 [node name="demoscene_10" type="MeshInstance3D" parent="Meshes/demoscene_16" unique_id=356677443]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -1.6161232, -0.17090803, 4.413857)
 mesh = SubResource("ArrayMesh_8hndq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Meshes/demoscene_16/demoscene_10" unique_id=398486788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.447422, 0.88697135, 4.560478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meshes/demoscene_16/demoscene_10/StaticBody3D" unique_id=825734123]
+shape = SubResource("BoxShape3D_nl3it")
 
 [node name="demoscene_20" type="MeshInstance3D" parent="Meshes" unique_id=486425443]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -6.0996537, 0, 0.48766476)
