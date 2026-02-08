@@ -38,6 +38,7 @@ var gravity = 18
 
 func _ready() -> void:
 	anim_tree.active = true
+	#player.load_skin(Game.player_data[device_index]["id_skin"])
 
 func _physics_process(delta: float):
 	# Add the gravity.
@@ -162,7 +163,13 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
-			position = Game.get_random_coord()
+			if fps_index != -1:
+				var new_position = Game.get_random_coord()
+				while new_position.distance_to(position) < 25:
+					new_position = Game.get_random_coord()
+				position = new_position
+			else:
+				self.queue_free()
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
 
