@@ -14,6 +14,8 @@ extends CharacterBody3D
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
 @export var push_force = 1.0
+@onready var loose_mask: AudioStreamPlayer = $LooseMask
+
 
 var head: Node3D
 var pitch: float = 0
@@ -116,6 +118,7 @@ func _robber_init_placement():
 
 func _on_button_timer_timeout() -> void:
 	var player = Game.PLAYER.instantiate()
+	loose_mask.play()
 	player.device_index = device_index
 	player.global_position = Game.get_random_coord()
 	get_tree().root.get_child(0).add_child(player)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dih0gjvh85w7h"]
 
 [ext_resource type="Script" uid="uid://blo67aqtj4irk" path="res://Scripts/Player/Fps/fps_player.gd" id="1_0e3s8"]
+[ext_resource type="AudioStream" uid="uid://e7qp37a1e3q3" path="res://Assets/Sounds/Got grabed.mp3" id="2_60br0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rb5b7"]
 radius = 0.3
@@ -77,5 +78,8 @@ libraries/ = SubResource("AnimationLibrary_sx2qq")
 [node name="ButtonTimer" type="Timer" parent="." unique_id=1239444218]
 wait_time = 25.0
 one_shot = true
+
+[node name="LooseMask" type="AudioStreamPlayer" parent="." unique_id=369616898]
+stream = ExtResource("2_60br0")
 
 [connection signal="timeout" from="ButtonTimer" to="." method="_on_button_timer_timeout"]

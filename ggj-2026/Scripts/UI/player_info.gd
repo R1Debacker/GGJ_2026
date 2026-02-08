@@ -30,6 +30,6 @@ func _process(delta: float) -> void:
 	
 	if Game.fps_player.device_index != device_idx:
 		return
-	score += 0.1 * delta
+	score += delta
 	txt_score.clear()
-	txt_score.add_text(str(round(score)))
+	txt_score.add_text(str(roundi(score)))
