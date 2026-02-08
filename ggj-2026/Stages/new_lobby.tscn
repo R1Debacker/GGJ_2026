@@ -223,6 +223,23 @@ theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="LabelBottom" type="Label" parent="CanvasLayer" unique_id=796332178]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -106.0
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_yv3x7")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=943734810]
 transform = Transform3D(1, 0, 0, 0, 0.12013681, 0.9927574, 0, -0.9927574, 0.12013681, 0.28327227, 5.401184, -4.064165)
 light_color = Color(6.3051284e-06, 0.7997399, 0.20987555, 1)
@@ -267,10 +284,12 @@ spot_angle = 28.598948
 
 [node name="LobyMusic" type="AudioStreamPlayer" parent="." unique_id=1472441911]
 stream = ExtResource("5_a7u3u")
+volume_db = -15.0
 autoplay = true
 
 [node name="Scratch" type="AudioStreamPlayer" parent="." unique_id=1972486802]
 stream = ExtResource("5_br6fm")
+volume_db = -5.0
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1053105973]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -7.1602306, 1.2379589, 0.942698)
@@ -406,19 +425,3 @@ shape = SubResource("SphereShape3D_r7mi0")
 [node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D10" unique_id=2107719064]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
-[node name="LabelBottom" type="Label" parent="CanvasLayer" unique_id=796332178]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -0.5
-offset_top = -106.0
-offset_right = 0.5
-grow_horizontal = 2
-grow_vertical = 0
-theme = SubResource("Theme_yv3x7")
-theme_type_variation = &"HeaderLarge"
-theme_override_font_sizes/font_size = 80
-horizontal_alignment = 1
-vertical_alignment = 1
