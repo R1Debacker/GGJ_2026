@@ -1,6 +1,6 @@
 extends Control
 
-@export var device_idx: int
+var device_idx: int
 var rob_count = 0
 
 var player_data : Dictionary = {}

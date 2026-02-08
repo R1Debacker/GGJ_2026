@@ -6,5 +6,5 @@ var PlayerInfo := preload("res://Entities/UI/player_info.tscn")
 func _ready() -> void:
 	for player_data in Game.players_data:
 		var player_info = PlayerInfo.instantiate()
-		add_child(player_info)
 		player_info.device_idx = player_data['idx']
+		add_child(player_info)
