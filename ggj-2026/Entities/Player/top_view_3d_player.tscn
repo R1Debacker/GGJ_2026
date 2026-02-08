@@ -2258,8 +2258,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cp6nn"]
-animation = &"Death_Forward"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gkaem"]
+animation = &"Death_Backward"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7fqn3"]
 animation = &"Fall"
@@ -2328,17 +2328,21 @@ advance_mode = 2
 advance_mode = 2
 advance_condition = &"grounded"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5h724"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5m2cu"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xpfbf"]
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x4l3w"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ptdkv"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_k3upo"]
-states/Death_Forward/node = SubResource("AnimationNodeAnimation_cp6nn")
-states/Death_Forward/position = Vector2(526, -32)
+states/Death_Backward/node = SubResource("AnimationNodeAnimation_gkaem")
+states/Death_Backward/position = Vector2(518, -34.625)
 states/Fall/node = SubResource("AnimationNodeAnimation_7fqn3")
 states/Fall/position = Vector2(351.5, 220.03125)
 states/Grabbing/node = SubResource("AnimationNodeAnimation_k3upo")
@@ -2352,19 +2356,21 @@ states/Jump_End/position = Vector2(512, 220.5625)
 states/Jump_Start/node = SubResource("AnimationNodeAnimation_6om21")
 states/Jump_Start/position = Vector2(184, 242.71875)
 states/Start/position = Vector2(134.5, 113.75)
-transitions = ["Start", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_y4py6"), "IDLE-WALK-RUN", "Jump_Start", SubResource("AnimationNodeStateMachineTransition_xio6d"), "Jump_Start", "Jump", SubResource("AnimationNodeStateMachineTransition_e1imo"), "Jump", "Jump_End", SubResource("AnimationNodeStateMachineTransition_bn233"), "Jump_End", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_j8rhf"), "IDLE-WALK-RUN", "Fall", SubResource("AnimationNodeStateMachineTransition_x2rb6"), "Fall", "Jump_End", SubResource("AnimationNodeStateMachineTransition_lv8mq"), "IDLE-WALK-RUN", "Death_Forward", SubResource("AnimationNodeStateMachineTransition_5h724"), "IDLE-WALK-RUN", "Grabbing", SubResource("AnimationNodeStateMachineTransition_5m2cu"), "Grabbing", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_xpfbf")]
-graph_offset = Vector2(-48, -104)
+transitions = ["Start", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_y4py6"), "IDLE-WALK-RUN", "Jump_Start", SubResource("AnimationNodeStateMachineTransition_xio6d"), "Jump_Start", "Jump", SubResource("AnimationNodeStateMachineTransition_e1imo"), "Jump", "Jump_End", SubResource("AnimationNodeStateMachineTransition_bn233"), "Jump_End", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_j8rhf"), "IDLE-WALK-RUN", "Fall", SubResource("AnimationNodeStateMachineTransition_x2rb6"), "Fall", "Jump_End", SubResource("AnimationNodeStateMachineTransition_lv8mq"), "IDLE-WALK-RUN", "Grabbing", SubResource("AnimationNodeStateMachineTransition_5m2cu"), "Grabbing", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_xpfbf"), "IDLE-WALK-RUN", "Death_Backward", SubResource("AnimationNodeStateMachineTransition_x4l3w"), "Death_Backward", "IDLE-WALK-RUN", SubResource("AnimationNodeStateMachineTransition_ptdkv")]
+graph_offset = Vector2(-32, -70)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bqdlq"]
 radius = 0.201
 height = 1.9070137
 
 [node name="top view 3D Player" unique_id=863512122 node_paths=PackedStringArray("skins") instance=ExtResource("1_k3upo")]
-transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
 script = ExtResource("2_cp6nn")
 skins = [NodePath("Skeleton/Skeleton3D/1"), NodePath("Skeleton/Skeleton3D/2"), NodePath("Skeleton/Skeleton3D/3"), NodePath("Skeleton/Skeleton3D/4"), NodePath("Skeleton/Skeleton3D/5")]
 
-[node name="Skeleton3D" parent="Skeleton" parent_id_path=PackedInt32Array(1422335089) index="0" unique_id=1034206244]
+[node name="Skeleton" parent="." index="0" unique_id=562029223]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Skeleton" index="0" unique_id=874623409]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(-3.0765375e-14, 0.79327625, -0.00031300314)
 bones/1/rotation = Quaternion(-0.24775839, 9.708203e-07, -2.4826946e-07, 0.9688219)
@@ -2660,7 +2666,7 @@ mesh = SubResource("ArrayMesh_jkma7")
 skin = SubResource("Skin_bxivb")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1517240265]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1545922745]
 libraries/ = ExtResource("4_61sof")
 speed_scale = 1.5
 
