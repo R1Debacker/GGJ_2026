@@ -18,6 +18,5 @@ func set_active_button(active: bool):
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print(body.name)
 	if is_active && body is FpsPlayer:
 		ButtonManager.on_button_pushed(self)
