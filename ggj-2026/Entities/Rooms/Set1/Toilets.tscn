@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cdcht7mqgcmv8" path="res://Assets/Map/grey-ceramic-floor-wall-tiles.jpg" id="1_cndu0"]
 [ext_resource type="Texture2D" uid="uid://clnpbkfhjoqjj" path="res://Assets/Map/toilet/FBX/toiletdemoscene_0.png" id="2_6y0f1"]
 [ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="3_6y0f1"]
+[ext_resource type="Texture2D" uid="uid://cm24vfxndk5h8" path="res://Assets/Map/toilet/macron.jpg" id="4_bqeq5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqeq5"]
 albedo_color = Color(0.76, 1, 0.984, 1)
@@ -1324,6 +1325,12 @@ size = Vector3(11.9, 4.2, 5.6)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0d0ws"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0d0ws"]
+albedo_texture = ExtResource("4_bqeq5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0d0ws"]
+material = SubResource("StandardMaterial3D_0d0ws")
+
 [node name="Node3D" type="Node3D" unique_id=1658696053]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=757966291]
@@ -1647,3 +1654,11 @@ shape = SubResource("BoxShape3D_0d0ws")
 
 [node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("3_6y0f1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9662943, 0.39573544, -1.6727774)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=781536809]
+transform = Transform3D(-0.37495592, 0.0057400838, 0.00031851794, -0.00033311744, -0.0009513042, -0.37499863, -0.0057392567, -0.37495485, 0.0009562913, -1.331224, 4.092202, 1.1284155)
+mesh = SubResource("PlaneMesh_0d0ws")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1579230475]
+transform = Transform3D(0.28103915, 0.24857424, -0.0011666908, -0.000333214, -0.0009520917, -0.4973678, -0.248442, 0.28119004, -0.000652691, -11.425408, 4.092202, 1.4132783)
+mesh = SubResource("PlaneMesh_0d0ws")
