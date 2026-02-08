@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cdcht7mqgcmv8" path="res://Assets/Map/grey-ceramic-floor-wall-tiles.jpg" id="1_cndu0"]
 [ext_resource type="Texture2D" uid="uid://clnpbkfhjoqjj" path="res://Assets/Map/toilet/FBX/toiletdemoscene_0.png" id="2_6y0f1"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="3_6y0f1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqeq5"]
 albedo_color = Color(0.76, 1, 0.984, 1)
@@ -1643,3 +1644,6 @@ mesh = SubResource("BoxMesh_cndu0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wallsupport2/StaticBody3D" unique_id=1283481279]
 shape = SubResource("BoxShape3D_0d0ws")
+
+[node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("3_6y0f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9662943, 0.39573544, -1.6727774)

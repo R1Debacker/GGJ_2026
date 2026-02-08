@@ -1,0 +1,418 @@
+[gd_scene format=4 uid="uid://cth12qwyicaqc"]
+
+[ext_resource type="Script" uid="uid://cqkpvvopfrhqk" path="res://Scripts/Props/push_button.gd" id="1_fosyu"]
+[ext_resource type="Material" uid="uid://komp7w7tn5k2" path="res://Common/Materials/Button/ButtonSocle.tres" id="3_ptsnk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5rxc"]
+resource_name = "defaultPolygonShader"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.6651851, 0.6651851, 0.6651851, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eco5j"]
+_surfaces = [{
+"aabb": AABB(-297.71136, -16.911304, -257.82562, 595.4227, 34.386925, 515.65125),
+"format": 34359742465,
+"index_count": 126,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAgABAAQABAAFAAIABgAFAAQABwABAAAABAABAAcACAAAAAMAAwAJAAgACAAJAAoACgAGAAsABAALAAYACwAMAAoACgAMAAgADQALAAQADAALAA0ACAAMAA4ADQAOAAwADwAAAAgAAAAPAAcADgAQAAgACAAQAA8AEQAOAA0AEAAOABEABAASAA0ABwASAAQADQATABEAEwANABIAEQAUABAADwAQABQAFQARABMAFQAUABEAEgAWABMAFQATABYAFgASAAcAFQAWABcABwAXABYAFQAYABQAFAAYAA8AFQAXABgABwAPABgAGAAXAAcA"),
+"name": "defaultPolygonShader",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 25,
+"vertex_data": PackedByteArray("CCgGQ1pKh0GTXWjDAigGw1pKh0GXXWjDC9sUw1pKh8Gu6YDDEtsUQ1pKh8Gr6YDDAyiGw1pKh0E+Hym4DtuUw1pKh8Hdyja4ENsUw1pKh8Gs6YBDVrrdwhLOi0GlBUDDAyiGQ1pKh0HRnLa0DtuUQ1pKh8F/vFE1DdsUQ1pKh8Gt6YBDBSgGw1pKh0GVXWhDAygGQ1pKh0GWXWhDXbrdwhLOi0GkBUBDWrrdQhLOi0GkBUBDYLrdQhLOi0GhBUDDXLpdQxLOi0Hn8uI2RibJQvhPOsBZMy5DXLpdwxLOi0GrWwy4SSbJwvhPOsBZMy5DRyZJQ/hPOsA++7A2pT1onfhPOsDLH6S0RyZJw/hPOsC/KgO4QybJwvhPOsBbMy7DSibJQvhPOsBXMy7D")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y3b13"]
+resource_name = "pCylinder9"
+_surfaces = [{
+"aabb": AABB(-297.71136, -16.911304, -257.82562, 595.4227, 34.386925, 515.65125),
+"attribute_data": PackedByteArray("dpD2PopT1T52kPY+7GglPr56AT8UGRc+vHoBP3p73D5kcYU+gCcLPWRxhT6AQsU7vnoBPxQZFz52kPY+7GglPmRxhT6AJws9cJIiPexoJT5gqX08DBkXPmRxhT6AQsU7cJIiPexoJT5skiI9iFPVPkCpfTx6e9w+YKl9PAwZFz5jcYU+iFELP2NxhT56eRI/QKl9PHp73D5skiI9iFPVPmNxhT6IUQs/dpD2PopT1T68egE/envcPmNxhT56eRI/vMldPmnRRj8Ds8M+O1YuP/+ywz6VTF8/vsldPgzbFT+8yV0+w8d3P8i1UD07Vi4/yLVQPZVMXz+Q7OI+rBY8PnaQ9j7saCU+dpD2PopT1T5kcYU+gCcLPZDs4j6s/Mk+ZHGFPphKoD1jcYU+iFELP9DYnz2sFjw+Y3GFPlj1/z5wkiI97GglPtDYnz2q/Mk+bJIiPYhT1T7/ssM+lUxfPwOzwz47Vi4/C2DMPhPVKz8LYMw+vs1hP77JXT4M2xU/vsldPrvYED8LYMw+E9UrPwOzwz47Vi4/yLVQPTtWLj94TQs9E9UrP77JXT672BA/vsldPgzbFT/ItVA9lUxfP3hNCz29zWE/eE0LPRPVKz/ItVA9O1YuP8i1UD2VTF8/vMldPsPHdz+8yV0+FMp8P3hNCz29zWE/vMldPsPHdz//ssM+lUxfPwtgzD6+zWE/vMldPhTKfD8="),
+"format": 34359742487,
+"index_count": 126,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGAAbABkAGAAaABwAGAAdABsAGAAcAB4AGAAeAB0AHwAgACEAIgAgAB8AIQAjAB8AHwAkACIAIwAhACUAIgAkACYAJQAnACMAJgAoACIAKQAnACUAKgAoACYAJgApACoAJQAqACkAKwAsAC0ALQAuACsALwAwADEAMQAyAC8AMwA0ADUANQA2ADMANwA4ADkAOQA6ADcAOwA8AD0APQA+ADsAPwBAAEEAQQBCAD8A"),
+"material": SubResource("StandardMaterial3D_i5rxc"),
+"name": "defaultPolygonShader",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 67,
+"vertex_data": PackedByteArray("CCgGQ1pKh0GTXWjDAigGw1pKh0GXXWjDC9sUw1pKh8Gu6YDDEtsUQ1pKh8Gr6YDDAyiGw1pKh0E+Hym4DtuUw1pKh8Hdyja4C9sUw1pKh8Gu6YDDAigGw1pKh0GXXWjDAyiGw1pKh0E+Hym4BSgGw1pKh0GVXWhDENsUw1pKh8Gs6YBDDtuUw1pKh8Hdyja4BSgGw1pKh0GVXWhDAygGQ1pKh0GWXWhDDdsUQ1pKh8Gt6YBDENsUw1pKh8Gs6YBDAyiGQ1pKh0HRnLa0DtuUQ1pKh8F/vFE1DdsUQ1pKh8Gt6YBDAygGQ1pKh0GWXWhDAyiGQ1pKh0HRnLa0CCgGQ1pKh0GTXWjDEtsUQ1pKh8Gr6YDDDtuUQ1pKh8F/vFE1pT1onfhPOsDLH6S0QybJwvhPOsBbMy7DSibJQvhPOsBXMy7DRyZJw/hPOsC/KgO4RyZJQ/hPOsA++7A2SSbJwvhPOsBZMy5DRibJQvhPOsBZMy5DVrrdwhLOi0GlBUDDAigGw1pKh0GXXWjDCCgGQ1pKh0GTXWjDAyiGw1pKh0E+Hym4YLrdQhLOi0GhBUDDXLpdwxLOi0GrWwy4AyiGQ1pKh0HRnLa0XbrdwhLOi0GkBUBDXLpdQxLOi0Hn8uI2BSgGw1pKh0GVXWhDWrrdQhLOi0GkBUBDAygGQ1pKh0GWXWhDSibJQvhPOsBXMy7DQybJwvhPOsBbMy7DVrrdwhLOi0GlBUDDYLrdQhLOi0GhBUDDRyZJw/hPOsC/KgO4XLpdwxLOi0GrWwy4VrrdwhLOi0GlBUDDQybJwvhPOsBbMy7DSSbJwvhPOsBZMy5DXbrdwhLOi0GkBUBDXLpdwxLOi0GrWwy4RyZJw/hPOsC/KgO4RibJQvhPOsBZMy5DWrrdQhLOi0GkBUBDXbrdwhLOi0GkBUBDSSbJwvhPOsBZMy5DRibJQvhPOsBZMy5DRyZJQ/hPOsA++7A2XLpdQxLOi0Hn8uI2WrrdQhLOi0GkBUBDRyZJQ/hPOsA++7A2SibJQvhPOsBXMy7DYLrdQhLOi0GhBUDDXLpdQxLOi0Hn8uI2Bsn+//i2AIAGyf7/BkkAgAbJ/v8GSQCABsn+//i2AIB5La3L6MwAgHktrcvozACAeS2tyxYzAIB5La3LFjMAgK5Lea0WM/7/rkt5rejM/v+uS3mt6Mz+/65Lea0WM/7//3/4tvi2/v//f/i2+Lb+//9/+Lb4tv7//3/4tvi2/v9QtHmt6Mz+/1C0ea3ozP7/ULR5rejM//9QtHmt6Mz//4XSrcsWMwCAhdKty+jMAICF0q3L6MwAgIXSrcsWMwCA/3//////////f/////8AgP9//////wCA/3//////////f/////////9//////////3///wAA/v/qfTv/qv4AgOp9O/+q/gCAFII7/1QBAIB3fnb+///+/xSCO/9UAQCAd352/v///v+HgXb+AAAAgDx/6f1UAf7/h4F2/gAAAIA8f+n9VAH+/8KA6f2q/v7/woDp/ar+/v//f7O7S0T+//9/s7tLRP7//3+zu0tE/v//f7O7S0T+/3qx8rGSLv7/erHysZIu/v96sfKxki7+/3qx8rGSLv7/DM6DzmzRAIAMzoPObNEAgAzOg85s0QCADM6DzmzRAIBLxP//S0QAgEvE//9LRACAS8T//7O7AIBLxP//s7sAgPIxg86SLgCA8jGDzpIuAIDyMYPOki4AgPIxg86SLgCAhE7ysWzR/v+ETvKxki7+/4RO8rGSLv//hE7ysWzR/v8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eco5j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o146q"]
+albedo_color = Color(0.91460514, 0.46811748, 0.5271157, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4nikh"]
+_surfaces = [{
+"aabb": AABB(-212.22643, 4.681118, -183.7935, 424.45285, 49.908054, 367.58698),
+"format": 34359742465,
+"index_count": 90,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAABAAAAAwABAAQAAwAFAAIAAwAGAAUAAwAEAAcAAwAHAAYABQAGAAgACAAGAAcAAgAFAAkACAAJAAUACQAKAAIAAgAKAAAACwAJAAgACQALAAwADAAKAAkACAANAAsACgAMAA4ADgAAAAoAAAAOAA8ADQAIABAABwAQAAgAEAARAA0AEgAQAAcAEQAQABIAEgAPABEADwASAAAABwAEABIAAAASAAQA"),
+"name": "defaultPolygonShader",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 19,
+"vertex_data": PackedByteArray("9zlUQ0OZNEIXhOez5ulMQ1BbWkLqXki17OnMQlBbWkLedTHDAAAAAFBbWkIXhOez5unMQlBbWkLgdTFD4unMwlBbWkLhdTHD5ulMw1BbWkI+IQC46unMwlBbWkLfdTFD9zlUw0OZNEL9FwW48znUwkOZNEIjyzfD/jnUQkOZNEIgyzfD8znUwrjLlUAjyzfD/jnUQrjLlUAgyzfD9zlUw7jLlUD9FwW49zlUQ7jLlUAXhOez9jnUQrjLlUAiyzdD+znUwkOZNEIhyzdD+znUwrjLlUAhyzdD9jnUQkOZNEIiyzdD")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_thw2p"]
+resource_name = "pCylinder10"
+_surfaces = [{
+"aabb": AABB(-212.22643, 4.681118, -183.7935, 424.45285, 49.908054, 367.58698),
+"attribute_data": PackedByteArray("8/QyP5YtcT/z9DI/S9VuP5jcaz+o+k0/eORtP9AmTz955G0/PhkLP3jkbT/QJk8/mNxrP6j6TT+Z3Gs/ZEUMP/P0Mj/oJNI+eeRtPz4ZCz+Z3Gs/ZEUMP/P0Mj+C1dY+nBr0PmJFDD/bCvA+PBkLP/P0Mj/oJNI+8/QyP4LV1j7cCvA+ziZPP9sK8D48GQs/nBr0PmJFDD+cGvQ+qPpNP/P0Mj+WLXE/3ArwPs4mTz+cGvQ+qPpNP/P0Mj9L1W4/eeRtPz4ZCz+H3no/PhkLP4Peej/QJk8/eORtP9AmTz/z9DI/6CTSPu9yOj/SMLg+dWJ1P2g+/D555G0/PhkLP9sK8D48GQs/5A7hPmQ+/D74dis/1DC4PvP0Mj/oJNI+3ArwPs4mTz/GFtY+ziZPP8IW1j48GQs/2wrwPjwZCz/z9DI/li1xP/d2Kz+jJ34/4Q7hPtggXD/cCvA+ziZPP3jkbT/QJk8/dmJ1P94gXD/scjo/oSd+P/P0Mj+WLXE/8/QyPwUgLT+Z3Gs/ZEUMP5jcaz+o+k0/8/QyP4LV1j7z9DI/S9VuP5wa9D5iRQw/nBr0Pqj6TT8="),
+"format": 34359742487,
+"index_count": 90,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMAAzADEAMAAyADQAMAA1ADMAMAA0ADYAMAA2ADUA"),
+"material": SubResource("StandardMaterial3D_i5rxc"),
+"name": "defaultPolygonShader",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 55,
+"vertex_data": PackedByteArray("9zlUQ0OZNEIXhOez5ulMQ1BbWkLqXki17OnMQlBbWkLedTHD/jnUQkOZNEIgyzfD8znUwkOZNEIjyzfD/jnUQkOZNEIgyzfD7OnMQlBbWkLedTHD4unMwlBbWkLhdTHD9zlUw0OZNEL9FwW48znUwkOZNEIjyzfD4unMwlBbWkLhdTHD5ulMw1BbWkI+IQC46unMwlBbWkLfdTFD+znUwkOZNEIhyzdD9zlUw0OZNEL9FwW45ulMw1BbWkI+IQC49jnUQkOZNEIiyzdD+znUwkOZNEIhyzdD6unMwlBbWkLfdTFD5unMQlBbWkLgdTFD9zlUQ0OZNEIXhOez9jnUQkOZNEIiyzdD5unMQlBbWkLgdTFD5ulMQ1BbWkLqXki18znUwkOZNEIjyzfD8znUwrjLlUAjyzfD/jnUQrjLlUAgyzfD/jnUQkOZNEIgyzfD9zlUw0OZNEL9FwW49zlUw7jLlUD9FwW48znUwrjLlUAjyzfD8znUwkOZNEIjyzfD+znUwkOZNEIhyzdD+znUwrjLlUAhyzdD9zlUw7jLlUD9FwW49zlUw0OZNEL9FwW49jnUQkOZNEIiyzdD9jnUQrjLlUAiyzdD+znUwrjLlUAhyzdD+znUwkOZNEIhyzdD9zlUQ0OZNEIXhOez9zlUQ7jLlUAXhOez9jnUQrjLlUAiyzdD9jnUQkOZNEIiyzdD/jnUQkOZNEIgyzfD/jnUQrjLlUAgyzfD9zlUQ7jLlUAXhOez9zlUQ0OZNEIXhOezAAAAAFBbWkIXhOez4unMwlBbWkLhdTHD7OnMQlBbWkLedTHD5ulMw1BbWkI+IQC45ulMQ1BbWkLqXki16unMwlBbWkLfdTFD5unMQlBbWkLgdTFD1tWTyVbJAIDW1ZPJVskAgNbVk8moNgCA1tWTyag2AICazP7/mkwAgJrM/v+aTACAmsz+/5pMAICazP7/mkwAgCgqk8moNgCAKCqTyag2AIAoKpPJqDYAgCgqk8moNgCAlEkoqlbJ/v+USSiqVsn+/5RJKKqoNv7/lEkoqqg2/v//f2Szmkz+//9/ZLNks/7//39ks2Sz/v//f2Szmkz+/2q2KKqoNv7/arYoqqg2/v9qtiiqqDb+/2q2KKqoNv7////+//9/AID///7//38AgP///v//fwCA///+//9/AIAAANmust0lkQAA2a6y3SWRAADZrrLdJZEAANmust0lkdku/39MItju2S7/f0wi2O7ZLv9/TCLY7tku/39MItju/3//f/9/////f/9//3////9//3//f////3//f/9///8l0f9/st3Y7iXR/3+y3djuJdH/f7Ld2O4l0f9/st3Y7v//2a5LIiWR///ZrksiJZH//9muTCIlkf//2a5MIiWR/3//////AID/f/////////9//////////3//////////f/////////9///8AAACA/3//////AIA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4nikh")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o146q"]
+points = PackedVector3Array(-106.11322, 4.681118, -183.7935, -212.22643, 4.681118, -0.035995483, -106.11322, 45.14592, -183.7935, 106.113205, 4.681118, -183.7935, -106.15476, 4.681118, 183.79347, -212.22643, 45.14592, -0.035995483, -102.45701, 54.589172, -177.46075, 106.113205, 45.14592, -183.7935, -204.914, 54.589172, -0.035995483, 212.2264, 4.681118, -1.5258789e-05, -106.15476, 45.14592, 183.79347, 106.113205, 4.681118, 183.79347, 102.41545, 54.589172, -177.46075, 212.2264, 45.14592, -1.5258789e-05, -102.45701, 54.589172, 177.42476, 106.113205, 45.14592, 183.79347, 204.87245, 54.589172, -1.5258789e-05, 102.41545, 54.589172, 177.42476)
+
+[sub_resource type="Animation" id="Animation_fosyu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button/pCylinder10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.49942195, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_oppyu"]
+resource_name = "active"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button/pCylinder10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.5824013, 0), Vector3(0, -0.11365843, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 3.0, 0.5, 3.0, 2.0]
+}
+
+[sub_resource type="Animation" id="Animation_ptsnk"]
+resource_name = "inactive"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button/pCylinder10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.11365843, 0), Vector3(0, -0.6144984, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vyknl"]
+_data = {
+&"RESET": SubResource("Animation_fosyu"),
+&"active": SubResource("Animation_oppyu"),
+&"inactive": SubResource("Animation_ptsnk")
+}
+
+[node name="PushButton" type="Node3D" unique_id=2135814083]
+script = ExtResource("1_fosyu")
+
+[node name="Button" type="Node3D" parent="." unique_id=1291644716]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="pCylinder2" type="Node3D" parent="Button" unique_id=186324911]
+transform = Transform3D(0.14723371, 0, 0, 0, 0.009053098, 0, 0, 0, 0.14723371, -0.31, 0.009053124, 0)
+
+[node name="transform17" type="Node3D" parent="Button/pCylinder2" unique_id=1039308760]
+
+[node name="pCube2" type="Node3D" parent="Button" unique_id=416315466]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.01, -0.033238858, 0)
+
+[node name="pSphere25_f_0_transform1" type="Node3D" parent="Button/pCube2" unique_id=1760105873]
+
+[node name="pCube3" type="Node3D" parent="Button" unique_id=268745299]
+transform = Transform3D(0.011092549, -0.0042699664, 0, 0.0042699664, 0.011092549, 0, 0, 0, 0.011886011, 0.04, -0.08, 0)
+
+[node name="transform25" type="Node3D" parent="Button/pCube3" unique_id=1547216519]
+
+[node name="group1" type="Node3D" parent="Button" unique_id=843279361]
+transform = Transform3D(0.0010108252, -0.0007283394, 0, 0.0007283394, 0.0010108252, 0, 0, 0, 0.0012458916, 0.018428411, 0.14545138, -9.08517e-09)
+
+[node name="group3" type="Node3D" parent="Button/group1" unique_id=345086453]
+transform = Transform3D(1.0933868, 0, 0, 0, 1.0933868, 0, 0, 0, 1.0933868, -9.7975, -4.64054, -1.6996524e-21)
+
+[node name="pCylinder4" type="Node3D" parent="Button/group1/group3" unique_id=254408539]
+transform = Transform3D(21.55984, 0, 0, 0, 12.779668, 0, 0, 0, 21.55984, 13.075595, 54.842, -1.8634725e-20)
+
+[node name="transform34" type="Node3D" parent="Button/group1/group3/pCylinder4" unique_id=1782499457]
+
+[node name="pCylinder3" type="Node3D" parent="Button/group1/group3" unique_id=559003666]
+transform = Transform3D(34.823387, 0, 0, 0, 3.7754948, 0, 0, 0, 34.823387, 13.075595, 50.99898, -1.8634725e-20)
+
+[node name="transform35" type="Node3D" parent="Button/group1/group3/pCylinder3" unique_id=1979818520]
+
+[node name="pSphere2" type="Node3D" parent="Button" unique_id=1421194387]
+transform = Transform3D(0.013959947, 0, 0, 0, 0.013959947, 0, 0, 0, 0.013959947, 0, 0.30444393, 0)
+
+[node name="transform2" type="Node3D" parent="Button/pSphere2" unique_id=1150751309]
+
+[node name="pCylinder6" type="Node3D" parent="Button" unique_id=2048755468]
+transform = Transform3D(0.016850699, 0, 0, 0, 0.0025728918, 0, 0, 0, 0.016850699, 0, 0.30228618, 0)
+
+[node name="transform1" type="Node3D" parent="Button/pCylinder6" unique_id=384277174]
+
+[node name="pSphere3" type="Node3D" parent="Button" unique_id=1608061297]
+transform = Transform3D(0.0017517332, -0.0048162355, -0.004916601, 0.0068108332, 0.0019433945, 0.0005229052, 0.0009907794, -0.004844043, 0.0050981627, 0.092439875, -0.011709587, 0.13020992)
+
+[node name="pSphere27" type="Node3D" parent="Button/pSphere3" unique_id=2032310967]
+
+[node name="pSphere25_f_0_transform4" type="Node3D" parent="Button/pSphere3/pSphere27" unique_id=618659658]
+
+[node name="transform7" type="Node3D" parent="Button/pSphere3" unique_id=1725911984]
+
+[node name="pSphere4" type="Node3D" parent="Button" unique_id=1818421497]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0118577145, 0.030578287, -0.00044978468)
+
+[node name="pSphere23" type="Node3D" parent="Button/pSphere4" unique_id=1730129464]
+
+[node name="pSphere25_f_0_transform3" type="Node3D" parent="Button/pSphere4/pSphere23" unique_id=288184545]
+
+[node name="transform6" type="Node3D" parent="Button/pSphere4" unique_id=1256541519]
+
+[node name="pSphere5" type="Node3D" parent="Button" unique_id=2115158161]
+transform = Transform3D(0.0017517332, -0.0048162355, -0.004916601, 0.0068108332, 0.0019433945, 0.0005229052, 0.0009907794, -0.004844043, 0.0050981627, 0.08102893, -0.039838344, 0.13102403)
+
+[node name="pSphere31" type="Node3D" parent="Button/pSphere5" unique_id=1372286607]
+
+[node name="pSphere25_f_0_transform5" type="Node3D" parent="Button/pSphere5/pSphere31" unique_id=784202081]
+
+[node name="transform8" type="Node3D" parent="Button/pSphere5" unique_id=2059208562]
+
+[node name="pSphere7" type="Node3D" parent="Button" unique_id=7095142]
+transform = Transform3D(0.00998903, 0.00046825968, 0, -0.00046825968, 0.00998903, 0, 0, 0, 0.01, 0.055928264, 0.041707873, -0.06707563)
+
+[node name="pSphere19" type="Node3D" parent="Button/pSphere7" unique_id=1283779694]
+
+[node name="transform28" type="Node3D" parent="Button/pSphere7/pSphere19" unique_id=1288267299]
+
+[node name="transform5" type="Node3D" parent="Button/pSphere7" unique_id=700846436]
+
+[node name="pSphere8" type="Node3D" parent="Button" unique_id=576759056]
+transform = Transform3D(0.0066729235, 0.00031280925, 0, -0.00031280925, 0.0066729235, 0, 0, 0, 0.0066802516, 0.0029552532, 0.07189609, -0.046344344)
+
+[node name="pSphere15" type="Node3D" parent="Button/pSphere8" unique_id=882763148]
+
+[node name="transform29" type="Node3D" parent="Button/pSphere8/pSphere15" unique_id=818227742]
+
+[node name="transform4" type="Node3D" parent="Button/pSphere8" unique_id=145347625]
+
+[node name="pSphere9" type="Node3D" parent="Button" unique_id=338667315]
+transform = Transform3D(0.0032860397, 0.00015404097, 0, -0.00015404097, 0.0032860397, 0, 0, 0, 0.0032896483, -0.044743862, 0.10676923, -0.031366855)
+
+[node name="pSphere11" type="Node3D" parent="Button/pSphere9" unique_id=1703442862]
+
+[node name="transform30" type="Node3D" parent="Button/pSphere9/pSphere11" unique_id=1333857912]
+
+[node name="transform3" type="Node3D" parent="Button/pSphere9" unique_id=1196021906]
+
+[node name="pSphere13" type="Node3D" parent="Button" unique_id=1625109810]
+transform = Transform3D(0.0032860397, 0.00015404097, 0, -0.00015404097, 0.0032860397, 0, 0, 0, 0.0032896483, -0.044743862, 0.10676923, -0.031366855)
+
+[node name="transform31" type="Node3D" parent="Button/pSphere13" unique_id=969511708]
+
+[node name="pSphere17" type="Node3D" parent="Button" unique_id=653010459]
+transform = Transform3D(0.0066729235, 0.00031280925, 0, -0.00031280925, 0.0066729235, 0, 0, 0, 0.0066802516, 0.0029552537, 0.07189609, -0.046344344)
+
+[node name="transform32" type="Node3D" parent="Button/pSphere17" unique_id=1570145951]
+
+[node name="pSphere21" type="Node3D" parent="Button" unique_id=92554938]
+transform = Transform3D(0.00998903, 0.00046825968, 0, -0.00046825968, 0.00998903, 0, 0, 0, 0.01, 0.055928264, 0.041707877, -0.06707563)
+
+[node name="transform33" type="Node3D" parent="Button/pSphere21" unique_id=408444128]
+
+[node name="pSphere25" type="Node3D" parent="Button" unique_id=521008105]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.0118577145, 0.030578287, -0.00044978468)
+
+[node name="pSphere25_f_0_transform8" type="Node3D" parent="Button/pSphere25" unique_id=1989617843]
+
+[node name="pSphere29" type="Node3D" parent="Button" unique_id=1015772744]
+transform = Transform3D(0.0017517332, -0.0048162355, -0.004916601, 0.0068108332, 0.0019433945, 0.0005229052, 0.0009907794, -0.004844043, 0.0050981627, 0.09243987, -0.011709587, 0.13020992)
+
+[node name="pSphere25_f_0_transform7" type="Node3D" parent="Button/pSphere29" unique_id=1583160645]
+
+[node name="pSphere33" type="Node3D" parent="Button" unique_id=977805124]
+transform = Transform3D(0.0017517332, -0.0048162355, -0.004916601, 0.0068108332, 0.0019433945, 0.0005229052, 0.0009907794, -0.004844043, 0.0050981627, 0.08102893, -0.03983835, 0.13102403)
+
+[node name="pSphere25_f_0_transform6" type="Node3D" parent="Button/pSphere33" unique_id=153063729]
+
+[node name="pSphere36" type="Node3D" parent="Button" unique_id=700199213]
+transform = Transform3D(0.013959947, 0, 0, 0, 0.013959947, 0, 0, 0, 0.013959947, 0.28799495, 0.30444393, 0)
+
+[node name="transform12" type="Node3D" parent="Button/pSphere36" unique_id=321436173]
+
+[node name="pCylinder7" type="Node3D" parent="Button" unique_id=1692558818]
+transform = Transform3D(0.016850699, 0, 0, 0, 0.0025728918, 0, 0, 0, 0.016850699, 0.28799495, 0.30228618, 0)
+
+[node name="transform11" type="Node3D" parent="Button/pCylinder7" unique_id=1905153039]
+
+[node name="pSphere37" type="Node3D" parent="Button" unique_id=427119126]
+transform = Transform3D(0.01, 0, 0, 0, 0.00923454, 0.0038370907, 0, -0.0038370907, 0.00923454, -0.5979949, -0.25233796, 0.006308071)
+
+[node name="transform23" type="Node3D" parent="Button/pSphere37" unique_id=1286281300]
+
+[node name="pSphere43" type="Node3D" parent="Button" unique_id=1912493431]
+transform = Transform3D(0.07195341, 0, 0, 0, 0.08213046, 0, 0, 0, 0.07195341, -0.31, 0.03, 0)
+
+[node name="transform20" type="Node3D" parent="Button/pSphere43" unique_id=1526682116]
+
+[node name="group4" type="Node3D" parent="Button" unique_id=2049493757]
+transform = Transform3D(0.027170438, 0, 0, 0, 0.027170438, 0, 0, 0, 0.027170438, -0.053243924, -0.76506597, 1.31721505e-08)
+
+[node name="pCylinder8" type="Node3D" parent="Button/group4" unique_id=1273101612]
+transform = Transform3D(4.743749, 0.0020265365, 0, -0.018691821, 0.51430947, 0, 0, 0, 4.743786, -20.491243, 28, -9.08517e-07)
+
+[node name="transform14" type="Node3D" parent="Button/group4/pCylinder8" unique_id=1405978295]
+
+[node name="pCylinder1" type="Node3D" parent="Button/group4" unique_id=1697357246]
+transform = Transform3D(2.7981186, 0, 0, 0, 0.8303132, 0, 0, 0, 2.7981186, -20.491243, 28.462711, 0)
+
+[node name="transform13" type="Node3D" parent="Button/group4/pCylinder1" unique_id=52721172]
+
+[node name="pSphere45" type="Node3D" parent="Button" unique_id=1913711232]
+transform = Transform3D(-0.07195341, 0, 7.2718923e-17, 0, 0.08213046, 0, -7.2718923e-17, 0, -0.07195341, -0.31, 0.03, 4.9303807e-32)
+
+[node name="transform19" type="Node3D" parent="Button/pSphere45" unique_id=1169442289]
+
+[node name="pSphere46" type="Node3D" parent="Button" unique_id=1790149302]
+transform = Transform3D(0.01, 0, 0, 0, 0.009505366, -0.0031061252, 0, 0.0031061252, 0.009505366, -0.5979949, -0.26070806, 0.015102283)
+
+[node name="transform15" type="Node3D" parent="Button/pSphere46" unique_id=1895138133]
+
+[node name="pSphere47" type="Node3D" parent="Button" unique_id=315966435]
+transform = Transform3D(0.008826571, -0.0035838203, -0.0030410336, 0.0025691902, 0.009096707, -0.003263307, 0.00393585, 0.0020990816, 0.008950025, -0.5502283, -0.3220695, -0.12153814)
+
+[node name="transform21" type="Node3D" parent="Button/pSphere47" unique_id=2128637189]
+
+[node name="pSphere48" type="Node3D" parent="Button" unique_id=1740074530]
+transform = Transform3D(0.008826568, 0.0035838187, -0.0030410443, -0.0025692002, 0.009096716, 0.003263275, 0.00393585, -0.0020990467, 0.008950032, -0.5775159, -0.17408672, -0.10481444)
+
+[node name="transform18" type="Node3D" parent="Button/pSphere48" unique_id=158475685]
+
+[node name="pSphere49" type="Node3D" parent="Button" unique_id=1854689978]
+transform = Transform3D(0.009343181, -0.0034846184, 0.00074993476, 0.003231698, 0.009169049, 0.0023419366, -0.0015036943, -0.0019457575, 0.009692932, -0.5689776, -0.34338516, 0.04671755)
+
+[node name="transform22" type="Node3D" parent="Button/pSphere49" unique_id=1466303754]
+
+[node name="pSphere50" type="Node3D" parent="Button" unique_id=1933893536]
+transform = Transform3D(0.009343175, 0.003484637, 0.00074991165, -0.0032317126, 0.009169031, -0.002341988, -0.0015036942, 0.0019458106, 0.009692921, -0.5892903, -0.15724163, 0.03943369)
+
+[node name="transform16" type="Node3D" parent="Button/pSphere50" unique_id=754676080]
+
+[node name="pSphere51" type="Node3D" parent="Button" unique_id=398422859]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="transform24" type="Node3D" parent="Button/pSphere51" unique_id=1021769381]
+
+[node name="pCube5" type="Node3D" parent="Button" unique_id=1337811562]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="pSphere25_f_0_transform2" type="Node3D" parent="Button/pCube5" unique_id=648150170]
+
+[node name="transform26" type="Node3D" parent="Button" unique_id=1969984475]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="transform27" type="Node3D" parent="Button/transform26" unique_id=2094122706]
+
+[node name="pSphere52" type="Node3D" parent="Button" unique_id=1104452666]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="transform36" type="Node3D" parent="Button/pSphere52" unique_id=549408787]
+
+[node name="pSphere53" type="Node3D" parent="Button" unique_id=979930150]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="transform37" type="Node3D" parent="Button/pSphere53" unique_id=1010038486]
+
+[node name="pCylinder9" type="MeshInstance3D" parent="Button" unique_id=68807547]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 1.4953614e-05)
+material_override = ExtResource("3_ptsnk")
+mesh = SubResource("ArrayMesh_y3b13")
+
+[node name="pCylinder10" type="MeshInstance3D" parent="Button" unique_id=830321820]
+transform = Transform3D(0.010000001, 0, 0, 0, 0.010000001, 0, 0, 0, 0.010000001, 0, -0.49942195, 0)
+material_override = SubResource("StandardMaterial3D_o146q")
+mesh = SubResource("ArrayMesh_thw2p")
+
+[node name="Area3D" type="Area3D" parent="Button/pCylinder10" unique_id=1806980475]
+transform = Transform3D(99.99999, 0, 0, 0, 99.99999, 0, 0, 0, 99.99999, 0, 58.871113, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Button/pCylinder10/Area3D" unique_id=1985617699]
+transform = Transform3D(0.010000001, 0, 0, 0, 0.010000001, 0, 0, 0, 0.010000001, 0, -0.31731543, 0)
+shape = SubResource("ConvexPolygonShape3D_o146q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=32374864]
+libraries/ = SubResource("AnimationLibrary_vyknl")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1633344282]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2.011767, 0)
+light_color = Color(1, 0.63, 0.6361666, 1)
+light_energy = 2.0
+spot_range = 3.346
+spot_angle = 42.44
+
+[connection signal="body_entered" from="Button/pCylinder10/Area3D" to="." method="_on_area_3d_body_entered"]

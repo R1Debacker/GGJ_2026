@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dtffij8ebtfec" path="res://Assets/Map/chemestry lab/FBX/CHEMISTRYcentrifuge.fbx" id="12_3c00d"]
 [ext_resource type="Texture2D" uid="uid://deeb4xihfql44" path="res://Assets/Map/computer/FBX/COMPUTERdemoscene_0.png" id="13_u5c3f"]
 [ext_resource type="PackedScene" uid="uid://buocwhi6266sv" path="res://Assets/Map/chemestry lab/FBX/CHEMISTRYsolarsystem_9.fbx" id="13_ubak1"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="15_bo35k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s43wg"]
 albedo_texture = ExtResource("1_uay2r")
@@ -1097,3 +1098,6 @@ spot_angle = 60.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2025488928]
 shape = SubResource("BoxShape3D_u5c3f")
+
+[node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("15_bo35k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.120573, 0.36766905, -4.3709736)

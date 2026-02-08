@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://clfcxjfay7jta" path="res://Assets/Map/classroom/FBX/pencilcase.fbx" id="5_g84y5"]
 [ext_resource type="PackedScene" uid="uid://o3rr6b4k6oxx" path="res://Assets/Map/classroom/FBX/radio.fbx" id="6_3mpmx"]
 [ext_resource type="Texture2D" uid="uid://cbfft7ek1p1ja" path="res://Assets/Map/classroom/FBX/chair_0.png" id="7_3mpmx"]
+[ext_resource type="PackedScene" uid="uid://cth12qwyicaqc" path="res://Entities/Rooms/push_button.tscn" id="7_454rn"]
 [ext_resource type="Texture2D" uid="uid://rlmqdt3nlaxf" path="res://Assets/Map/classroom/FBX/table_0.png" id="7_o4tgc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7qi4"]
@@ -758,6 +759,9 @@ transform = Transform3D(1.4779869, 0.25603667, -1.1191727e-08, -2.1227484e-15, -
 
 [node name="radio" parent="Meshes" unique_id=804577968 instance=ExtResource("6_3mpmx")]
 transform = Transform3D(-0.29567474, 0, -0.95528865, 0, 1, 0, 0.95528865, 0, -0.29567474, -3.4850554, 2.1164153, 5.9647303)
+
+[node name="PushButton" parent="Meshes" unique_id=2135814083 instance=ExtResource("7_454rn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1989071, 0.34521264, 0.53939587)
 
 [node name="Lights" type="Node3D" parent="." unique_id=1268065368]
 

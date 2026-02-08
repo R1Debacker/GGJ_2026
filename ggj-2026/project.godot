@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="GGJ2026"
-run/main_scene="uid://bpgywictbgvx5"
+run/main_scene="uid://bk6adlhieuqu6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
 [autoload]
 
 Game="*uid://df2e5dfko7l67"
+ButtonManager="*uid://qh2lmb5eluum"
 
 [filesystem]
 
