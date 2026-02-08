@@ -14,6 +14,8 @@ extends CharacterBody3D
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
 @export var push_force = 1.0
+@onready var loose_mask: AudioStreamPlayer = $LooseMask
+
 
 var head: Node3D
 var pitch: float = 0
@@ -54,7 +56,7 @@ func _physics_process(delta: float) -> void:
 		# rotation verticale de la tête
 		var y_rotation = -Input.get_joy_axis(device_index, JOY_AXIS_RIGHT_Y)
 		if abs(y_rotation) <= 0.3: y_rotation = 0
-		pitch = clamp(pitch + y_rotation  * sensitivity, deg_to_rad(-30), deg_to_rad(30))
+		pitch = clamp(pitch + y_rotation  * sensitivity, deg_to_rad(-50), deg_to_rad(30))
 		head.rotation.x = pitch
 		
 		var x_direction = -Input.get_joy_axis(device_index, JOY_AXIS_LEFT_Y) * forward
@@ -110,14 +112,16 @@ func _robber_init_placement():
 			dist_to_center = start_position.distance_to(point)
 			nearest_center = point
 			
-	position = start_position
+	global_position = start_position
+	
 	rotation.y = transform.looking_at(nearest_center).basis.get_euler().y
-
+	head.rotation.x = 0
 
 func _on_button_timer_timeout() -> void:
 	var player = Game.PLAYER.instantiate()
+	loose_mask.play()
 	player.device_index = device_index
-	player.global_position = Game.get_random_coord()
+	player.position = position
 	get_tree().root.get_child(0).add_child(player)
 	device_index = -1
 	_robber_init_placement()

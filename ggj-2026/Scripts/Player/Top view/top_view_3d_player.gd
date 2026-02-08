@@ -20,6 +20,7 @@ class_name player3D_top_view
 var last_direction := Vector3.FORWARD
 var sprinting := false
 var grabbing := false
+var dying := false
 var success_grab := false
 var can_sprint := true
 var sprint_speed = default_speed * sprint_factor
@@ -38,15 +39,13 @@ var gravity = 18
 
 func _ready() -> void:
 	anim_tree.active = true
-	#if not Game.get_player_data_by_index(device_index).empty():
-		#var player_data = Game.get_player_data_by_index(device_index)
-		#load_skin(player_data["id_skin"])
 
 
 static func spawn(parent: Node, player_data: Dictionary):
 	var player = Game.PLAYER.instantiate()
 	parent.add_child(player)
 	player.device_index = player_data["idx"]
+	player.load_skin(player_data["id_skin"])
 	return player
 
 func _physics_process(delta: float):
@@ -58,7 +57,7 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 	
-	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing:
+	if Input.is_joy_button_pressed(device_index, JOY_BUTTON_X) && !grabbing && !dying:
 		grabbing = true
 		if Game.fps_player == null:
 			anim_state.travel("Grabbing")
@@ -69,6 +68,7 @@ func _physics_process(delta: float):
 			anim_state.travel("Grabbing")
 			
 			if distanceToRobber <= 4 && dot > -0.2:
+				Game.fps_player.button_timer.stop()
 				rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
 				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
 				success_grab = true
@@ -98,7 +98,7 @@ func get_move_input(delta):
 	
 	speed = default_speed
 	animation_player.speed_scale = 1.5
-	if grabbing:
+	if grabbing || dying:
 		velocity = Vector3.ZERO
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -113,9 +113,11 @@ func get_move_input(delta):
 			sprint_duration.stop()
 			can_sprint = false
 			sprinting = false
+			push_force = 1
 			sprint_cooldown.start()
 			
 		if sprinting:
+			push_force = 3
 			speed = sprint_speed
 			animation_player.speed_scale = 3.0
 			
@@ -147,7 +149,7 @@ func load_skin(index: int):
 	if can_change_skin:
 		can_change_skin = false
 		$SkinTimer.start()
-		var mod_index = index%skins.size()
+		var mod_index = posmod(index, skins.size())
 		for i in skins.size():
 			if i == mod_index: skins[i].show()
 			else: skins[i].hide()
@@ -155,6 +157,7 @@ func load_skin(index: int):
 func _on_sprint_duration_timeout() -> void:
 	can_sprint = false
 	sprinting = false
+	push_force = 1
 	print("not sprint anymore")
 	sprint_cooldown.start()
 
@@ -165,6 +168,8 @@ func _on_sprint_cooldown_timeout() -> void:
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	var new_position = Game.get_random_coord()
+	while new_position.distance_to(position) < 25:
+		new_position = Game.get_random_coord()
 	if anim_name == "Grabbing":
 		grabbing = false
 		if success_grab:
@@ -172,16 +177,23 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 			var fps_index = Game.fps_player.device_index
 			Game.fps_player.device_index = device_index
 			device_index = fps_index
-			if fps_index != -1:
-				while new_position.distance_to(position) < 25:
-					new_position = Game.get_random_coord()
+			dying = true
+			if device_index != -1:
+				for player_data in Game.players_data:
+					if player_data["idx"] == device_index:
+						load_skin(player_data["id_skin"])
+						break
+				rotate(Vector3.UP, 180)
 				anim_state.travel("Death_Backward")
 			else:
 				self.queue_free()
+				
 			Game.fps_player.rotate(Vector3.UP, 180)
 			Game.fps_player.grabbed = false
+			Game.fps_player.button_timer.start()
 			
 	if anim_name == "Death_Backward":
+		dying = false
 		position = new_position
 
 func _on_skin_timer_timeout() -> void:
