@@ -81,5 +81,6 @@ one_shot = true
 
 [node name="LooseMask" type="AudioStreamPlayer" parent="." unique_id=369616898]
 stream = ExtResource("2_60br0")
+volume_db = -15.0
 
 [connection signal="timeout" from="ButtonTimer" to="." method="_on_button_timer_timeout"]
