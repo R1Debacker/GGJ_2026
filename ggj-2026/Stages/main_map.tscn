@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ehclpewwo2hn"]
+[gd_scene format=3 uid="uid://c5gaklgxdhfxe"]
 
 [ext_resource type="Script" path="res://Scripts/Init players.gd" id="1_4p4bd"]
 [ext_resource type="PackedScene" uid="uid://du40surynppr0" path="res://Entities/interface_split_screen_v2.tscn" id="1_ehnf5"]
@@ -49,6 +49,7 @@ device_index = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1187000995]
 stream = ExtResource("9_cp0ci")
+volume_db = -10.0
 autoplay = true
 parameters/looping = false
 

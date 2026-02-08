@@ -24,6 +24,7 @@ func _ready() -> void:
 	Game.fps_player = self
 	head = $Head
 	animation_head_bob.play("headbob")
+	#global_position = Game.get_random_coord()
 
 func _physics_process(delta: float) -> void:
 	var forward = -transform.basis.z

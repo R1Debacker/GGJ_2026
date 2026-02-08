@@ -35,14 +35,10 @@ func get_player_data_by_index(index: int):
 func get_random_coord() -> Vector3:
 	
 	var ran_coord = Vector3(0,0,0)
-	
-	ran_coord.x = randi_range(-46, 46)
-	ran_coord.z = randi_range(-25, 25)
-
-	while ran_coord.x in range(-18, 18) and ran_coord.z in range(-11, 11):
+	while -20 < ran_coord.x and ran_coord.x < 20 and -12 < ran_coord.z and ran_coord.z < 12:
 		
-		ran_coord.x = randi_range(-46, 46)
-		ran_coord.z = randi_range(-25, 25)
-			
+		ran_coord.x = randi_range(-44, 44)
+		ran_coord.z = randi_range(-23, 23)
+		
 	return ran_coord
 	
