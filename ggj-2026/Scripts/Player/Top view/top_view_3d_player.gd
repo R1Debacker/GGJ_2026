@@ -67,7 +67,7 @@ func _physics_process(delta: float):
 			var dot = last_direction.dot(vectorToRobber)
 			anim_state.travel("Grabbing")
 			
-			if distanceToRobber <= 4 && dot > -0.2:
+			if distanceToRobber <= 4 && dot > -0.2 && !Game.fps_player.grabbed:
 				Game.fps_player.button_timer.stop()
 				rotation.y = transform.looking_at(Game.fps_player.position).basis.get_euler().y
 				position = Game.fps_player.position - vectorToRobber.normalized() * 1.5
@@ -189,6 +189,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 				self.queue_free()
 				
 			Game.fps_player.rotate(Vector3.UP, 180)
+			Game.fps_player._robber_init_placement()
 			Game.fps_player.grabbed = false
 			Game.fps_player.button_timer.start()
 			
