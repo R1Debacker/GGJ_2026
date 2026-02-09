@@ -2049,7 +2049,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4237056, 0.32859153, 3.7808
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.115141, 7.0813684, 2.1818848)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85
 
@@ -2057,7 +2057,7 @@ spot_angle = 62.85
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.115141, 7.0813684, -2.317171)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85
 
@@ -2065,7 +2065,7 @@ spot_angle = 62.85
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.6632805, 7.0813684, 3.4305916)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85
 
@@ -2073,6 +2073,6 @@ spot_angle = 62.85
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.6632805, 7.0813684, -3.1460953)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85

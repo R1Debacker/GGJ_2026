@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://7xbpyhl4kw7b"]
 
-[ext_resource type="Material" uid="uid://c8irhd166olea" path="res://Common/Materials/wall_material.tres" id="1_nxi1u"]
 [ext_resource type="BoxMesh" uid="uid://ccb7bm3m0ge46" path="res://Entities/Walls/wall.tres" id="2_g52jr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qe08r"]
@@ -17,5 +16,4 @@ shape = SubResource("BoxShape3D_qe08r")
 
 [node name="Wall" type="MeshInstance3D" parent="Wall" unique_id=923764988]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-material_override = ExtResource("1_nxi1u")
 mesh = ExtResource("2_g52jr")

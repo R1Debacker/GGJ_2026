@@ -723,7 +723,7 @@ shape = SubResource("BoxShape3D_y1hmp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0421772, 6.5094805, -0.560729)
 light_color = Color(0.72, 0.68976, 0.46080002, 1)
 light_energy = 5.0
-shadow_enabled = true
+light_bake_mode = 1
 omni_range = 663.465
 
 [node name="PushButton" parent="." unique_id=2135814083 instance=ExtResource("4_y1hmp")]

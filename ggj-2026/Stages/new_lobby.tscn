@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b2vuoqbt665b5" path="res://Assets/Textures/disco.jpg" id="2_uwrve"]
 [ext_resource type="AudioStream" uid="uid://tpx5rhg1e5ey" path="res://Assets/Sounds/Bee Gees Stayin Alive   lyrics.mp3" id="5_a7u3u"]
 [ext_resource type="AudioStream" uid="uid://cegvttbn5x2jw" path="res://Assets/Sounds/Scratch.wav" id="5_br6fm"]
+[ext_resource type="LightmapGIData" uid="uid://ku8sxwbknb4t" path="res://Stages/lightmap/new_lobby.lmbake" id="6_br6fm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r7mi0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,7 +26,9 @@ albedo_texture = ExtResource("2_uwrve")
 uv1_scale = Vector3(7.77, 7.325, 7.77)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rxdke"]
+lightmap_size_hint = Vector2i(122, 69)
 material = SubResource("StandardMaterial3D_g5iwf")
+add_uv2 = true
 size = Vector2(24, 13.5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a7u3u"]
@@ -35,7 +38,9 @@ data = PackedVector3Array(12, 0, 6.75, -12, 0, 6.75, 12, 0, -6.75, -12, 0, 6.75,
 albedo_color = Color(0.22959551, 0.14858207, 0.092593096, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_yv3x7"]
+lightmap_size_hint = Vector2i(126, 222)
 material = SubResource("StandardMaterial3D_yv3x7")
+add_uv2 = true
 size = Vector3(24, 9.63, 0.4)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yv3x7"]
@@ -200,9 +205,6 @@ mesh = SubResource("BoxMesh_r7mi0")
 visible = false
 shape = SubResource("ConcavePolygonShape3D_r7mi0")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1652205827]
-transform = Transform3D(1, 0, 0, 0, 0.1466528, 0.9891881, 0, -0.9891881, 0.14665282, -3.8146973e-06, 24.024557, 3.256855)
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=974299900]
 transform = Transform3D(1, 0, 0, 0, 0.64278764, 0.76604444, 0, -0.76604444, 0.64278764, 0, 7.007, 7.611)
 size = 13.5
@@ -240,48 +242,6 @@ theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=943734810]
-transform = Transform3D(1, 0, 0, 0, 0.12013681, 0.9927574, 0, -0.9927574, 0.12013681, 0.28327227, 5.401184, -4.064165)
-light_color = Color(6.3051284e-06, 0.7997399, 0.20987555, 1)
-light_energy = 14.435
-spot_range = 8.242099
-spot_angle = 28.598948
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1547582726]
-transform = Transform3D(1, 0, 0, 0, 0.12013681, 0.9927574, 0, -0.9927574, 0.12013681, 7.4434586, 5.401184, -3.3673868)
-light_color = Color(1, 0.9764706, 0, 1)
-light_energy = 16.0
-spot_range = 8.242099
-spot_angle = 33.35875
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=389065474]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.087715, 8.181593, -4.2701197)
-light_color = Color(1, 0.30588236, 1, 1)
-light_energy = 14.435
-spot_range = 13.697
-spot_angle = 28.598948
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=568568094]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.4550858, 5.2577004, 2.0142236)
-light_color = Color(1, 0.30588236, 0.23529412, 1)
-light_energy = 14.435
-spot_range = 8.242099
-spot_angle = 28.598948
-
-[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=1790718981]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3836813, 5.2577004, -3.31288)
-light_color = Color(1, 0.30588236, 0.23529412, 1)
-light_energy = 18.33
-spot_range = 8.242099
-spot_angle = 28.598948
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=165216649]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.2304955, 4.434209, -0.34506893)
-light_color = Color(0, 0.36862746, 0.9882353, 1)
-light_energy = 16.0
-spot_range = 8.242099
-spot_angle = 28.598948
-
 [node name="LobyMusic" type="AudioStreamPlayer" parent="." unique_id=1472441911]
 stream = ExtResource("5_a7u3u")
 volume_db = -15.0
@@ -291,167 +251,219 @@ autoplay = true
 stream = ExtResource("5_br6fm")
 volume_db = -5.0
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1053105973]
+[node name="Lights" type="Node3D" parent="." unique_id=1666663610]
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=943734810]
+transform = Transform3D(1, 0, 0, 0, 0.12013681, 0.9927574, 0, -0.9927574, 0.12013681, 0.28327227, 5.401184, -4.064165)
+light_color = Color(6.3051284e-06, 0.7997399, 0.20987555, 1)
+light_energy = 14.435
+spot_range = 8.242099
+spot_angle = 28.598948
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=1547582726]
+transform = Transform3D(1, 0, 0, 0, 0.12013681, 0.9927574, 0, -0.9927574, 0.12013681, 7.4434586, 5.401184, -3.3673868)
+light_color = Color(1, 0.9764706, 0, 1)
+light_energy = 16.0
+spot_range = 8.242099
+spot_angle = 33.35875
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=389065474]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.087715, 8.181593, -4.2701197)
+light_color = Color(1, 0.30588236, 1, 1)
+light_energy = 14.435
+spot_range = 13.697
+spot_angle = 28.598948
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=568568094]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.4550858, 5.2577004, 2.0142236)
+light_color = Color(1, 0.30588236, 0.23529412, 1)
+light_energy = 14.435
+spot_range = 8.242099
+spot_angle = 28.598948
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights" unique_id=1790718981]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3836813, 5.2577004, -3.31288)
+light_color = Color(1, 0.30588236, 0.23529412, 1)
+light_energy = 18.33
+spot_range = 8.242099
+spot_angle = 28.598948
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights" unique_id=165216649]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.2304955, 4.434209, -0.34506893)
+light_color = Color(0, 0.36862746, 0.9882353, 1)
+light_energy = 16.0
+spot_range = 8.242099
+spot_angle = 28.598948
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1652205827]
+transform = Transform3D(1, 0, 0, 0, 0.1466528, 0.9891881, 0, -0.9891881, 0.1466528, -3.8146973e-06, 24.024557, 3.256855)
+
+[node name="Balls" type="Node3D" parent="." unique_id=711256726]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Balls" unique_id=1053105973]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -7.1602306, 1.2379589, 0.942698)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D" unique_id=1977878709]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D" unique_id=1977878709]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=263474810]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D" unique_id=263474810]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D" unique_id=1843636621]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D" unique_id=1843636621]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=1381444329]
+[node name="RigidBody3D3" type="RigidBody3D" parent="Balls" unique_id=1381444329]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, 5.9543743, 1.2379589, -3.5361505)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D3" unique_id=2018147531]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D3" unique_id=2018147531]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=501710450]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D3" unique_id=501710450]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D3" unique_id=2026779662]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D3" unique_id=2026779662]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1483249366]
+[node name="RigidBody3D5" type="RigidBody3D" parent="Balls" unique_id=1483249366]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.042245, 1.2379589, 3.8031564)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D5" unique_id=1657028528]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D5" unique_id=1657028528]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=2061187409]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D5" unique_id=2061187409]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D5" unique_id=645651519]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D5" unique_id=645651519]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D6" type="RigidBody3D" parent="." unique_id=1247345401]
+[node name="RigidBody3D6" type="RigidBody3D" parent="Balls" unique_id=1247345401]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -6.123945, 1.2379589, 3.8031564)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D6" unique_id=2100956430]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D6" unique_id=2100956430]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6" unique_id=588303396]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D6" unique_id=588303396]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D6" unique_id=431534672]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D6" unique_id=431534672]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D11" type="RigidBody3D" parent="." unique_id=1826509283]
+[node name="RigidBody3D11" type="RigidBody3D" parent="Balls" unique_id=1826509283]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -6.123945, 1.2379589, -2.6863246)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D11" unique_id=1160135534]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D11" unique_id=1160135534]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11" unique_id=1221472881]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D11" unique_id=1221472881]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D11" unique_id=2082725642]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D11" unique_id=2082725642]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D12" type="RigidBody3D" parent="." unique_id=92301983]
+[node name="RigidBody3D12" type="RigidBody3D" parent="Balls" unique_id=92301983]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.143451, 1.2379589, -2.6863246)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D12" unique_id=404774210]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D12" unique_id=404774210]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D12" unique_id=64751536]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D12" unique_id=64751536]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D12" unique_id=1159951050]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D12" unique_id=1159951050]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D13" type="RigidBody3D" parent="." unique_id=1739911742]
+[node name="RigidBody3D13" type="RigidBody3D" parent="Balls" unique_id=1739911742]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, -9.143451, 1.2379589, 1.6288862)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D13" unique_id=1924355865]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D13" unique_id=1924355865]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D13" unique_id=1175671789]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D13" unique_id=1175671789]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D13" unique_id=81172380]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D13" unique_id=81172380]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D7" type="RigidBody3D" parent="." unique_id=2077070501]
+[node name="RigidBody3D7" type="RigidBody3D" parent="Balls" unique_id=2077070501]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, 5.741063, 1.2379589, 3.55375)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D7" unique_id=420383321]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D7" unique_id=420383321]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D7" unique_id=121811724]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D7" unique_id=121811724]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D7" unique_id=1157369290]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D7" unique_id=1157369290]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D8" type="RigidBody3D" parent="." unique_id=974221319]
+[node name="RigidBody3D8" type="RigidBody3D" parent="Balls" unique_id=974221319]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, 8.440675, 1.2379589, 3.55375)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D8" unique_id=151487128]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D8" unique_id=151487128]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D8" unique_id=142118276]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D8" unique_id=142118276]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D8" unique_id=788869116]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D8" unique_id=788869116]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D9" type="RigidBody3D" parent="." unique_id=1307393476]
+[node name="RigidBody3D9" type="RigidBody3D" parent="Balls" unique_id=1307393476]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, 8.440675, 1.2379589, 0.86820936)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D9" unique_id=1071608485]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D9" unique_id=1071608485]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D9" unique_id=1210154255]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D9" unique_id=1210154255]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D9" unique_id=760338925]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D9" unique_id=760338925]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
 
-[node name="RigidBody3D10" type="RigidBody3D" parent="." unique_id=912274599]
+[node name="RigidBody3D10" type="RigidBody3D" parent="Balls" unique_id=912274599]
 transform = Transform3D(0.24548556, 0, 0.9694003, 0, 1, 0, -0.9694003, 0, 0.24548556, 8.440675, 1.2379589, -2.2825866)
 
-[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D10" unique_id=483855146]
+[node name="pSphere3_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D10" unique_id=483855146]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1n37l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D10" unique_id=2104820121]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balls/RigidBody3D10" unique_id=2104820121]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("SphereShape3D_r7mi0")
 
-[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="RigidBody3D10" unique_id=2107719064]
+[node name="pSphere3_non_disco_mat_0" type="MeshInstance3D" parent="Balls/RigidBody3D10" unique_id=2107719064]
 transform = Transform3D(0.99999994, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ghrnn")
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=101504483]
+light_data = ExtResource("6_br6fm")

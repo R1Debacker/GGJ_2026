@@ -786,56 +786,56 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1989071, 0.34521264, 0.5393
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=394410981]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.1787529, 5.693247, 4.3081903)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=911050102]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.1787529, 5.693247, -3.5112438)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=1153457699]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.6250286, 5.693247, -3.5112438)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=964064908]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4.6250286, 5.693247, 4.1260066)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="Lights" unique_id=1658056365]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.691538, 5.693247, 4.1260066)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="Lights" unique_id=2036274240]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.691538, 5.693247, -3.4903908)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 10.65
 spot_angle = 55.0
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="Lights" unique_id=406275413]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -13.827938, 5.693247, -0.46443748)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.0
 spot_angle = 70.0
 
 [node name="SpotLight3D8" type="SpotLight3D" parent="Lights" unique_id=1855720618]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 13.075527, 5.693247, -0.46443748)
 light_energy = 4.0
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.129
 spot_angle = 70.78
 

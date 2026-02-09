@@ -1602,7 +1602,7 @@ shape = SubResource("BoxShape3D_4vebu")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 6.870968, 5.513733, -4.4031534)
 light_color = Color(1.5720325, 0.69297224, 0.7222742, 1)
 light_energy = 5.571
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.13
 spot_angle = 65.78
 
@@ -1610,7 +1610,7 @@ spot_angle = 65.78
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.5963306, 5.513733, -4.4031534)
 light_color = Color(1.5720325, 0.69297224, 0.7222742, 1)
 light_energy = 5.571
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.13
 spot_angle = 65.78
 
@@ -1618,7 +1618,7 @@ spot_angle = 65.78
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.5963306, 5.513733, 4.768342)
 light_color = Color(1.5720325, 0.69297224, 0.7222742, 1)
 light_energy = 5.571
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.13
 spot_angle = 65.78
 
@@ -1626,7 +1626,7 @@ spot_angle = 65.78
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 6.7402, 5.513733, 4.768342)
 light_color = Color(1.5720325, 0.69297224, 0.7222742, 1)
 light_energy = 5.571
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 15.13
 spot_angle = 65.78
 

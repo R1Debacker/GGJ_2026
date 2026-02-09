@@ -122,4 +122,7 @@ top_view_grab={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+global_illumination/sdfgi/frames_to_update_lights=4
 textures/quality/msaa_3d=2

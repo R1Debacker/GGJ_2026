@@ -798,7 +798,7 @@ shape = SubResource("BoxShape3D_6aohs")
 transform = Transform3D(-0.9474562, 0.31988555, 1.39826435e-08, 4.6426516e-16, -4.3711395e-08, 1, 0.31988555, 0.9474562, 4.1414634e-08, 0.58405083, 9.263956, 6.528815)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85
 
@@ -806,7 +806,7 @@ spot_angle = 62.85
 transform = Transform3D(-0.9474562, 0.31988555, 1.3982644e-08, 4.6426516e-16, -4.3711395e-08, 1, 0.31988555, 0.9474562, 4.1414634e-08, 3.4598997, 8.386186, -8.035198)
 light_color = Color(1.2331204, 1.1885815, 0.6986506, 1)
 light_energy = 6.091
-shadow_enabled = true
+light_bake_mode = 1
 spot_range = 13.978
 spot_angle = 62.85
 
