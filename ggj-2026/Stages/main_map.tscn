@@ -21,20 +21,16 @@ script = ExtResource("1_4p4bd")
 texture = SubResource("ViewportTexture_4p4bd")
 
 [node name="ControlRobberCamera" parent="View/CameraSetup" parent_id_path=PackedInt32Array(1065518466, 1332214440) index="1" unique_id=2070296700]
-anchor_left = 0.35200003
-anchor_top = 0.349
-anchor_right = 0.651
-anchor_bottom = 0.651
-offset_left = -0.5040283
-offset_top = -0.15200806
-offset_right = 0.047973633
-offset_bottom = 0.15197754
+anchor_left = 0.31
+anchor_top = 0.31
+anchor_right = 0.69
+anchor_bottom = 0.69
 
 [node name="TextureRect" parent="View/CameraSetup/ControlRobberCamera/PanelContainer" parent_id_path=PackedInt32Array(1065518466, 1364882602) index="0" unique_id=1085849617]
 texture = SubResource("ViewportTexture_2cw51")
 
 [node name="Camera3D" parent="View/SubViewport Top Camera" parent_id_path=PackedInt32Array(1065518466, 1032100479) index="0" unique_id=150376836]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 52, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 50, 0)
 visible = true
 projection = 0
 fov = 60.0

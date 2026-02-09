@@ -6,13 +6,12 @@
 viewport_path = NodePath("SubViewport Top Camera")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwddo"]
-bg_color = Color(0, 0, 0, 1)
 draw_center = false
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.36, 0.52, 1, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_qwddo"]
 viewport_path = NodePath("SubViewportFPS Player")
